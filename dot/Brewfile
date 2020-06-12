@@ -29,10 +29,12 @@ brew 'webp'
 brew 'zsh'
 
 cask 'brooklyn'
+cask 'daisydisk'
 cask 'google-chrome'
 cask 'discord'
 cask 'gimp'
 cask 'iterm2'
+cask 'intellij-idea'
 cask 'java'
 brew 'mas'
 cask 'postman'
@@ -64,5 +66,15 @@ brew 'dart'
 
 tap 'teamookla/speedtest'
 brew 'speedtest'
+
+mas 'Evernote', id: 406056744
+mas 'Notability', id: 736189492
+mas 'Telegram', id: 747648890
+mas 'Messenger', id: 1480068668
+mas 'iMovie', id: 408981434
+mas 'Keynote', id: 409183694
+mas 'Numbers', id: 409203825
+mas 'Pages', id: 409201541
+mas 'Xcode', id: 497799835
 
 
