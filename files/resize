@@ -1,0 +1,20 @@
+#!/bin/bash
+
+size=64x64
+
+if [ ! -d /resized ]; then
+  echo "/resized directory doesn't exist. Creating it now..."
+  mkdir resized
+  echo "resized dir created"
+fi
+
+for i in *; do
+  output=$(~/imagesize.sh $i)
+  
+  if [[ $output == *"512x512"* ]] ; then
+    if [[ $output == *".png"* ]] ; then
+      mogrify -path resized -thumbnail $size $i
+      echo "resized $i"
+    fi
+  fi
+done

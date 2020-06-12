@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
 
-# Stuff to happen after brew is installed goes here!
+printf "Hey, Bartek! Brew installation is complete!"
 
-echo "Hey, Bartek! Brew installation is complete!"
+# Stuff to happen after brew is installed goes here!

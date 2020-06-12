@@ -1,6 +1,11 @@
 #!/bin/bash
 set -e
 
+# This script is designed to be run as part of the strap bootstrapping process.
+# Assume that git and brew are installed. Assume that dotfiles repo is in ~.
+
+printf "Hello from dotfiles/script/setup!"
+
 # Symlink dot/* into home directory as hidden files
 for f in $(ls -d ~/.dotfiles/dot/*); do ln -sfn $f ~/.$(basename $f); done
 
