@@ -1,0 +1,6 @@
+#!/bin/bash
+set -e
+
+# Stuff to happen after brew is installed goes here!
+
+echo "Hey, Bartek! Brew installation is complete!"
