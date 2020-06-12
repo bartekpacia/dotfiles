@@ -1,0 +1,64 @@
+brew 'bat'
+brew 'cocoapods'
+brew 'ffmpeg'
+
+brew 'gh'
+brew 'git'
+brew 'go'
+brew 'grep'
+brew 'htop'
+
+brew 'imagemagick'
+brew 'iosdeploy'
+
+brew 'kotlin'
+brew 'ktlint'
+
+brew 'lsd'
+
+brew 'neofetch'
+brew 'nmap'
+brew 'nvm'
+
+brew 'pyenv'
+
+brew 'rbenv'
+brew 'realpath'
+
+brew 'webp'
+brew 'zsh'
+
+cask 'brooklyn'
+cask 'google-chrome'
+cask 'discord'
+cask 'iterm2'
+cask 'java'
+cask 'skype'
+cask 'slack'
+cask 'qlimagesize'
+cask 'qlstephen'
+cask 'quicklook-json'
+cask 'quicklookapk'
+cask 'visual-studio-code'
+
+# Specific taps
+
+# OpenJDK 8 for use with android-studio
+tap 'AdoptopenJDK/openjdk'
+cask 'adoptopenjdk8'
+
+# Font needed by lsd
+tap 'homebrew/cask-fonts'
+cask 'font-hack-nerd-font'
+cask 'font-jetbrains-mono'
+
+tap 'heroku/brew'
+brew 'heroku'
+
+tap 'dart-lang/dart'
+brew 'dart'
+
+tap 'teamookla/speedtest'
+brew 'speedtest'
+
+

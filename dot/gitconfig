@@ -1,0 +1,9 @@
+[user]
+	name = Bartek Pacia
+	email = barpac02@gmail.com
+[core]
+	editor = open -W -n
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg
