@@ -5,4 +5,3 @@ for name do
   size=$(($size / 1000))
   identify -format "%f, %G, $size kB\n" "$name"
 done
-exit 0

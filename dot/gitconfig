@@ -7,3 +7,9 @@
 	gpgsign = true
 [gpg]
 	program = gpg
+[github]
+	user = bartekpacia
+[push]
+	default = simple
+[credential]
+	helper = osxkeychain

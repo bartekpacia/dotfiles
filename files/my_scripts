@@ -11,4 +11,4 @@ resize() {
   source ~/resize $1
 }
 
-echo "Your private script library's been loaded"
+echo "Your personal scripts have been loaded :)"

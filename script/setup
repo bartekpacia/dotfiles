@@ -24,4 +24,10 @@ else
   echo "directory ~/.oh-my-zsh/ already exists, installation aborted"
 fi
 
+# The below asks for a password, so it's annoying
+#
+# echo "Changing default shell to zsh in $(which zsh)"
+# chsh -s $(which zsh)
+# echo "Successfully changed default shell to zsh"
+
 echo "setup: such successfullness"

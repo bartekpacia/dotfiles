@@ -6,7 +6,7 @@ exact=""
 fit=""
 
 usage() {
-    echo "Użycie: $(basename $0) (-e|-f) wielkość_miniatury obraz [obraz] [obraz]"
+    echo "Usage: $(basename $0) (-e|-f) thumb_size image [image] [image]"
 }
 
 if [ $# -eq 0]; then
