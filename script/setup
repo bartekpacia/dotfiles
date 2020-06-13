@@ -14,6 +14,7 @@ for f in $(ls -d ~/.dotfiles/files/*); do ln -sfn $f ~/$(basename $f); done
 
 # Setup oh-my-zsh
 export KEEP_ZSHRC="yes"
+export RUNZSH="no"
 if [ ! -d ~/.oh-my-zsh ]; then
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 

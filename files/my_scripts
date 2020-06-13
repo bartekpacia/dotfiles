@@ -1,0 +1,14 @@
+#!/bin/bash
+
+alias echon=~/echon
+alias calc=~/calc
+
+imagesize() {
+  source ~/imagesize $1
+}
+
+resize() {
+  source ~/resize $1
+}
+
+echo "Your private script library's been loaded"

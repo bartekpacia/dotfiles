@@ -99,4 +99,5 @@ _splay_nostalgia() {
   spotify play uri spotify:playlist:09cuSyQXHYTEq8OXLHmuBn
 }
 
-. ~/.library.zsh
+# Load my private scripts
+. ~/my_scripts
