@@ -4,10 +4,23 @@ set -e
 # This script is designed to be run as part of the strap bootstrapping process.
 # Assume that git and brew are installed. Assume that dotfiles repo is in ~.
 
-printf "Hello from dotfiles/script/setup!"
+echo "Hello from dotfiles/script/setup!"
 
 # Symlink dot/* into home directory as hidden files
 for f in $(ls -d ~/.dotfiles/dot/*); do ln -sfn $f ~/.$(basename $f); done
 
 # Symlink files/* into home directory as regular files
 for f in $(ls -d ~/.dotfiles/files/*); do ln -sfn $f ~/$(basename $f); done
+
+# Setup oh-my-zsh
+export KEEP_ZSHRC="yes"
+if [ ! -d ~/.oh-my-zsh ]; then
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+  rm -rf ~/.oh-my-zsh/custom
+  cp -r ~/.dotfiles/custom ~/.oh-my-zsh
+else
+  echo "directory ~/.oh-my-zsh/ already exists, installation aborted"
+fi
+
+echo "setup: such successfullness"

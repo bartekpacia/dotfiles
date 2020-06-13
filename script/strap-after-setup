@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 
-printf "Hey, Bartek! Brew installation is complete!"
+echo "Hello from dotfiles/script/strap-after-setup!"
+
+
 
 # Stuff to happen after brew is installed goes here!
