@@ -25,6 +25,8 @@ brew 'pyenv'
 brew 'rbenv'
 brew 'realpath'
 
+brew 'translate-shell'
+
 brew 'webp'
 brew 'zsh'
 
