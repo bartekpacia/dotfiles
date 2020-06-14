@@ -1,8 +1,6 @@
 #!/bin/bash
 set -e
 
-echo "Hello from dotfiles/script/strap-after-setup!"
-
-
-
 # Stuff to happen after brew is installed goes here!
+
+echo "strap-after-setup: such successfullness"

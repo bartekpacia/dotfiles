@@ -4,13 +4,15 @@ set -e
 # This script is designed to be run as part of the strap bootstrapping process.
 # Assume that git and brew are installed. Assume that dotfiles repo is in ~.
 
-echo "Hello from dotfiles/script/setup!"
-
 # Symlink dot/* into home directory as hidden files
-for f in $(ls -d ~/.dotfiles/dot/*); do ln -sfn $f ~/.$(basename $f); done
+for f in $(ls -d ~/.dotfiles/dot/*); do
+  ln -sfn $f ~/.$(basename $f);
+done
 
 # Symlink files/* into home directory as regular files
-for f in $(ls -d ~/.dotfiles/files/*); do ln -sfn $f ~/$(basename $f); done
+for f in $(ls -d ~/.dotfiles/files/*);
+  do ln -sfn $f ~/$(basename $f);
+done
 
 # Setup oh-my-zsh
 export KEEP_ZSHRC="yes"
@@ -21,7 +23,7 @@ if [ ! -d ~/.oh-my-zsh ]; then
   rm -rf ~/.oh-my-zsh/custom
   cp -r ~/.dotfiles/custom ~/.oh-my-zsh
 else
-  echo "directory ~/.oh-my-zsh/ already exists, installation aborted"
+  echo "Directory ~/.oh-my-zsh/ already exists, installation aborted"
 fi
 
 # The below asks for a password, so it's annoying
