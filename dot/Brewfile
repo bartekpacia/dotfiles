@@ -4,6 +4,7 @@ brew 'ffmpeg'
 
 brew 'gh'
 brew 'git'
+brew 'git-lfs
 brew 'go'
 brew 'grep'
 brew 'htop'
