@@ -31,6 +31,12 @@ devserver_rudy() {
   npm run serve
 }
 
+# ------ Shit ------
+
+lenny() {
+  echo "( ͡° ͜ʖ ͡°)"
+}
+
 # ------ Spotify ------
 
 # Play song passed as argument

@@ -21,7 +21,8 @@ if [ ! -d ~/.oh-my-zsh ]; then
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
   rm -rf ~/.oh-my-zsh/custom
-  cp -r ~/.dotfiles/custom ~/.oh-my-zsh
+
+  ln -s ~/.dotfiles/custom ~/.oh-my-zsh
 else
   echo "Directory ~/.oh-my-zsh/ already exists, installation aborted"
 fi

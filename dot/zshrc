@@ -5,8 +5,8 @@ ZSH_CONFIG="/Users/bartekpacia/.zshrc"
 # GPG config (see https://help.github.com/en/github/authenticating-to-github/telling-git-about-your-signing-key)
 export GPG_TTY=$(tty)
 
-ZSH_THEME="robbyrussell"
-# ZSH_THEME="mlh"
+# ZSH_THEME="robbyrussell"
+ZSH_THEME="mlh"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
