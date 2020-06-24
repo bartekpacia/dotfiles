@@ -4,7 +4,7 @@ brew 'ffmpeg'
 
 brew 'gh'
 brew 'git'
-brew 'git-lfs
+brew 'git-lfs'
 brew 'go'
 brew 'grep'
 brew 'htop'
@@ -31,6 +31,7 @@ brew 'translate-shell'
 brew 'webp'
 brew 'zsh'
 
+cask 'blender'
 cask 'brooklyn'
 cask 'daisydisk'
 cask 'google-chrome'
@@ -49,6 +50,7 @@ cask 'qlimagesize'
 cask 'qlstephen'
 cask 'quicklook-json'
 cask 'quicklookapk'
+cask 'unity-hub'
 cask 'visual-studio-code'
 
 # Specific taps

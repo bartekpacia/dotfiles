@@ -5,8 +5,8 @@ ZSH_CONFIG="/Users/bartekpacia/.zshrc"
 # GPG config (see https://help.github.com/en/github/authenticating-to-github/telling-git-about-your-signing-key)
 export GPG_TTY=$(tty)
 
-# ZSH_THEME="robbyrussell"
-ZSH_THEME="mlh"
+ZSH_THEME="robbyrussell"
+# ZSH_THEME="mlh"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -83,8 +83,9 @@ source $ZSH/oh-my-zsh.sh
 # Flutter setup
 export PATH="$HOME/flutter/bin:$PATH"
 
-# Andrid Debug Bridge setup
+# Android Debug Bridge setup
 export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
+export ANDROID_HOME="$HOME/Library/Android/sdk"
 
 # Python (pyenv + Poetry setup)
 eval "$(pyenv init -)"
@@ -101,13 +102,17 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 # export PATH="$HOME/.gem/ruby/2.6.3/bin:$PATH" # uncomment if Ruby breaks
 eval "$(rbenv init -)"
 
-# Rust setup (I guess)
+# Rust setup
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # nvm configuration
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+if [ -s "$NVM_DIR/nvm.sh" ]; then
+  source "$NVM_DIR/nvm.sh"  # This loads nvm
+fi
+if [ -s "$NVM_DIR/bash_completion" ]; then
+  source "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+fi
 
 # User configuration
 

@@ -34,7 +34,7 @@ devserver_rudy() {
 # ------ Shit ------
 
 lenny() {
-  echo "( ͡° ͜ʖ ͡°)"
+  echo "( ͡° ͜ʖ ͡°)" | pbcopy
 }
 
 # ------ Spotify ------
@@ -73,6 +73,14 @@ s() {
   spotify vol $saved_volume >/dev/null
    
   sstat
+}
+
+sprev() {
+  spotify prev
+}
+
+snext() {
+  spotify next
 }
 
 # Control volume
