@@ -74,6 +74,7 @@ plugins=(
   zsh-syntax-highlighting
   zsh-apple-touchbar
   gcloud
+  poetry
 )
 
 source $ZSH/oh-my-zsh.sh

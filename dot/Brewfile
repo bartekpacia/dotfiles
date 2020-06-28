@@ -1,5 +1,6 @@
 brew 'bat'
 brew 'cocoapods'
+brew 'fd'
 brew 'ffmpeg'
 
 brew 'gh'
@@ -17,16 +18,19 @@ brew 'ktlint'
 
 brew 'lsd'
 
+brew 'ncdu'
 brew 'neofetch'
 brew 'nmap'
 brew 'nvm'
 
 brew 'pyenv'
 
+brew 'ranger'
 brew 'rbenv'
 brew 'realpath'
 
 brew 'translate-shell'
+brew 'tldr'
 
 brew 'webp'
 brew 'zsh'
