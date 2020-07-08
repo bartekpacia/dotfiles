@@ -1,1 +1,0 @@
-/Users/bartekpacia/dev/shell/MLH-OH-MY-ZSH-THEME/mlh.zsh-theme
