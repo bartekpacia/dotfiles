@@ -19,13 +19,25 @@ export KEEP_ZSHRC="yes"
 export RUNZSH="no"
 if [ ! -d ~/.oh-my-zsh ]; then
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-  rm -rf ~/.oh-my-zsh/custom
-
-  ln -s ~/.dotfiles/custom ~/.oh-my-zsh
 else
-  echo "Directory ~/.oh-my-zsh/ already exists, installation aborted"
+  echo "setup: Aborted installation of OhMyZsh because directory ~/.oh-my-zsh/ already exists."
 fi
+
+# rm -rf ~/.oh-my-zsh/custom
+
+# ln -s ~/.dotfiles/custom ~/.oh-my-zsh
+
+echo "setup: Copying your config..."
+
+for f in $(ls -d ~/.dotfiles/custom/plugins/*); do
+  echo "setup: Symlinking $(basename $f)"
+  ln -sfn $f ~/.oh-my-zsh/custom/plugins/$(basename $f)
+done
+
+for f in $(ls -d ~/.dotfiles/custom/themes/*); do
+  echo "setup: Symlinking $(basename $f)"
+  ln -sfn $f ~/.oh-my-zsh/custom/themes/$(basename $f)
+done
 
 # The below asks for a password, so it's annoying
 #

@@ -75,9 +75,9 @@ plugins=(
   zsh-apple-touchbar
 )
 
-source $ZSH/oh-my-zsh.sh
-
-# export PATH="$HOME/.nvm/versions/node/v10.18.0/bin/gatsby":$PATH # Uncomment if gatsby dies
+if [ -d $ZSH ]; then
+  source $ZSH/oh-my-zsh.sh
+fi
 
 # Flutter setup
 export PATH="$HOME/flutter/bin:$PATH"
