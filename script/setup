@@ -23,10 +23,6 @@ else
   echo "setup: Aborted installation of OhMyZsh because directory ~/.oh-my-zsh/ already exists."
 fi
 
-# rm -rf ~/.oh-my-zsh/custom
-
-# ln -s ~/.dotfiles/custom ~/.oh-my-zsh
-
 echo "setup: Copying your config..."
 
 for f in $(ls -d ~/.dotfiles/custom/plugins/*); do
@@ -38,6 +34,9 @@ for f in $(ls -d ~/.dotfiles/custom/themes/*); do
   echo "setup: Symlinking $(basename $f)"
   ln -sfn $f ~/.oh-my-zsh/custom/themes/$(basename $f)
 done
+
+echo "setup: Symlinking bartekpacia.zsh"
+ln -sfn ~/.dotfiles/custom/bartekpacia.zsh ~/.oh-my-zsh/custom/bartekpacia.zsh
 
 # The below asks for a password, so it's annoying
 #
