@@ -73,6 +73,7 @@ plugins=(
   zsh-autosuggestions
   zsh-syntax-highlighting
   zsh-apple-touchbar
+  flutter
 )
 
 if [ -d $ZSH ]; then
