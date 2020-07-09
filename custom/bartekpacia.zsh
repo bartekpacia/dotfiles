@@ -31,6 +31,15 @@ devserver_rudy() {
   npm run serve
 }
 
+# ------ Sleep ------
+zzz() {
+  pmset sleepnow
+}
+
+zzzz() {
+  pmset sleepnow
+}
+
 # ------ Shit ------
 
 lenny() {
