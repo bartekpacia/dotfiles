@@ -23,6 +23,8 @@ brew 'neofetch'
 brew 'nmap'
 brew 'nvm'
 
+brew 'micro'
+
 brew 'pyenv'
 
 brew 'ranger'
