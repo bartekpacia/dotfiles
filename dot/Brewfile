@@ -23,6 +23,7 @@ brew 'neofetch'
 brew 'nmap'
 brew 'nvm'
 
+brew 'mas'
 brew 'micro'
 
 brew 'pyenv'
@@ -47,7 +48,7 @@ cask 'gitkraken'
 cask 'iterm2'
 cask 'java'
 cask 'jetbrains-toolbox'
-brew 'mas'
+cask 'notion'
 cask 'postman'
 cask 'skype'
 cask 'spotify'
@@ -80,7 +81,6 @@ tap 'teamookla/speedtest'
 brew 'speedtest'
 
 mas 'Keynote', id: 409183694
-mas 'Evernote', id: 406056744
 mas 'Messenger', id: 1480068668
 mas 'Notability', id: 736189492
 mas 'Numbers', id: 409203825
