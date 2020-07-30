@@ -1,5 +1,6 @@
 brew 'bat'
 brew 'cocoapods'
+brew 'fastlane'
 brew 'fd'
 brew 'ffmpeg'
 
@@ -26,6 +27,7 @@ brew 'nvm'
 brew 'mas'
 brew 'micro'
 
+brew 'poetry'
 brew 'pyenv'
 
 brew 'ranger'
