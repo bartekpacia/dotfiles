@@ -3,6 +3,7 @@ brew 'cocoapods'
 brew 'fastlane'
 brew 'fd'
 brew 'ffmpeg'
+brew 'firebase-cli'
 
 brew 'gh'
 brew 'git'
