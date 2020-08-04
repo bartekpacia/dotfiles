@@ -1,4 +1,6 @@
 brew 'bat'
+brew 'bundletool'
+
 brew 'cocoapods'
 brew 'fastlane'
 brew 'fd'
