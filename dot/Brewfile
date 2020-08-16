@@ -36,6 +36,7 @@ brew 'pyenv'
 brew 'ranger'
 brew 'rbenv'
 brew 'realpath'
+brew 'rustup'
 
 brew 'translate-shell'
 brew 'tldr'
@@ -47,6 +48,7 @@ cask 'blender'
 cask 'brooklyn'
 cask 'daisydisk'
 cask 'google-chrome'
+cask 'google-cloud-sdk'
 cask 'discord'
 cask 'gimp'
 cask 'gitkraken'
@@ -71,10 +73,11 @@ cask 'visual-studio-code'
 tap 'AdoptopenJDK/openjdk'
 cask 'adoptopenjdk8'
 
-# Font needed by lsd
 tap 'homebrew/cask-fonts'
-cask 'font-hack-nerd-font'
 cask 'font-jetbrains-mono'
+
+# Font needed by lsd
+cask 'font-hack-nerd-font'
 
 tap 'heroku/brew'
 brew 'heroku'

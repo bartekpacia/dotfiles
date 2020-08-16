@@ -1,5 +1,11 @@
 #!/bin/bash
 
+if [ -d ~/.dotfiles/idea ]; then
+  for f in $(ls ~/.dotfiles/idea); do
+    alias $f=~/.dotfiles/idea/$f
+  done
+fi
+
 alias echon=~/echon
 alias calc=~/calc
 
