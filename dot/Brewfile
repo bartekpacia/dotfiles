@@ -38,7 +38,6 @@ brew 'rbenv'
 brew 'realpath'
 brew 'rustup'
 
-brew 'translate-shell'
 brew 'tldr'
 
 brew 'webp'
@@ -60,6 +59,7 @@ cask 'postman'
 cask 'skype'
 cask 'spotify'
 cask 'sf-symbols'
+cask 'raspberry-pi-imager'
 cask 'qlimagesize'
 cask 'qlstephen'
 cask 'quicklook-json'
@@ -87,6 +87,9 @@ brew 'dart'
 
 tap 'teamookla/speedtest'
 brew 'speedtest'
+
+tap 'microsoft/git'
+cask 'git-credential-manager-core'
 
 mas 'Keynote', id: 409183694
 mas 'Messenger', id: 1480068668
