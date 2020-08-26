@@ -1941,7 +1941,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/bartekpacia/.dotfiles/files</string>
+	<string>/Users/bartekpacia/dotfiles/files</string>
 	<key>Print In Black And White</key>
 	<true/>
 	<key>PromptOnQuit</key>

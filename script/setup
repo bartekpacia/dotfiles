@@ -36,7 +36,7 @@ for f in $(ls -d ~/dotfiles/custom/themes/*); do
 done
 
 echo "setup: Symlinking bartekpacia.zsh"
-ln -sfn ~/.dotfiles/custom/bartekpacia.zsh ~/.oh-my-zsh/custom/bartekpacia.zsh
+ln -sfn ~/dotfiles/custom/bartekpacia.zsh ~/.oh-my-zsh/custom/bartekpacia.zsh
 
 # The below asks for a password, so it's annoying
 #

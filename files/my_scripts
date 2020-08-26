@@ -1,8 +1,8 @@
 #!/bin/bash
 
-if [ -d ~/.dotfiles/idea ]; then
-  for f in $(ls ~/.dotfiles/idea); do
-    alias $f=~/.dotfiles/idea/$f
+if [ -d ~/dotfiles/idea ]; then
+  for f in $(ls ~/dotfiles/idea); do
+    alias $f=~/dotfiles/idea/$f
   done
 fi
 
