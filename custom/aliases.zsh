@@ -7,19 +7,6 @@ alias buildc='clang -std=c18 -o program.out'
 alias lsd="lsd -lah"
 alias lso="ls -oah"
 
-set_rudy_functions() {
-  rudy_functions
-  export GOOGLE_APPLICATION_CREDENTIALS="/Users/bartekpacia/dev/node/discover-rudy-functions/serviceAccountKey.json"
-  echo "Google credentials set up!"
-  nvm use 10
-}
-
-devserver_rudy() {
-  set_rudy_functions
-  cd functions/
-  npm run serve
-}
-
 # ------ Sleep ------
 zzz() {
   pmset sleepnow

@@ -72,8 +72,16 @@ cask 'quicklook-json'
 cask 'quicklookapk'
 cask 'unity-hub'
 cask 'visual-studio-code'
+cask 'zoomus'
 
 # Specific taps
+
+# Microsoft
+cask 'microsoft-word'
+cask 'microsoft-excel'
+cask 'microsoft-powerpoint'
+cask 'microsoft-teams'
+cask 'onedrive'
 
 # OpenJDK 8 for use with android-studio
 tap 'AdoptopenJDK/openjdk'

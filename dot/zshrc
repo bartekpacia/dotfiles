@@ -9,15 +9,9 @@ export GPG_TTY=$(tty)
 ZSH_THEME="robbyrussell"
 # ZSH_THEME="mlh"
 
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
-
-# Uncomment the following line to automatically update without prompting.
-# DISABLE_UPDATE_PROMPT="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
 export UPDATE_ZSH_DAYS=3
@@ -46,7 +40,6 @@ plugins=(
   zsh-completions
   zsh-apple-touchbar
   flutter
-  emoji
 )
 
 
@@ -66,11 +59,9 @@ export ANDROID_HOME="$HOME/Library/Android/sdk"
 # # # # # # # # # # # # # #
 
 # Check if pyenv is installed
-if ! command -v pyenv &> /dev/null
-then
-  echo "pyenv could not be found"
-else
+if command -v pyenv &> /dev/null; then
   eval "$(pyenv init -)"
+  echo "pyenv initialized"
 fi
 
 export PATH="$HOME/.poetry/bin:$PATH"
@@ -89,20 +80,22 @@ export PATH="$GOBIN":$PATH
 # # # # # # # # # # # # # #
 
 # Check if rbenv is installed
-if ! command -v rbenv &> /dev/null
-then
-  echo "rbenv could not be found"
-else
+if command -v rbenv &> /dev/null; then
   eval "$(rbenv init -)"
   export PATH="$HOME/.rbenv/bin:$PATH"
+  echo "rbenv initialized"
 fi
 
 # # # # # # # # # # # # # # 
 # R u s t 
 # # # # # # # # # # # # # #
+
 export PATH="$HOME/.cargo/bin:$PATH"
 
-# nvm configuration
+# # # # # # # # # # # # # # 
+# N o d e 
+# # # # # # # # # # # # # #
+
 export NVM_DIR="$HOME/.nvm"
 if [ -s "$NVM_DIR/nvm.sh" ]; then
   source "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -117,13 +110,14 @@ fi
 export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='nano'
+else
+  export EDITOR='nanp'
+fi
 
-# heroku autocomplete setup
-# HEROKU_AC_ZSH_SETUP_PATH=/Users/bartekpacia/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source # $HEROKU_AC_ZSH_SETUP_PATH;
-
-autoload -U compinit && compinit
+# Heroku autocomplete setup
+HEROKU_AC_ZSH_SETUP_PATH=/Users/bartekpacia/Library/Caches/heroku/autocomplete/zsh_setup 
+if [ -f $HEROKU_AC_ZSH_SETUP_PATH ]; then
+  source $HEROKU_AC_ZSH_SETUP_PATH;
+fi
