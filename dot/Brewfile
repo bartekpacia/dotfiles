@@ -76,6 +76,9 @@ cask 'zoomus'
 
 # Specific taps
 
+tap 'schollz/tap'
+brew 'croc'
+
 # Microsoft
 cask 'microsoft-word'
 cask 'microsoft-excel'
