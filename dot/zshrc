@@ -6,8 +6,8 @@ ZSH_CUSTOM=$ZSH/custom
 # GPG config (see https://help.github.com/en/github/authenticating-to-github/telling-git-about-your-signing-key)
 export GPG_TTY=$(tty)
 
-ZSH_THEME="robbyrussell"
-# ZSH_THEME="mlh"
+# ZSH_THEME="robbyrussell"
+ZSH_THEME="mlh"
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.

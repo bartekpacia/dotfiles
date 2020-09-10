@@ -7,6 +7,10 @@ alias buildc='clang -std=c18 -o program.out'
 alias lsd="lsd -lah"
 alias lso="ls -oah"
 
+cls() {
+  clear
+}
+
 # ------ Sleep ------
 zzz() {
   pmset sleepnow
