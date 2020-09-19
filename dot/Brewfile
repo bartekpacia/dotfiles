@@ -32,6 +32,8 @@ brew 'mas'
 brew 'micro'
 brew 'mosh'
 
+brew 'openvpn'
+
 brew 'poetry'
 brew 'pyenv'
 
@@ -63,6 +65,7 @@ cask 'iterm2'
 cask 'java'
 cask 'jetbrains-toolbox'
 cask 'notion'
+cask 'openvpn-connect'
 cask 'postman'
 cask 'skype'
 cask 'spotify'
@@ -111,7 +114,6 @@ tap 'microsoft/git'
 cask 'git-credential-manager-core'
 
 mas 'Keynote', id: 409183694
-mas 'Messenger', id: 1480068668
 mas 'Notability', id: 736189492
 mas 'Numbers', id: 409203825
 mas 'Pages', id: 409201541
