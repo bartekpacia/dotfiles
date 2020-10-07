@@ -5,11 +5,9 @@ alias buildcpp='clang++ -std=c++17 -stdlib=libc++ -o program.out'
 alias buildc='clang -std=c18 -o program.out'
 
 alias lsd="lsd -lah"
+alias lsl="ls -lah"
 alias lso="ls -oah"
-
-cls() {
-  clear
-}
+alias cls="clear"
 
 # ------ Sleep ------
 zzz() {

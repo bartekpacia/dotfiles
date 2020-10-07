@@ -23,5 +23,6 @@
 	ff = only
 [credential]
 	helper = manager-core
+	credentialStore = gpg
 [credential "https://dev.azure.com"]
 	useHttpPath = true
