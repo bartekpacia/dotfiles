@@ -50,9 +50,21 @@ fi
 # Flutter setup
 export PATH="$HOME/flutter/bin:$PATH"
 
-# Android Debug Bridge setup
-export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
-export ANDROID_HOME="$HOME/Library/Android/sdk"
+# Android setup
+# export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
+# export ANDROID_HOME="$HOME/Library/Android/sdk"
+
+# Android
+export ANDROID_SDK_ROOT="$HOME/tools"
+export PATH="$ANDROID_SDK_ROOT:$PATH"
+export PATH="$ANDROID_SDK_ROOT/bin:$PATH"
+export PATH="$ANDROID_SDK_ROOT/lib:$PATH"
+export PATH="$ANDROID_SDK_ROOT/platform-tools:$PATH"
+export PATH="$ANDROID_SDK_ROOT/emulator:$PATH"
+
+# Java
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk
+export PATH="$JAVA_HOME/bin:$PATH"
 
 # # # # # # # # # # # # # #
 # P y t h o n
