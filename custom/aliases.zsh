@@ -21,7 +21,11 @@ zzzz() {
 # ------ Shit ------
 
 lenny() {
-  echo "( ͡° ͜ʖ ͡°)" | pbcopy
+  if [ "$1" = "sad" ]; then
+    echo "( ͡° ʖ̯ ͡°)"
+  else
+    echo "( ͡° ͜ʖ ͡°)"
+  fi
 }
 
 # ------ Spotify ------

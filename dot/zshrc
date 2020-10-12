@@ -39,7 +39,6 @@ plugins=(
   zsh-syntax-highlighting
   zsh-completions
   zsh-apple-touchbar
-  flutter
 )
 
 
@@ -55,15 +54,15 @@ export PATH="$HOME/flutter/bin:$PATH"
 # export ANDROID_HOME="$HOME/Library/Android/sdk"
 
 # Android
-export ANDROID_SDK_ROOT="$HOME/tools"
+export ANDROID_SDK_ROOT="$HOME/androidsdk"
 export PATH="$ANDROID_SDK_ROOT:$PATH"
-export PATH="$ANDROID_SDK_ROOT/bin:$PATH"
-export PATH="$ANDROID_SDK_ROOT/lib:$PATH"
+export PATH="$ANDROID_SDK_ROOT/cmdline-tools/tools/bin:$PATH"
+export PATH="$ANDROID_SDK_ROOT/cmdline-tools/tools/lib:$PATH"
 export PATH="$ANDROID_SDK_ROOT/platform-tools:$PATH"
 export PATH="$ANDROID_SDK_ROOT/emulator:$PATH"
 
 # Java
-export JAVA_HOME=/usr/lib/jvm/java-8-openjdk
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 export PATH="$JAVA_HOME/bin:$PATH"
 
 # # # # # # # # # # # # # #
@@ -93,9 +92,12 @@ fi
 # G o l a n g
 # # # # # # # # # # # # # #
 
-export GOPATH=$HOME/go
-export GOBIN=$GOPATH/bin
-export PATH="$GOBIN":$PATH
+export PATH="/usr/local/go/bin:$PATH"
+
+# 3 exports below are deprecated and should be removed
+# export GOPATH=$HOME/go
+# export GOBIN=$GOPATH/bin
+# export PATH="$GOBIN":$PATH
 
 # # # # # # # # # # # # # #
 # R u s t
@@ -108,12 +110,8 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # # # # # # # # # # # # # #
 
 export NVM_DIR="$HOME/.nvm"
-if [ -s "$NVM_DIR/nvm.sh" ]; then
-  source "$NVM_DIR/nvm.sh"  # This loads nvm
-fi
-if [ -s "$NVM_DIR/bash_completion" ]; then
-  source "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-fi
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -124,7 +122,7 @@ export LANG=en_US.UTF-8
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='nano'
 else
-  export EDITOR='nanp'
+  export EDITOR='nano'
 fi
 
 # Heroku autocomplete setup
