@@ -62,7 +62,9 @@ export PATH="$ANDROID_SDK_ROOT/platform-tools:$PATH"
 export PATH="$ANDROID_SDK_ROOT/emulator:$PATH"
 
 # Java
-export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+# Linux
+# export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/home"
 export PATH="$JAVA_HOME/bin:$PATH"
 
 # # # # # # # # # # # # # #
