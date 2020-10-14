@@ -34,25 +34,25 @@ lenny() {
 s() {
   # saved_volume=$(spotify vol)
   saved_volume="Current Spotify volume level is 50."
-
+  
   if [[ "$saved_volume" =~ [0-9][0-9]?[0-9]? ]]; then
     saved_volume=$MATCH
   fi
-
-
+  
+  
   spotify vol 0 >/dev/null
   spotify pause >/dev/null
   song_name="$@"
-
+  
   # Shortcuts for my playlists
   if [[ ! -z $song_name ]]; then
     if [[ $song_name == "cali" ]]; then
       echo "Dreaaam of Californicaaation..."
       _splay_california
-    elif [[ $song_name == "nost" ]]; then
+      elif [[ $song_name == "nost" ]]; then
       echo "Playing nostalgic playlist..."
       _splay_nostalgia
-    elif [[ $song_name == "lofi" ]]; then
+      elif [[ $song_name == "lofi" ]]; then
       echo "Just chillin..."
       _splay_lofi
     else
@@ -60,9 +60,9 @@ s() {
       spotify play $song_name
     fi
   fi
-
+  
   spotify vol $saved_volume >/dev/null
-   
+  
   sstat
 }
 
