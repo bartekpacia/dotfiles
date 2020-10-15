@@ -64,7 +64,6 @@ cask 'google-backup-and-sync'
 cask 'iterm2'
 # cask 'java'
 cask 'jetbrains-toolbox'
-cask 'notion'
 cask 'mos'
 cask 'openvpn-connect'
 cask 'postman'
@@ -122,7 +121,6 @@ mas 'Pages', id: 409201541
 mas 'Telegram', id: 747648890
 mas 'Slack', id: 803453959
 mas 'iMovie', id: 408981434
-mas 'Xcode', id: 497799835
+mas 'Amphetamine', id: 937984704
 mas 'Termius - SSH client', id: 1176074088
-
-
+mas 'Xcode', id: 497799835
