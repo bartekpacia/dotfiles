@@ -135,7 +135,7 @@ else
 fi
 
 # Heroku autocomplete setup
-HEROKU_AC_ZSH_SETUP_PATH=/Users/bartekpacia/Library/Caches/heroku/autocomplete/zsh_setup
+HEROKU_AC_ZSH_SETUP_PATH=~/Library/Caches/heroku/autocomplete/zsh_setup
 if [ -f $HEROKU_AC_ZSH_SETUP_PATH ]; then
   source $HEROKU_AC_ZSH_SETUP_PATH;
 fi
