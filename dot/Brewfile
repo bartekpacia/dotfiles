@@ -1,12 +1,12 @@
 brew 'bat'
 brew 'bundletool'
 
-brew 'cocoapods'
+# brew 'cocoapods' it gets installed on its own, somehow
 brew 'coreutils'
-brew 'fastlane'
+# brew 'fastlane' install through gem
 brew 'fd'
 brew 'ffmpeg'
-brew 'firebase-cli'
+# brew 'firebase-cli'
 
 brew 'gh'
 brew 'git'
@@ -34,7 +34,7 @@ brew 'mosh'
 
 brew 'openvpn'
 
-brew 'poetry'
+# brew 'poetry' use pyenv-installed Python instead, see https://github.com/Homebrew/homebrew-core/issues/53169
 brew 'pyenv'
 
 brew 'rbenv'
@@ -94,6 +94,9 @@ cask 'onedrive'
 # OpenJDK 8 for use with android-studio
 tap 'AdoptopenJDK/openjdk'
 cask 'adoptopenjdk/openjdk/adoptopenjdk8'
+
+tap 'tinygo-org/tools'
+brew 'tinygo'
 
 tap 'homebrew/cask-fonts'
 cask 'font-jetbrains-mono'

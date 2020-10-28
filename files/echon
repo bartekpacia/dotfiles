@@ -1,3 +1,0 @@
-#!/bin/bash
-
-printf "$*" | awk '{ printf "%s", $0 }'

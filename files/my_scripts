@@ -6,7 +6,6 @@ if [ -d ~/dotfiles/idea ]; then
   done
 fi
 
-alias echon=~/echon
 alias calc=~/calc
 
 imagesize() {
