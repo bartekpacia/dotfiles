@@ -2,29 +2,27 @@
 	name = Bartek Pacia
 	email = barpac02@gmail.com
 	signingkey = 6E3C1569F64A987B
+[github]
+	user = bartekpacia
 [core]
 	editor = vim
 [commit]
 	gpgsign = true
-[gpg]
-	program = gpg
-[github]
-	user = bartekpacia
 [push]
 	default = simple
-[credential]
-	helper = ""
+[pull]
+	ff = only
+[tag]
+	forceSignAnnotated = true
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
-[pull]
-	ff = only
+[gpg]
+	program = gpg
 [credential]
-	helper = manager-core
 	credentialStore = gpg
+	helper = manager-core
 [credential "https://dev.azure.com"]
 	useHttpPath = true
-[tag]
-	forceSignAnnotated = true
