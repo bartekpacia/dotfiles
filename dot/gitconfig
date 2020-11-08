@@ -3,7 +3,7 @@
 	email = barpac02@gmail.com
 	signingkey = 6E3C1569F64A987B
 [core]
-	editor = nano
+	editor = vim
 [commit]
 	gpgsign = true
 [gpg]
