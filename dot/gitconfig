@@ -6,6 +6,7 @@
 	user = bartekpacia
 [core]
 	editor = vim
+	autocrlf = input
 [commit]
 	gpgsign = true
 [push]
