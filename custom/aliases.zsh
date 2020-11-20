@@ -105,4 +105,4 @@ _splay_nostalgia() {
 }
 
 # Load my private scripts
-. ~/my_scripts
+# . ~/my_scripts
