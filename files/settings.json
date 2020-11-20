@@ -2,20 +2,15 @@
 // It should still be usable in newer versions, but newer versions might have additional
 // settings, help text, or changes that you will not see unless you clear this file
 // and let us generate a new one for you.
-
 // To view the default settings, hold "alt" while clicking on the "Settings" button.
 // For documentation on these settings, see: https://aka.ms/terminal-documentation
 {
   "$schema": "https://aka.ms/terminal-profiles-schema",
-
   "defaultProfile": "{00000000-0000-0000-ba54-000000000002}",
-
   // If enabled, selections are automatically copied to your clipboard.
   "copyOnSelect": false,
-
   // If enabled, formatted data is also copied to your clipboard
   "copyFormatting": false,
-
   "profiles": {
     "defaults": {
       // Put settings here that you want to apply to all profiles.
@@ -56,11 +51,32 @@
   },
   "schemes": [],
   "actions": [
-    { "command": { "action": "copy", "singleLine": false }, "keys": "ctrl+c" },
-    { "command": "paste", "keys": "ctrl+v" },
-    { "command": "find", "keys": "ctrl+f" },
-    { "command": { "action": "newTab", "index": 0 }, "keys": "ctrl+t" },
-    { "command": "closeTab", "keys": "ctrl+w" },
+    {
+      "command": {
+        "action": "copy",
+        "singleLine": false
+      },
+      "keys": "ctrl+c"
+    },
+    {
+      "command": "paste",
+      "keys": "ctrl+v"
+    },
+    {
+      "command": "find",
+      "keys": "ctrl+f"
+    },
+    {
+      "command": {
+        "action": "newTab",
+        "index": 0
+      },
+      "keys": "ctrl+t"
+    },
+    {
+      "command": "closeTab",
+      "keys": "ctrl+w"
+    },
     {
       "command": {
         "action": "splitPane",
