@@ -32,15 +32,6 @@ lenny() {
 
 # Play song passed as argument
 s() {
-  # saved_volume=$(spotify vol)
-  saved_volume="Current Spotify volume level is 50."
-  
-  if [[ "$saved_volume" =~ [0-9][0-9]?[0-9]? ]]; then
-    saved_volume=$MATCH
-  fi
-  
-  
-  spotify vol 0 >/dev/null
   spotify pause >/dev/null
   song_name="$@"
   
@@ -60,10 +51,6 @@ s() {
       spotify play $song_name
     fi
   fi
-  
-  spotify vol $saved_volume >/dev/null
-  
-  sstat
 }
 
 sprev() {
