@@ -44,6 +44,7 @@ brew 'tldr'
 
 brew 'webp'
 brew 'wget'
+brew 'youtube-dl'
 brew 'zsh'
 
 cask '1password'
