@@ -1,8 +1,8 @@
 # Projects
 alias rudy_android='cd ~/dev/android/discover-rudy-android'
 alias rudy_functions='cd ~/dev/node/discover-rudy-functions'
-alias buildcpp='clang++ -std=c++17 -stdlib=libc++ -o program.out'
-alias buildc='clang -std=c18 -o program.out'
+alias buildcpp='clang++ -std=c++17 -stdlib=libc++ -o program'
+alias buildc='clang -std=c18 -o program'
 
 alias lsd="lsd -lah"
 alias lsl="ls -lah"
