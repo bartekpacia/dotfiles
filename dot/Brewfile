@@ -41,6 +41,7 @@ brew 'rbenv'
 brew 'rustup'
 
 brew 'tldr'
+brew 'tree'
 
 brew 'webp'
 brew 'wget'
@@ -78,7 +79,7 @@ cask 'quicklook-json'
 cask 'quicklookapk'
 cask 'unity-hub'
 cask 'visual-studio-code'
-cask 'zoomus'
+cask 'zoom'
 
 # Specific taps
 
