@@ -56,22 +56,26 @@ s() {
   
   # Shortcuts for my playlists
   if [[ ! -z $song_name ]]; then
-    if [[ $song_name == "cali" ]]; then
+    if [[ "$song_name" == "cali" ]]; then
       echo "Dreaaam of Californicaaation..."
       _splay_california
-      elif [[ $song_name == "nost" ]]; then
-      echo "Playing nostalgic playlist..."
-      _splay_nostalgia
-      elif [[ $song_name == "lofi" ]]; then
+      elif [[ "$song_name" == "nosten" ]]; then
+      echo "Playing English nostalgic playlist..."
+      _splay_nostalgia_en
+      elif [[ "$song_name" == "nostpl" ]]; then
+      echo "Playing Polish nostalgic playlist..."
+      _splay_nostalgia_pl
+      elif [[ "$song_name" == "lofi" ]]; then
       echo "Just chillin..."
       _splay_lofi
     else
       echo "Searching for \"$song_name\""
-      spotify play $song_name >/dev/null
+      spotify play "$song_name" >/dev/null
     fi
   fi
   
   spotify vol $saved_volume >/dev/null
+  # printf "resuming saved_volume: $saved_volume"
 }
 
 sprev() {
@@ -107,8 +111,12 @@ _splay_lofi() {
   spotify play uri spotify:playlist:37i9dQZF1DWWQRwui0ExPn
 }
 
+_splay_nostalgia_en() {
+  spotify play uri spotify:playlist:69DBzmNjUb8nHlqIoZrqRn
+}
+
 # Play my nostalgic playlist
-_splay_nostalgia() {
+_splay_nostalgia_pl() {
   spotify play uri spotify:playlist:09cuSyQXHYTEq8OXLHmuBn
 }
 
