@@ -31,33 +31,24 @@ lenny() {
 # ------ Spotify ------
 
 testvol() {
-  # setopt local_options BASH_REMATCH
-  
   saved_volume=$(spotify vol)
-  printf "saved_volume: $saved_volume\n"
-  saved_volume="Current Spotify volume level is 47."
-  printf "saved_volume: $saved_volume\n"
+  saved_volume=$(echo $saved_volume | perl -pe 's/\x1b\[[0-9;]*[mG]//g')
+  printf "saved_volume (stripped): $saved_volume\n"
   
   regex="[0-9][0-9]?[0-9]?"
   if [[ "$saved_volume" =~ $regex ]]; then
     saved_volume=$BASH_REMATCH[1]
-    echo "match[1]: $match[1]"
-    echo "MATCH[1]: $MATCH[1]"
-    echo "BASH_REMATCH[1]: $BASH_REMATCH[1]"
+    echo "MATCH: $MATCH"
   fi
 }
 
 # Play song passed as argument
 s() {
-  saved_volume=$(spotify vol)
-  echo "saved_volume: $saved_volume"
-  # saved_volume="Current Spotify volume level is 50."
+  saved_volume=$(spotify vol | perl -pe 's/\x1b\[[0-9;]*[mG]//g')
   
   if [[ "$saved_volume" =~ '[0-9][0-9]?[0-9]?' ]]; then
     saved_volume=$MATCH
-    echo "saved_volume: $saved_volume"
   fi
-  
   
   spotify vol 0 >/dev/null
   spotify pause >/dev/null
@@ -80,11 +71,7 @@ s() {
     fi
   fi
   
-  echo "setting volume to $saved_volume"
   spotify vol $saved_volume >/dev/null
-  spotify vol
-  
-  # sstat
 }
 
 sprev() {
