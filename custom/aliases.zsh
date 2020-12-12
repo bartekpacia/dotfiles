@@ -30,6 +30,18 @@ lenny() {
   fi
 }
 
+# ------ IntelliJ IDEs ------
+
+if [ -f ~/dotfiles/idea/idea ]; then
+  alias idea="~/dotfiles/idea/idea"
+else
+  echo "idea not found"
+fi
+
+if [ -f ~/dotfiles/idea/pycharm ]; then
+  alias pycharm="~/dotfiles/idea/pycharm"
+fi
+
 # ------ Spotify ------
 
 testvol() {

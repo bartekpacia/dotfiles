@@ -24,6 +24,6 @@
 	program = gpg
 [credential]
 	credentialStore = gpg
-	helper = git-credential-manager-core
+	helper = manager-core
 [credential "https://dev.azure.com"]
 	useHttpPath = true
