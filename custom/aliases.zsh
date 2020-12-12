@@ -22,9 +22,11 @@ zzzz() {
 
 lenny() {
   if [ "$1" = "sad" ]; then
-    echo "( ͡° ʖ̯ ͡°)"
+    printf "( ͡° ʖ̯ ͡°)\n"
+    elif [ "$1" = "sly" ]; then
+    printf "( ͡° ͜ʖ ͡°)\n"
   else
-    echo "( ͡° ͜ʖ ͡°)"
+    printf "error: name the lenny!\n"
   fi
 }
 
