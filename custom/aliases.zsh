@@ -65,8 +65,10 @@ testvol() {
   fi
 }
 
+alias s="splay & disown"
+
 # Play song passed as argument
-s() {
+splay() {
   saved_volume=$(spotify vol | perl -pe 's/\x1b\[[0-9;]*[mG]//g')
   
   if [[ "$saved_volume" =~ '[0-9][0-9]?[0-9]?' ]]; then
