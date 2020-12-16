@@ -89,7 +89,6 @@ brew 'croc'
 # Microsoft
 cask 'microsoft-word'
 cask 'microsoft-excel'
-cask 'microsoft-powerpoint'
 cask 'microsoft-teams'
 cask 'onedrive'
 
