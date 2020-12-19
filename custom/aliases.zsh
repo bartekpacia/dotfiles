@@ -4,13 +4,12 @@ alias rudy_functions='cd ~/dev/node/discover-rudy-functions'
 alias buildcpp='clang++ -std=c++17 -stdlib=libc++ -o program'
 alias buildc='clang -std=c18 -o program'
 
-
-alias lsl="ls -lah"
-alias lso="ls -oah"
 alias cls="clear"
 
 if command -v lsd &>/dev/null; then
   alias lsd="lsd -lah"
+else
+  alias lsd="ls -lah"
 fi
 
 if command -v bat &>/dev/null; then
@@ -43,8 +42,6 @@ lenny() {
 
 if [ -f ~/dotfiles/idea/idea ]; then
   alias idea="~/dotfiles/idea/idea"
-else
-  echo "idea not found"
 fi
 
 if [ -f ~/dotfiles/idea/pycharm ]; then
