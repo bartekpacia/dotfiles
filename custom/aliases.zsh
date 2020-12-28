@@ -48,6 +48,10 @@ if [ -f ~/dotfiles/idea/pycharm ]; then
   alias pycharm="~/dotfiles/idea/pycharm"
 fi
 
+if [ -f ~/dotfiles/idea/clion ]; then
+  alias clion="~/dotfiles/idea/clion"
+fi
+
 # ------ Spotify ------
 
 testvol() {
