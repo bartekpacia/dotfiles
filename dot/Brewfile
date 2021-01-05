@@ -1,3 +1,5 @@
+brew 'avrdude'
+
 brew 'bat'
 brew 'bundletool'
 
@@ -79,6 +81,7 @@ cask 'quicklook-json'
 cask 'quicklookapk'
 # cask 'unity-hub'
 cask 'visual-studio-code'
+cask 'vlc'
 cask 'zoom'
 
 # Specific taps
@@ -116,6 +119,9 @@ brew 'speedtest'
 
 tap 'microsoft/git'
 cask 'git-credential-manager-core'
+
+tap 'osx-cross/avr'
+brew 'avr-gcc'
 
 # mas 'Pages', id: 409201541
 # mas 'Numbers', id: 409203825
