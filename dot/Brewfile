@@ -77,7 +77,7 @@ cask 'qlimagesize'
 cask 'qlstephen'
 cask 'quicklook-json'
 cask 'quicklookapk'
-cask 'unity-hub'
+# cask 'unity-hub'
 cask 'visual-studio-code'
 cask 'zoom'
 
@@ -90,7 +90,7 @@ brew 'croc'
 cask 'microsoft-word'
 cask 'microsoft-excel'
 cask 'microsoft-teams'
-cask 'onedrive'
+# cask 'onedrive'
 
 # OpenJDK 8 for use with android-studio
 tap 'AdoptopenJDK/openjdk'
@@ -117,10 +117,10 @@ brew 'speedtest'
 tap 'microsoft/git'
 cask 'git-credential-manager-core'
 
-mas 'Keynote', id: 409183694
+# mas 'Pages', id: 409201541
+# mas 'Numbers', id: 409203825
+# mas 'Keynote', id: 409183694
 mas 'Notability', id: 736189492
-mas 'Numbers', id: 409203825
-mas 'Pages', id: 409201541
 mas 'Telegram', id: 747648890
 mas 'Slack', id: 803453959
 mas 'iMovie', id: 408981434
