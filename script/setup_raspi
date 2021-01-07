@@ -2,15 +2,29 @@
 set -euo pipefail
 IFS=$'\n\t'
 
-sudo apt install git python3
-
 sudo apt update
 sudo apt upgrade
 
-sudo apt install zsh htop neofetch
+SOFTWARE=(
+  git
+  htop
+  neofetch
+  python3
+  zsh
+)
 
+sudo apt install $(SOFTWARE)
 
-git clone https://github.com/zyedidia/micro
-cd micro
-make build
-sudo mv micro /usr/local/bin # optional
+# Create my dev dir structure
+
+mkdir -p ~/dev/go
+mkdir -p ~/dev/node
+mkdir -p ~/dev/python
+mkdir -p ~/dev/cpp
+
+# Install Micro editor (https://github.com/zyedidia/micro)
+if ! command -v micro &>/dev/null; then
+  git clone https://github.com/zyedidia/micro ~/dev/go
+  (cd ~/dev/go/micro && make build)
+  sudo mv ~/dev/go/micro/micro /usr/local/bin
+fi
