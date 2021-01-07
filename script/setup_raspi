@@ -1,7 +1,16 @@
 #!/bin/bash
-set -e
+set -euo pipefail
+IFS=$'\n\t'
+
+sudo apt install git python3
 
 sudo apt update
 sudo apt upgrade
 
 sudo apt install zsh htop neofetch
+
+
+git clone https://github.com/zyedidia/micro
+cd micro
+make build
+sudo mv micro /usr/local/bin # optional
