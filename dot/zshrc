@@ -129,9 +129,9 @@ export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='micro'
+  export EDITOR='nano'
 else
-  export EDITOR='micro'
+  export EDITOR='nano'
 fi
 
 # Heroku autocomplete setup
@@ -139,3 +139,7 @@ HEROKU_AC_ZSH_SETUP_PATH=~/Library/Caches/heroku/autocomplete/zsh_setup
 if [ -f $HEROKU_AC_ZSH_SETUP_PATH ]; then
   source $HEROKU_AC_ZSH_SETUP_PATH;
 fi
+
+
+# TODO: Source local files if present
+source /opt/ros/melodic/setup.zsh
