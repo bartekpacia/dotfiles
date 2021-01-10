@@ -141,5 +141,9 @@ if [ -f $HEROKU_AC_ZSH_SETUP_PATH ]; then
 fi
 
 
-# TODO: Source local files if present
-source /opt/ros/melodic/setup.zsh
+# Source local, gitignored files
+if [ -d local ]; then
+  for file in local/*.zsh; do
+    source "$file"
+  done
+fi
