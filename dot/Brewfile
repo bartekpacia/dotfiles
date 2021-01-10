@@ -8,6 +8,7 @@ brew 'exiftool'
 brew 'coreutils'
 brew 'clang-format'
 brew 'fd'
+brew 'fzf'
 brew 'ffmpeg'
 
 brew 'gh'
