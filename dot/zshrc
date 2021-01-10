@@ -3,6 +3,8 @@ ZSH=~/.oh-my-zsh
 ZSH_CONFIG=~/.zshrc
 ZSH_CUSTOM=$ZSH/custom
 
+DOTFILES=~/dotfiles
+
 # GPG config (see https://help.github.com/en/github/authenticating-to-github/telling-git-about-your-signing-key)
 export GPG_TTY=$(tty)
 
@@ -142,8 +144,8 @@ fi
 
 
 # Source local, gitignored files
-if [ -d local ]; then
-  for file in local/*.zsh; do
+if [ -d $DOTFILES/local ]; then
+  for file in $DOTFILES/local/*.zsh; do
     source "$file"
   done
 fi
