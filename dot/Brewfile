@@ -131,7 +131,7 @@ brew 'avr-gcc'
 # mas 'Keynote', id: 409183694
 mas 'Notability', id: 736189492
 mas 'Telegram', id: 747648890
-mas 'Slack', id: 803453959
+mas 'The Unarchiver', id: 425424353
 mas 'iMovie', id: 408981434
 mas 'Amphetamine', id: 937984704
 mas 'Termius - SSH client', id: 1176074088
