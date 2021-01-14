@@ -58,6 +58,7 @@ cask '1password-cli'
 
 cask 'android-file-transfer'
 cask 'arduino'
+cask 'balenaetcher'
 cask 'blender'
 cask 'brooklyn'
 cask 'daisydisk'
