@@ -44,6 +44,10 @@ printf "setup: symlinking custom oh-my-zsh script aliases.zsh..."
 ln -sfn ~/dotfiles/custom/aliases.zsh ~/.oh-my-zsh/custom/aliases.zsh
 printf "ok\n"
 
+printf "setup: symlinking custom oh-my-zsh script ssh_comp.zsh..."
+ln -sfn ~/dotfiles/custom/ssh_comp.zsh ~/.oh-my-zsh/custom/ssh_comp.zsh
+printf "ok\n"
+
 if [ "$1" = "--no-reinstall" ]; then
   printf "setup: --no-reinstall passed, aborted reinstalling custom plugins\n"
   exit 0
