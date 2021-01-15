@@ -4,6 +4,28 @@ set -e
 # This script is designed to be run as part of the strap bootstrapping process.
 # Assume that git and brew are installed. Assume that dotfiles repo is in ~.
 
+reinstall() {
+  printf "setup: reinstalling zsh-autosuggestions..."
+  rm -rf ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+  git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions &>/dev/null
+  printf "ok\n"
+  
+  printf "setup: reinstalling zsh-syntax-highlighting..."
+  rm -rf ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting &>/dev/null
+  printf "ok\n"
+  
+  printf "setup: reinstalling zsh-completions..."
+  rm -rf ~/.oh-my-zsh/custom/plugins/zsh-completions
+  git clone https://github.com/zsh-users/zsh-completions ~/.oh-my-zsh/custom/plugins/zsh-completions &>/dev/null
+  printf "ok\n"
+  
+  printf "setup: reinstalling zsh-apple-touchbar..."
+  rm -rf ~/.oh-my-zsh/custom/plugins/zsh-apple-touchbar
+  git clone https://github.com/zsh-users/zsh-apple-touchbar.git ~/.oh-my-zsh/custom/plugins/zsh-apple-touchbar &>/dev/null
+  printf "ok\n"
+}
+
 # Symlink dot/* into home directory as hidden files
 printf "setup: symlinking dotfiles..."
 for f in $(ls -d ~/dotfiles/dot/*); do
@@ -40,38 +62,18 @@ for f in $(ls -d ~/dotfiles/custom/themes/*); do
 done
 printf "ok\n"
 
-printf "setup: symlinking custom oh-my-zsh script aliases.zsh..."
-ln -sfn ~/dotfiles/custom/aliases.zsh ~/.oh-my-zsh/custom/aliases.zsh
-printf "ok\n"
-
-printf "setup: symlinking custom oh-my-zsh script ssh_comp.zsh..."
-ln -sfn ~/dotfiles/custom/ssh_comp.zsh ~/.oh-my-zsh/custom/ssh_comp.zsh
+printf "setup: symlinking custom oh-my-zsh scripts..."
+for f in $(ls -d ~/dotfiles/custom/*.zsh); do
+  ln -sfn $f ~/.oh-my-zsh/custom/$(basename $f)
+done
 printf "ok\n"
 
 if [ "$1" = "--no-reinstall" ]; then
   printf "setup: --no-reinstall passed, aborted reinstalling custom plugins\n"
-  exit 0
+else
+  printf "setup: --no-reinstall not passed, proceeding to reinstall custom plugins\n"
+  reinstall
 fi
-
-printf "setup: reinstalling zsh-autosuggestions..."
-rm -rf ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions &>/dev/null
-printf "ok\n"
-
-printf "setup: reinstalling zsh-syntax-highlighting..."
-rm -rf ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting &>/dev/null
-printf "ok\n"
-
-printf "setup: reinstalling zsh-completions..."
-rm -rf ~/.oh-my-zsh/custom/plugins/zsh-completions
-git clone https://github.com/zsh-users/zsh-completions ~/.oh-my-zsh/custom/plugins/zsh-completions &>/dev/null
-printf "ok\n"
-
-printf "setup: reinstalling zsh-apple-touchbar..."
-rm -rf ~/.oh-my-zsh/custom/plugins/zsh-apple-touchbar
-git clone https://github.com/zsh-users/zsh-apple-touchbar.git ~/.oh-my-zsh/custom/plugins/zsh-apple-touchbar &>/dev/null
-printf "ok\n"
 
 # The below asks for a password, so it's annoying
 #
