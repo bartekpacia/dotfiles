@@ -5,6 +5,8 @@ brew 'bundletool'
 
 brew 'cmake'
 
+brew 'doxygen'
+
 brew 'exif'
 brew 'exiftool'
 brew 'coreutils'
