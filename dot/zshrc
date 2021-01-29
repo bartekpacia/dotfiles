@@ -63,6 +63,9 @@ export PATH="$ANDROID_SDK_ROOT/cmdline-tools/tools/lib:$PATH"
 export PATH="$ANDROID_SDK_ROOT/platform-tools:$PATH"
 export PATH="$ANDROID_SDK_ROOT/emulator:$PATH"
 
+# Raspberry Pi Pico
+export PICO_SDK_PATH="$HOME/pico-sdk"
+
 # Java
 # on Linux
 # export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
