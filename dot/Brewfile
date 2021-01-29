@@ -3,6 +3,8 @@ brew 'avrdude'
 brew 'bat'
 brew 'bundletool'
 
+brew 'cmake'
+
 brew 'exif'
 brew 'exiftool'
 brew 'coreutils'
@@ -126,6 +128,9 @@ cask 'git-credential-manager-core'
 
 tap 'osx-cross/avr'
 brew 'avr-gcc'
+
+tap 'ArmMbed/homebrew-formulae'
+brew 'arm-none-eabi-gcc'
 
 # mas 'Pages', id: 409201541
 # mas 'Numbers', id: 409203825
