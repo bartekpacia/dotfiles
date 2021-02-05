@@ -1,6 +1,5 @@
 # ------ General ------
 alias cls="clear"
-alias s="ssh"
 
 if command -v lsd &>/dev/null; then
   alias lsd="lsd -lah"

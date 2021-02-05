@@ -1,4 +1,4 @@
-alias sp="spplay & disown"
+alias s="spplay & disown"
 
 # ------ Spotify ------
 
