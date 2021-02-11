@@ -46,6 +46,8 @@ lenny() {
     printf "( ͡° ʖ̯ ͡°)\n"
     elif [ "$1" = "sly" ]; then
     printf "( ͡° ͜ʖ ͡°)\n"
+    elif [ "$1" = "idk" ]; then
+    printf "¯\_(ツ)_/¯\n"
   else
     printf "error: name the lenny!\n"
   fi
