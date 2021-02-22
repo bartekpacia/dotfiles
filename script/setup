@@ -71,7 +71,6 @@ printf "ok\n"
 if [ "$1" = "--no-reinstall" ]; then
   printf "setup: --no-reinstall passed, aborted reinstalling custom plugins\n"
 else
-  printf "setup: --no-reinstall not passed, proceeding to reinstall custom plugins\n"
   reinstall
 fi
 

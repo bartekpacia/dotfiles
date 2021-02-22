@@ -1,7 +1,0 @@
-#!/bin/bash
-
-for name do
-  size=$(stat -f%z $name)
-  size=$(($size / 1000))
-  identify -format "%f, %G, $size kB\n" "$name"
-done
