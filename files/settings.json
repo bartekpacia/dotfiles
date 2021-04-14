@@ -2,14 +2,13 @@
 // It should still be usable in newer versions, but newer versions might have additional
 // settings, help text, or changes that you will not see unless you clear this file
 // and let us generate a new one for you.
+
 // To view the default settings, hold "alt" while clicking on the "Settings" button.
 // For documentation on these settings, see: https://aka.ms/terminal-documentation
 {
   "$schema": "https://aka.ms/terminal-profiles-schema",
-  "defaultProfile": "{00000000-0000-0000-ba54-000000000002}",
-  // If enabled, selections are automatically copied to your clipboard.
-  "copyOnSelect": false,
-  // If enabled, formatted data is also copied to your clipboard
+  "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+  "copyOnSelect": true,
   "copyFormatting": false,
   "profiles": {
     "defaults": {
@@ -36,12 +35,6 @@
         "hidden": false
       },
       {
-        "guid": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
-        "name": "Ubuntu-20.04",
-        "source": "Windows.Terminal.Wsl",
-        "hidden": false
-      },
-      {
         "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
         "name": "Azure Cloud Shell",
         "source": "Windows.Terminal.Azure",
@@ -51,32 +44,11 @@
   },
   "schemes": [],
   "actions": [
-    {
-      "command": {
-        "action": "copy",
-        "singleLine": false
-      },
-      "keys": "ctrl+c"
-    },
-    {
-      "command": "paste",
-      "keys": "ctrl+v"
-    },
-    {
-      "command": "find",
-      "keys": "ctrl+f"
-    },
-    {
-      "command": {
-        "action": "newTab",
-        "index": 0
-      },
-      "keys": "ctrl+t"
-    },
-    {
-      "command": "closeTab",
-      "keys": "ctrl+w"
-    },
+    { "command": { "action": "copy", "singleLine": false }, "keys": "ctrl+c" },
+    { "command": "paste", "keys": "ctrl+v" },
+    { "command": "find", "keys": "ctrl+f" },
+    { "command": { "action": "newTab", "index": 0 }, "keys": "ctrl+t" },
+    { "command": "closeTab", "keys": "ctrl+w" },
     {
       "command": {
         "action": "splitPane",
