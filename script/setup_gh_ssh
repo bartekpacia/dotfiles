@@ -1,8 +1,0 @@
-#!/bin/bash
-set -e
-
-printf "setup_gh_ssh: generating id_rsa_github..."
-ssh-keygen -t rsa -b 4096 -C "barpac02@gmail.com"
-printf "ok\n"
-
-cat ~/.ssh/id_rsa_github.pub

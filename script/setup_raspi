@@ -6,11 +6,11 @@ sudo apt update
 sudo apt upgrade
 
 SOFTWARE=(
-  git
-  htop
-  neofetch
-  python3
-  zsh
+    git
+    htop
+    neofetch
+    python3
+    zsh
 )
 
 sudo apt install $(SOFTWARE)
@@ -24,7 +24,7 @@ mkdir -p ~/dev/cpp
 
 # Install Micro editor (https://github.com/zyedidia/micro)
 if ! command -v micro &>/dev/null; then
-  git clone https://github.com/zyedidia/micro ~/dev/go
-  (cd ~/dev/go/micro && make build)
-  sudo mv ~/dev/go/micro/micro /usr/local/bin
+    git clone https://github.com/zyedidia/micro ~/dev/go
+    (cd ~/dev/go/micro && make build)
+    sudo mv ~/dev/go/micro/micro /usr/local/bin
 fi
