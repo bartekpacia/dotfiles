@@ -99,8 +99,8 @@ tap 'schollz/tap'
 brew 'croc'
 
 # Microsoft
-cask 'microsoft-word'
-cask 'microsoft-excel'
+# cask 'microsoft-word'
+# cask 'microsoft-excel'
 cask 'microsoft-teams'
 # cask 'onedrive'
 
@@ -121,7 +121,7 @@ tap 'heroku/brew'
 brew 'heroku'
 
 tap 'dart-lang/dart'
-brew 'dart'
+# brew 'dart'
 
 tap 'teamookla/speedtest'
 brew 'speedtest'
