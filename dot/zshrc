@@ -66,6 +66,9 @@ export PATH="$ANDROID_SDK_ROOT/emulator:$PATH"
 # Raspberry Pi Pico
 export PICO_SDK_PATH="$HOME/pico-sdk"
 
+# avr-gcc
+export PATH="/usr/local/opt/avr-gcc@11/bin:$PATH"
+
 # # # # # # # # # # # # # #
 # J a v a
 # # # # # # # # # # # # # #

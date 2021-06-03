@@ -5,38 +5,49 @@ set -e
 # Assume that git and brew are installed. Assume that dotfiles repo is in ~.
 
 reinstall() {
-  printf "setup: reinstalling zsh-autosuggestions..."
-  rm -rf ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
-  git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions &>/dev/null
-  printf "ok\n"
-  
-  printf "setup: reinstalling zsh-syntax-highlighting..."
-  rm -rf ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
-  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting &>/dev/null
-  printf "ok\n"
-  
-  printf "setup: reinstalling zsh-completions..."
-  rm -rf ~/.oh-my-zsh/custom/plugins/zsh-completions
-  git clone https://github.com/zsh-users/zsh-completions ~/.oh-my-zsh/custom/plugins/zsh-completions &>/dev/null
-  printf "ok\n"
-  
-  printf "setup: reinstalling zsh-apple-touchbar..."
-  rm -rf ~/.oh-my-zsh/custom/plugins/zsh-apple-touchbar
-  git clone https://github.com/zsh-users/zsh-apple-touchbar.git ~/.oh-my-zsh/custom/plugins/zsh-apple-touchbar &>/dev/null
-  printf "ok\n"
+    printf "setup: reinstalling zsh-autosuggestions..."
+    rm -rf ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+    git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions &>/dev/null
+    printf "ok\n"
+    
+    printf "setup: reinstalling zsh-syntax-highlighting..."
+    rm -rf ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting &>/dev/null
+    printf "ok\n"
+    
+    printf "setup: reinstalling zsh-completions..."
+    rm -rf ~/.oh-my-zsh/custom/plugins/zsh-completions
+    git clone https://github.com/zsh-users/zsh-completions ~/.oh-my-zsh/custom/plugins/zsh-completions &>/dev/null
+    printf "ok\n"
+    
+    printf "setup: reinstalling zsh-apple-touchbar..."
+    rm -rf ~/.oh-my-zsh/custom/plugins/zsh-apple-touchbar
+    git clone https://github.com/zsh-users/zsh-apple-touchbar.git ~/.oh-my-zsh/custom/plugins/zsh-apple-touchbar &>/dev/null
+    printf "ok\n"
 }
 
 # Symlink dot/* into home directory as hidden files
-printf "setup: symlinking dotfiles..."
+printf "setup: symlinking hidden files..."
 for f in $(ls -d ~/dotfiles/dot/*); do
-  ln -sfn $f ~/.$(basename $f);
+    ln -sfn $f ~/.$(basename $f);
 done
 printf "ok\n"
 
 # Symlink files/* into home directory as regular files
 printf "setup: symlinking normal files..."
 for f in $(ls -d ~/dotfiles/files/*); do
-  ln -sfn $f ~/$(basename $f);
+    ln -sfn $f ~/$(basename $f);
+done
+printf "ok\n"
+
+# Symlink ssh/* (my common SSH config) into ~/.ssh as regular files
+printf "setup: symlinking ssh files..."
+for f in $(ls -d ~/dotfiles/ssh/*); do
+    if [ ! -d ~/.ssh ]; then
+        mkdir ~/.ssh
+    fi
+    
+    ln -sfn $f ~/.ssh/$(basename $f);
 done
 printf "ok\n"
 
@@ -44,34 +55,34 @@ printf "ok\n"
 export KEEP_ZSHRC="yes"
 export RUNZSH="no"
 if [ ! -d ~/.oh-my-zsh ]; then
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 else
-  printf "setup: aborted installation of oh-my-zsh because directory ~/.oh-my-zsh/ already exists\n"
+    printf "setup: aborted installation of oh-my-zsh because directory ~/.oh-my-zsh/ already exists\n"
 fi
 
 printf "setup: symlinking custom oh-my-zsh plugins..."
 for f in $(ls -d ~/dotfiles/custom/plugins/*); do
-  ln -sfn $f ~/.oh-my-zsh/custom/plugins/$(basename $f)
+    ln -sfn $f ~/.oh-my-zsh/custom/plugins/$(basename $f)
 done
 printf "ok\n"
 
 # Symlink oh-my-zsh custom themes
 printf "setup: symlinking custom oh-my-zsh themes..."
 for f in $(ls -d ~/dotfiles/custom/themes/*); do
-  ln -sfn $f ~/.oh-my-zsh/custom/themes/$(basename $f)
+    ln -sfn $f ~/.oh-my-zsh/custom/themes/$(basename $f)
 done
 printf "ok\n"
 
 printf "setup: symlinking custom oh-my-zsh scripts..."
 for f in $(ls -d ~/dotfiles/custom/*.zsh); do
-  ln -sfn $f ~/.oh-my-zsh/custom/$(basename $f)
+    ln -sfn $f ~/.oh-my-zsh/custom/$(basename $f)
 done
 printf "ok\n"
 
 if [ "$1" = "--no-reinstall" ]; then
-  printf "setup: --no-reinstall passed, aborted reinstalling custom plugins\n"
+    printf "setup: --no-reinstall passed, aborted reinstalling custom plugins\n"
 else
-  reinstall
+    reinstall
 fi
 
 # The below asks for a password, so it's annoying
