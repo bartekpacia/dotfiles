@@ -19,11 +19,6 @@ reinstall() {
     rm -rf ~/.oh-my-zsh/custom/plugins/zsh-completions
     git clone https://github.com/zsh-users/zsh-completions ~/.oh-my-zsh/custom/plugins/zsh-completions &>/dev/null
     printf "ok\n"
-    
-    printf "setup: reinstalling zsh-apple-touchbar..."
-    rm -rf ~/.oh-my-zsh/custom/plugins/zsh-apple-touchbar
-    git clone https://github.com/zsh-users/zsh-apple-touchbar.git ~/.oh-my-zsh/custom/plugins/zsh-apple-touchbar &>/dev/null
-    printf "ok\n"
 }
 
 # Symlink dot/* into home directory as hidden files
