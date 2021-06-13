@@ -8,7 +8,6 @@ DOTFILES=~/dotfiles
 # GPG config (see https://help.github.com/en/github/authenticating-to-github/telling-git-about-your-signing-key)
 export GPG_TTY=$(tty)
 
-# ZSH_THEME="robbyrussell"
 ZSH_THEME="mlh"
 
 # Uncomment the following line to use hyphen-insensitive completion.
@@ -21,18 +20,6 @@ export UPDATE_ZSH_DAYS=7
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS=true
 
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# You can set one of the optional three formats:
-# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# or set a custom format using the strftime function format specifications,
-# see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
 plugins=(
     git
     osx
@@ -48,12 +35,8 @@ if [ -d $ZSH ]; then
     source $ZSH/oh-my-zsh.sh
 fi
 
-# Flutter setup
+# Flutter
 export PATH="$HOME/flutter/bin:$PATH"
-
-# Android setup
-# export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
-# export ANDROID_HOME="$HOME/Library/Android/sdk"
 
 # Android
 export ANDROID_SDK_ROOT="$HOME/androidsdk"
@@ -108,12 +91,12 @@ fi
 # G o l a n g
 # # # # # # # # # # # # # #
 
+# when installed directly from the webpage (no thru the pkg manager)
 export PATH="/usr/local/go/bin:$PATH"
 
 # 3 exports below are deprecated and should be removed
 export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
-export PATH="$GOBIN":$PATH
 
 # # # # # # # # # # # # # #
 # R u s t
@@ -153,8 +136,7 @@ if [ -f $HEROKU_AC_ZSH_SETUP_PATH ]; then
     source $HEROKU_AC_ZSH_SETUP_PATH;
 fi
 
-
-# Source local, gitignored files
+# Source local gitignored files (not tracked by git)
 if [ -d $DOTFILES/local ]; then
     for file in $DOTFILES/local/*.zsh; do
         source "$file"
