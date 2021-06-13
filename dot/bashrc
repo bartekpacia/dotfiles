@@ -12,9 +12,9 @@ alias gs="git status"
 alias gmnff="git merge --no-ff"
 
 if command -v lsd &>/dev/null; then
-  alias lsd="lsd -lah"
+    alias lsd="lsd -lah"
 else
-  alias lsd="ls -lah"
+    alias lsd="ls -lah"
 fi
 
 alias cls="clear"
