@@ -36,21 +36,17 @@ fi
 
 # ------ IntelliJ IDEs ------
 
-if [ -f ~/dotfiles/idea/idea ]; then
-    alias idea="~/dotfiles/idea/idea"
+if [ -f ~/dotfiles/local/idea ]; then
+    alias idea="~/dotfiles/local/idea"
 fi
 
-if [ -f ~/dotfiles/idea/pycharm ]; then
-    alias pycharm="~/dotfiles/idea/pycharm"
+if [ -f ~/dotfiles/local/pycharm ]; then
+    alias pycharm="~/dotfiles/local/pycharm"
 fi
 
-if [ -f ~/dotfiles/idea/clion ]; then
-    alias clion="~/dotfiles/idea/clion"
+if [ -f ~/dotfiles/local/clion ]; then
+    alias clion="~/dotfiles/local/clion"
 fi
-
-# ------ C/C++ ------
-alias buildcpp='g++ -std=c++17 -stdlib=libc++'
-alias buildc='gcc -std=c18 -o'
 
 # ------ Shit ------
 
