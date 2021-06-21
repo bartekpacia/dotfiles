@@ -22,7 +22,7 @@ PRINT_TIME=false
 AT_SYMBOL=" at "
 IN_SYMBOL=" in "
 ON_SYMBOL=" on "
-SHELL_SYMBOL="$"
+SHELL_SYMBOL="$ "
 
 # colors
 USER_COLOR="%F{001}"
@@ -59,6 +59,10 @@ exit_code() {
   fi
 }
 
+prompt_end() {
+  printf "\n$SHELL_SYMBOL"
+}
+
 # Set git_prompt_info text
 ZSH_THEME_GIT_PROMPT_PREFIX="${ON_SYMBOL}${BRANCH_COLOR}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%f"
@@ -66,5 +70,5 @@ ZSH_THEME_GIT_PROMPT_DIRTY=""
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 
 # %B and %b make the text bold
-PROMPT='%b$(username)$AT_SYMBOL$(device)$IN_SYMBOL$(directory)$(git_prompt_info)%b $SHELL_SYMBOL '
+PROMPT='%b$(username)$AT_SYMBOL$(device)$IN_SYMBOL$(directory)$(git_prompt_info)%b$(prompt_end)'
 RPROMPT="$(exit_code)$(current_time)"
