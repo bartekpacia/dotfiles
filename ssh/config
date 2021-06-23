@@ -8,6 +8,11 @@ Host home_raspi4b
 	User pi
 	IdentityFile ~/.ssh/id_rsa_raspi
 
+Host home_raspizero
+	HostName 192.168.1.111
+	User pi
+	IdentityFile ~/.ssh/id_rsa_raspi
+
 Host home_raspi400
 	HostName 192.168.1.112
 	User pi
@@ -26,7 +31,10 @@ Host knei_jetson
 	Port 8887
 
 Host *
+	IgnoreUnknown UseKeychain
 	ServerAliveInterval 5
 	StrictHostKeyChecking ask
-	UseKeychain yes
 	AddKeysToAgent yes
+	
+	# only on macOS
+	UseKeychain yes
