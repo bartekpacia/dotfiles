@@ -7,17 +7,17 @@ set -e
 reinstall() {
     printf "setup: reinstalling zsh-autosuggestions..."
     rm -rf ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
-    git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions &>/dev/null
+    git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions 1> /dev/null 2>&1
     printf "ok\n"
     
     printf "setup: reinstalling zsh-syntax-highlighting..."
     rm -rf ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
-    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting &>/dev/null
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting 1> /dev/null 2>&1
     printf "ok\n"
     
     printf "setup: reinstalling zsh-completions..."
     rm -rf ~/.oh-my-zsh/custom/plugins/zsh-completions
-    git clone https://github.com/zsh-users/zsh-completions ~/.oh-my-zsh/custom/plugins/zsh-completions &>/dev/null
+    git clone https://github.com/zsh-users/zsh-completions ~/.oh-my-zsh/custom/plugins/zsh-completions 1> /dev/null 2>&1
     printf "ok\n"
 }
 
