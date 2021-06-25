@@ -5,6 +5,8 @@ ZSH_CUSTOM=$ZSH/custom
 
 DOTFILES=~/dotfiles
 
+export MAKEFLAGS="-j 8"
+
 export MLH_AT_SYMBOL=" at "
 export MLH_IN_SYMBOL=" in "
 export MLH_ON_SYMBOL=" on "
