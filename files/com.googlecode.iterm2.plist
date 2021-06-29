@@ -165,6 +165,8 @@
 	<true/>
 	<key>HotkeyModifiers</key>
 	<integer>524288</integer>
+	<key>JiggleTTYSizeOnClearBuffer</key>
+	<true/>
 	<key>LeftCommand</key>
 	<integer>7</integer>
 	<key>LeftOption</key>
@@ -986,6 +988,8 @@
 	<key>PromptOnQuitEvenIfThereAreNoWindows</key>
 	<false/>
 	<key>QuitWhenAllWindowsClosed</key>
+	<false/>
+	<key>SaveScrollBufferWhenClearing</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
 	<false/>
