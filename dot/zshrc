@@ -103,6 +103,7 @@ export PATH="/usr/local/go/bin:$PATH"
 # 3 exports below are deprecated and should be removed
 export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
+export PATH="$GOBIN:$PATH"
 
 # # # # # # # # # # # # # #
 # R u s t
