@@ -4,17 +4,17 @@ Host github.com
 	IdentityFile ~/.ssh/id_ed25519_github
 
 Host home_raspi4b
-	HostName 192.168.1.110
+	HostName 192.168.0.110
 	User pi
 	IdentityFile ~/.ssh/id_rsa_raspi
 
 Host home_raspizero
-	HostName 192.168.1.111
+	HostName 192.168.0.111
 	User pi
 	IdentityFile ~/.ssh/id_rsa_raspi
 
 Host home_raspi400
-	HostName 192.168.1.112
+	HostName 192.168.0.112
 	User pi
 	IdentityFile ~/.ssh/id_rsa_raspi
 
