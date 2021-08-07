@@ -45,11 +45,12 @@ brew 'openvpn'
 brew 'pyenv'
 
 brew 'rbenv'
+brew 'rg'
 brew 'rustup'
 
 brew 'shellcheck'
 
-brew 'tldr'
+brew 'tealdeer'
 brew 'tree'
 
 brew 'webp'
@@ -63,7 +64,6 @@ cask '1password-cli'
 cask 'android-file-transfer'
 cask 'arduino'
 cask 'balenaetcher'
-cask 'blender'
 cask 'brooklyn'
 cask 'daisydisk'
 cask 'discord'
@@ -79,7 +79,6 @@ cask 'mos'
 cask 'notion'
 cask 'openvpn-connect'
 cask 'postman'
-# cask 'sequel-pro'
 cask 'sf-symbols'
 cask 'skype'
 cask 'spotify'
@@ -99,10 +98,7 @@ tap 'schollz/tap'
 brew 'croc'
 
 # Microsoft
-# cask 'microsoft-word'
-# cask 'microsoft-excel'
 cask 'microsoft-teams'
-# cask 'onedrive'
 
 # OpenJDK 8 for use with android-studio
 tap 'AdoptopenJDK/openjdk'
