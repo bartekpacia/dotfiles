@@ -119,6 +119,9 @@ brew 'heroku'
 tap 'dart-lang/dart'
 # brew 'dart'
 
+tap 'leoafarias/fvm'
+brew 'fvm'
+
 tap 'teamookla/speedtest'
 brew 'speedtest'
 
