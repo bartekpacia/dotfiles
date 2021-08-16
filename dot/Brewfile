@@ -9,8 +9,11 @@ brew 'doxygen'
 
 brew 'exif'
 brew 'exiftool'
+
 brew 'coreutils'
+brew 'cocoapods'
 brew 'clang-format'
+
 brew 'fd'
 brew 'fzf'
 brew 'ffmpeg'
@@ -25,6 +28,8 @@ brew 'htop'
 
 brew 'imagemagick'
 brew 'ios-deploy'
+
+brew 'jq'
 
 brew 'kotlin'
 brew 'ktlint'
@@ -80,7 +85,7 @@ cask 'notion'
 cask 'openvpn-connect'
 cask 'postman'
 cask 'sf-symbols'
-cask 'skype'
+cask 'slack'
 cask 'spotify'
 cask 'raspberry-pi-imager'
 cask 'qlimagesize'
@@ -96,9 +101,6 @@ cask 'zoom'
 
 tap 'schollz/tap'
 brew 'croc'
-
-# Microsoft
-cask 'microsoft-teams'
 
 # OpenJDK 8 for use with android-studio
 tap 'AdoptopenJDK/openjdk'

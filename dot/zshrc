@@ -17,6 +17,9 @@ export GPG_TTY=$(tty)
 
 ZSH_THEME="mlh"
 
+# force using "cd"
+unsetopt auto_cd
+
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
@@ -42,7 +45,9 @@ if [ -d $ZSH ]; then
 fi
 
 # Flutter
-export PATH="$HOME/flutter/bin:$PATH"
+# export PATH="$HOME/flutter/bin:$PATH"
+# Flutter from fvm
+export PATH="/Users/bartek/fvm/default/bin:$PATH"
 
 # Android
 export ANDROID_SDK_ROOT="$HOME/androidsdk"
