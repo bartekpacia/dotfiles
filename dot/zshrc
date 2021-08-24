@@ -7,18 +7,15 @@ DOTFILES=~/dotfiles
 
 export MAKEFLAGS="-j 8"
 
-export MLH_AT_SYMBOL=" at "
-export MLH_IN_SYMBOL=" in "
-export MLH_ON_SYMBOL=" on "
-export MLH_SHELL_SYMBOL="$ "
+MLH_AT_SYMBOL=" at "
+MLH_IN_SYMBOL=" in "
+MLH_ON_SYMBOL=" on "
+MLH_SHELL_SYMBOL="$ "
 
 # GPG config (see https://help.github.com/en/github/authenticating-to-github/telling-git-about-your-signing-key)
 export GPG_TTY=$(tty)
 
 ZSH_THEME="mlh"
-
-# force using "cd"
-unsetopt auto_cd
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
