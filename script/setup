@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 
+DOTFILES="$HOME/.dotfiles"
+
 # This script is designed to be run as part of the strap bootstrapping process.
 # Assume that git and brew are installed. Assume that dotfiles repo is in ~.
 
