@@ -11,7 +11,7 @@ brew 'exif'
 brew 'exiftool'
 
 brew 'coreutils'
-brew 'cocoapods'
+# brew 'cocoapods' # use cocoapods from fastlane!
 brew 'clang-format'
 
 brew 'fd'
