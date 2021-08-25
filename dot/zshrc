@@ -95,11 +95,6 @@ fi
 # when installed directly from the webpage (no thru the pkg manager)
 export PATH="/usr/local/go/bin:$PATH"
 
-# 3 exports below are deprecated and should be removed
-export GOPATH=$HOME/go
-export GOBIN=$GOPATH/bin
-export PATH="$GOBIN:$PATH"
-
 # # # # # # # # # # # # # #
 # R u s t
 # # # # # # # # # # # # # #
