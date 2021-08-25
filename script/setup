@@ -5,74 +5,59 @@ set -e
 # Assume that git and brew are installed. Assume that dotfiles repo is in ~.
 
 reinstall() {
-    printf "setup: reinstalling zsh-autosuggestions..."
+    printf "setup: reinstalling zsh-autosuggestions...\n"
     rm -rf ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
     git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions 1> /dev/null 2>&1
-    printf "ok\n"
     
-    printf "setup: reinstalling zsh-syntax-highlighting..."
+    printf "setup: reinstalling zsh-syntax-highlighting...\n"
     rm -rf ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting 1> /dev/null 2>&1
-    printf "ok\n"
     
-    printf "setup: reinstalling zsh-completions..."
+    printf "setup: reinstalling zsh-completions...\n"
     rm -rf ~/.oh-my-zsh/custom/plugins/zsh-completions
     git clone https://github.com/zsh-users/zsh-completions ~/.oh-my-zsh/custom/plugins/zsh-completions 1> /dev/null 2>&1
-    printf "ok\n"
 }
 
 # Symlink dot/* into home directory as hidden files
-printf "setup: symlinking hidden files..."
-for f in $(ls -d ~/dotfiles/dot/*); do
-    ln -sfn $f ~/.$(basename $f);
+printf "setup: symlinking hidden files...\n"
+for f in "$DOTFILES/dot/"*; do
+    ln -sfn "$f" "$HOME/.$(basename "$f")"
 done
-printf "ok\n"
 
 # Symlink files/* into home directory as regular files
-printf "setup: symlinking normal files..."
-for f in $(ls -d ~/dotfiles/files/*); do
-    ln -sfn $f ~/$(basename $f);
+printf "setup: symlinking normal files...\n"
+for f in "$DOTFILES/files/"*; do
+    ln -sfn "$f" "$HOME/$(basename "$f")"
 done
-printf "ok\n"
 
 # Symlink ssh/* (my common SSH config) into ~/.ssh as regular files
-printf "setup: symlinking ssh files..."
-for f in $(ls -d ~/dotfiles/ssh/*); do
+printf "setup: symlinking ssh files...\n"
+for f in "$DOTFILES/ssh/"*; do
     if [ ! -d ~/.ssh ]; then
         mkdir ~/.ssh
     fi
     
-    ln -sfn $f ~/.ssh/$(basename $f);
+    ln -sfn "$f" ~/.ssh/"$(basename "$f")"
 done
-printf "ok\n"
 
 # Setup oh-my-zsh
 export KEEP_ZSHRC="yes"
 export RUNZSH="no"
-if [ ! -d ~/.oh-my-zsh ]; then
+if [ ! -d "$ZSH" ]; then
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 else
     printf "setup: aborted installation of oh-my-zsh because directory ~/.oh-my-zsh/ already exists\n"
 fi
 
-printf "setup: symlinking custom oh-my-zsh plugins..."
-for f in $(ls -d ~/dotfiles/custom/plugins/*); do
-    ln -sfn $f ~/.oh-my-zsh/custom/plugins/$(basename $f)
+printf "setup: symlinking custom oh-my-zsh plugins...\n"
+for f in "$DOTFILES/custom/plugins/"*; do
+    ln -sfn "$f" "$ZSH_CUSTOM/plugins/$(basename "$f")"
 done
-printf "ok\n"
 
-# Symlink oh-my-zsh custom themes
-printf "setup: symlinking custom oh-my-zsh themes..."
-for f in $(ls -d ~/dotfiles/custom/themes/*); do
-    ln -sfn $f ~/.oh-my-zsh/custom/themes/$(basename $f)
+printf "setup: symlinking custom oh-my-zsh scripts...\n"
+for f in "$DOTFILES/custom/"*.zsh; do
+    ln -sfn "$f" "$ZSH_CUSTOM/$(basename "$f")"
 done
-printf "ok\n"
-
-printf "setup: symlinking custom oh-my-zsh scripts..."
-for f in $(ls -d ~/dotfiles/custom/*.zsh); do
-    ln -sfn $f ~/.oh-my-zsh/custom/$(basename $f)
-done
-printf "ok\n"
 
 if [ "$1" = "--no-reinstall" ]; then
     printf "setup: --no-reinstall passed, aborted reinstalling custom plugins\n"

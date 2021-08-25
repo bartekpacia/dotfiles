@@ -36,16 +36,16 @@ fi
 
 # ------ IntelliJ IDEs ------
 
-if [ -f ~/dotfiles/local/idea ]; then
-    alias idea="~/dotfiles/local/idea"
+if [ -f "$DOTFILES/local/idea" ]; then
+    alias idea="$DOTFILES/local/idea"
 fi
 
-if [ -f ~/dotfiles/local/pycharm ]; then
-    alias pycharm="~/dotfiles/local/pycharm"
+if [ -f "$DOTFILES/local/pycharm" ]; then
+    alias pycharm="$DOTFILES/local/pycharm"
 fi
 
-if [ -f ~/dotfiles/local/clion ]; then
-    alias clion="~/dotfiles/local/clion"
+if [ -f "$DOTFILES/local/clion" ]; then
+    alias clion="$DOTFILES/local/clion"
 fi
 
 # ------ Android Debug Bridge ------
