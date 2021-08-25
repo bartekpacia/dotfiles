@@ -5,10 +5,10 @@ export ZSH_CUSTOM="$ZSH/custom"
 
 export DOTFILES=~/dotfiles
 
-MLH_AT_SYMBOL=" at "
-MLH_IN_SYMBOL=" in "
-MLH_ON_SYMBOL=" on "
-MLH_SHELL_SYMBOL="$ "
+export MLH_AT_SYMBOL=" at "
+export MLH_IN_SYMBOL=" in "
+export MLH_ON_SYMBOL=" on "
+export MLH_SHELL_SYMBOL="$ "
 
 # GPG config (see https://help.github.com/en/github/authenticating-to-github/telling-git-about-your-signing-key)
 export GPG_TTY=$(tty)
@@ -25,8 +25,8 @@ plugins=(
 )
 
 
-if [ -d $ZSH ]; then
-    source $ZSH/oh-my-zsh.sh
+if [ -d "$ZSH" ]; then
+    source "$ZSH/oh-my-zsh.sh"
 fi
 
 # Flutter (from fvm)
