@@ -1,7 +1,6 @@
 # Path to your oh-my-zsh installation.
 ZSH=~/.oh-my-zsh
 ZSH_CONFIG=~/.zshrc
-ZSH_CUSTOM=$ZSH/custom
 
 DOTFILES=~/dotfiles
 
