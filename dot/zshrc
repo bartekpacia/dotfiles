@@ -42,12 +42,7 @@ export PATH="$ANDROID_SDK_ROOT/emulator:$PATH"
 # Raspberry Pi Pico
 export PICO_SDK_PATH="$HOME/pico-sdk"
 
-# avr-gcc
-export PATH="/usr/local/opt/avr-gcc@11/bin:$PATH"
-
-# # # # # # # # # # # # # #
-# J a v a
-# # # # # # # # # # # # # #
+# Java
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     # on Linux
     export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
@@ -58,14 +53,13 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     export PATH="$JAVA_HOME/bin:$PATH"
 fi
 
-# # # # # # # # # # # # # #
 # C
-# # # # # # # # # # # # # #
 export MAKEFLAGS="-j 8"
 
-# # # # # # # # # # # # # #
-# P y t h o n
-# # # # # # # # # # # # # #
+# avr-gcc
+export PATH="/usr/local/opt/avr-gcc@11/bin:$PATH"
+
+# Python
 
 # Check if pyenv is installed
 if [ -d "$HOME/.pyenv" ]; then
@@ -75,9 +69,7 @@ fi
 export PATH="$HOME/.poetry/bin:$PATH"
 export PYTHONDONTWRITEBYTECODE=1
 
-# # # # # # # # # # # # # #
-# R u b y
-# # # # # # # # # # # # # #
+# Ruby
 
 # Check if rbenv is installed
 if [ -d "$HOME/.rbenv" ]; then
@@ -85,30 +77,21 @@ if [ -d "$HOME/.rbenv" ]; then
     eval "$(rbenv init -)"
 fi
 
-# # # # # # # # # # # # # #
-# G o l a n g
-# # # # # # # # # # # # # #
+# Go
 
 # when installed directly from the webpage (no thru the pkg manager)
 export PATH="/usr/local/go/bin:$PATH"
 
-# # # # # # # # # # # # # #
-# R u s t
-# # # # # # # # # # # # # #
-
+# Rust
 export PATH="$HOME/.cargo/bin:$PATH"
 
-# # # # # # # # # # # # # #
-# N o d e
-# # # # # # # # # # # # # #
 
+# nvm
 export NVM_DIR="$HOME/.nvm"
-
-# normal install
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# Homebrew install
+# nvm (from Homebrew)
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
