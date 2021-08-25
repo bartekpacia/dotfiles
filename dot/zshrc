@@ -2,7 +2,6 @@
 export ZSH="$HOME/.oh-my-zsh"
 export ZSH_CONFIG="$HOME/.zshrc"
 export ZSH_CUSTOM="$ZSH/custom"
-
 export DOTFILES="$HOME/.dotfiles"
 
 export MLH_AT_SYMBOL=" at "
