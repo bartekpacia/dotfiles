@@ -4,15 +4,14 @@ brew 'bat'
 brew 'bundletool'
 
 brew 'cmake'
+brew 'coreutils'
+# brew 'cocoapods' # use cocoapods from fastlane!
+brew 'clang-format'
 
 brew 'doxygen'
 
 brew 'exif'
 brew 'exiftool'
-
-brew 'coreutils'
-# brew 'cocoapods' # use cocoapods from fastlane!
-brew 'clang-format'
 
 brew 'fd'
 brew 'fzf'
@@ -46,7 +45,7 @@ brew 'mosh'
 
 brew 'openvpn'
 
-# brew 'poetry' use pyenv-installed Poetry instead, see https://github.com/Homebrew/homebrew-core/issues/53169
+# brew 'poetry' # use pyenv-installed Poetry instead, see https://github.com/Homebrew/homebrew-core/issues/53169
 brew 'pyenv'
 
 brew 'rbenv'
