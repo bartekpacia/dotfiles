@@ -28,9 +28,7 @@ if [ -d $ZSH ]; then
     source $ZSH/oh-my-zsh.sh
 fi
 
-# Flutter
-# export PATH="$HOME/flutter/bin:$PATH"
-# Flutter from fvm
+# Flutter (from fvm)
 export PATH="/Users/bartek/fvm/default/bin:$PATH"
 
 # Android
