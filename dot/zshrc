@@ -49,7 +49,7 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     export PATH="$JAVA_HOME/bin:$PATH"
     elif [[ "$OSTYPE" == "darwin"* ]]; then
     # on macOS
-    export JAVA_HOME="/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/home"
+    export JAVA_HOME="/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home"
     export PATH="$JAVA_HOME/bin:$PATH"
 fi
 

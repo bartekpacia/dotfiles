@@ -101,9 +101,9 @@ cask 'zoom'
 tap 'schollz/tap'
 brew 'croc'
 
-# OpenJDK 8 for use with android-studio
+# OpenJDK for Android SDK
 tap 'AdoptopenJDK/openjdk'
-cask 'adoptopenjdk/openjdk/adoptopenjdk8'
+cask 'adoptopenjdk/openjdk/adoptopenjdk11'
 
 tap 'tinygo-org/tools'
 brew 'tinygo'
