@@ -127,7 +127,7 @@ tap 'teamookla/speedtest'
 brew 'speedtest'
 
 tap 'microsoft/git'
-cask 'git-credential-manager-core'
+# cask 'git-credential-manager-core'
 
 tap 'osx-cross/avr'
 brew 'avr-gcc'
