@@ -65,7 +65,7 @@ for f in "$DOTFILES/custom/"*.zsh; do
     ln -sfn "$f" "$ZSH_CUSTOM/$(basename "$f")"
 done
 
-if [ "$1" = "--no-reinstall" ]; then
+if [ "${1:-}" = "--no-reinstall" ]; then
     printf "setup: --no-reinstall passed, aborted reinstalling custom plugins\n"
 else
     reinstall
