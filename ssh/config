@@ -1,34 +1,12 @@
+Include ~/.ssh/config_*
+
+# Easily and securely add configs from 1Password:
+# $ op get document 'config_home' > ~/.ssh/config_home
+
 Host github.com
 	HostName github.com
 	User git
 	IdentityFile ~/.ssh/id_ed25519_github
-
-Host home_raspi4b
-	HostName 192.168.0.110
-	User pi
-	IdentityFile ~/.ssh/id_rsa_raspi
-
-Host home_raspizero
-	HostName 192.168.0.111
-	User pi
-	IdentityFile ~/.ssh/id_rsa_raspi
-
-Host home_raspi400
-	HostName 192.168.0.112
-	User pi
-	IdentityFile ~/.ssh/id_rsa_raspi
-
-Host knei_odroid
-	HostName 176.97.27.134
-	User pacia
-	IdentityFile ~/.ssh/id_rsa_odroid
-	Port 8000
-
-Host knei_jetson
-	HostName 176.97.27.134
-	User lazik
-	IdentityFile ~/.ssh/id_rsa_jetson
-	Port 8887
 
 Host *
 	IgnoreUnknown UseKeychain
