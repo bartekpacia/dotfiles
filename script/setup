@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+set -euo pipefail
 
 # keep those in sync with dot/zshrc
 ZSH="$HOME/.oh-my-zsh"
