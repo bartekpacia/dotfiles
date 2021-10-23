@@ -4,7 +4,13 @@
 # $ get_ssh_key "id_rsa_raspi"
 
 get_ssh_key() {
-    key_name=$1
+    key_name="$1"
+    
+    if [ -z "$key_name" ]; then
+        echo "key_name not passed. Nothing was done."
+        return 1
+    fi
+    
     key_path="$HOME/.ssh/$key_name"
     
     if [ -f "$key_path" ]; then
