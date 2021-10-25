@@ -63,8 +63,8 @@ export PATH="/usr/local/opt/avr-gcc@11/bin:$PATH"
 
 # Check if pyenv is installed
 if [ -d "$HOME/.pyenv" ]; then
+    eval "$(pyenv init --path)"
     eval "$(pyenv init -)"
-    export PATH="$PYENV_ROOT/shims:$PATH"
 fi
 
 export PATH="$HOME/.poetry/bin:$PATH"
@@ -119,3 +119,4 @@ if [ -d $DOTFILES/local ]; then
         source "$file"
     done
 fi
+
