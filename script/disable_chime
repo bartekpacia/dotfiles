@@ -1,4 +1,4 @@
 #!/usr/bin/env/ bash
 
-echo "The startup chime will be disabled."
+echo "the startup chime will be disabled"
 sudo nvram StartupMute=%01
