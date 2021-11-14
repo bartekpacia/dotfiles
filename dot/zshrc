@@ -36,8 +36,8 @@ export PATH="/Users/bartek/fvm/default/bin:$PATH"
 # Android
 export ANDROID_SDK_ROOT="$HOME/androidsdk"
 export PATH="$ANDROID_SDK_ROOT:$PATH"
-export PATH="$ANDROID_SDK_ROOT/cmdline-tools/tools/bin:$PATH"
-export PATH="$ANDROID_SDK_ROOT/cmdline-tools/tools/lib:$PATH"
+export PATH="$ANDROID_SDK_ROOT/cmdline-tools/latest/bin:$PATH"
+export PATH="$ANDROID_SDK_ROOT/cmdline-tools/latest/lib:$PATH"
 export PATH="$ANDROID_SDK_ROOT/platform-tools:$PATH"
 export PATH="$ANDROID_SDK_ROOT/emulator:$PATH"
 
@@ -61,15 +61,14 @@ export MAKEFLAGS="-j 8"
 # avr-gcc
 export PATH="/usr/local/opt/avr-gcc@11/bin:$PATH"
 
-# Python
+# Python poetry
+export PATH="$HOME/.local/bin:$PATH"
 
 # Check if pyenv is installed
 if [ -d "$HOME/.pyenv" ]; then
     eval "$(pyenv init --path)"
     eval "$(pyenv init -)"
 fi
-
-export PATH="$HOME/.poetry/bin:$PATH"
 export PYTHONDONTWRITEBYTECODE=1
 
 # Ruby
