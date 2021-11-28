@@ -30,6 +30,9 @@ if [ -d "$ZSH" ]; then
     source "$ZSH/oh-my-zsh.sh"
 fi
 
+# Dart
+export PATH="$HOME/.pub-cache/bin:$PATH"
+
 # Flutter (from fvm)
 export PATH="/Users/bartek/fvm/default/bin:$PATH"
 
