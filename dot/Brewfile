@@ -38,6 +38,7 @@ brew 'lsd'
 brew 'ncdu'
 brew 'neofetch'
 brew 'nmap'
+brew 'nvm'
 
 brew 'mas'
 brew 'micro'
