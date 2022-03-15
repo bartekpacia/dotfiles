@@ -33,6 +33,8 @@ brew 'jq'
 brew 'kotlin'
 brew 'ktlint'
 
+
+brew 'latexindent'
 brew 'lsd'
 
 brew 'ncdu'
@@ -58,6 +60,7 @@ brew 'rustup'
 brew 'shellcheck'
 
 brew 'tealdeer'
+brew 'texlive'
 brew 'tree'
 
 brew 'webp'
