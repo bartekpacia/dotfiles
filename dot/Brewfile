@@ -27,6 +27,7 @@ brew 'htop'
 
 brew 'imagemagick'
 brew 'ios-deploy'
+brew 'iproute2mac'
 
 brew 'jq'
 
