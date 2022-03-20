@@ -8,11 +8,16 @@ Host github.com
 	User git
 	IdentityFile ~/.ssh/id_ed25519_github
 
+Host bitbucket.org
+	HostName bitbucket.org
+	IdentityFile ~/.ssh/id_ed25519_bitbucket_lc
+
 Host *
 	IgnoreUnknown UseKeychain
 	ServerAliveInterval 5
 	StrictHostKeyChecking ask
 	AddKeysToAgent yes
+	IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
 	
 	# only on macOS
 	UseKeychain yes
