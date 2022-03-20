@@ -88,8 +88,10 @@ fi
 
 # Go
 
-# when installed directly from the webpage (no thru the pkg manager)
+# when Go installed directly from the webpage (no thru the pkg manager)
 export PATH="/usr/local/go/bin:$PATH"
+# for "go install"-ed software
+export PATH="$HOME/go/bin:$PATH"
 
 # Rust
 export PATH="$HOME/.cargo/bin:$PATH"
