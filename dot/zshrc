@@ -62,7 +62,7 @@ fi
 export PATH="/usr/local/share/dotnet/x64:$PATH"
 export PATH="$HOME/.dotnet/tools:$PATH"
 
-# C
+# make
 export MAKEFLAGS="-j 8"
 
 # avr-gcc
@@ -130,6 +130,13 @@ if [ -d $DOTFILES/local ]; then
     done
 fi
 
+# fzf
 if [ -f ~/.fzf.zsh ]; then
 	source ~/.fzf.zsh
 fi
+
+# bat
+export BAT_CONFIG_PATH="$HOME/.bat.conf"
+
+# colorize man pages using bat
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
