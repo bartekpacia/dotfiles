@@ -120,6 +120,8 @@
 	</dict>
 	<key>HapticFeedbackForEsc</key>
 	<false/>
+	<key>HideMenuBarInFullscreen</key>
+	<true/>
 	<key>Hotkey</key>
 	<true/>
 	<key>HotkeyChar</key>
@@ -526,26 +528,12 @@
 					<key>Text</key>
 					<string>[1;6A</string>
 				</dict>
-				<key>0xf700-0x280000</key>
-				<dict>
-					<key>Action</key>
-					<integer>11</integer>
-					<key>Text</key>
-					<string>0x1b 0x1b 0x5b 0x41</string>
-				</dict>
 				<key>0xf701-0x220000-0x0</key>
 				<dict>
 					<key>Action</key>
 					<integer>10</integer>
 					<key>Text</key>
 					<string>[1;2B</string>
-				</dict>
-				<key>0xf701-0x240000-0x0</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[1;5B</string>
 				</dict>
 				<key>0xf701-0x260000-0x0</key>
 				<dict>
@@ -554,33 +542,16 @@
 					<key>Text</key>
 					<string>[1;6B</string>
 				</dict>
-				<key>0xf701-0x280000</key>
-				<dict>
-					<key>Action</key>
-					<integer>11</integer>
-					<key>Text</key>
-					<string>0x1b 0x1b 0x5b 0x42</string>
-				</dict>
 				<key>0xf702-0x220000-0x0</key>
 				<dict>
 					<key>Action</key>
-					<integer>10</integer>
+					<integer>45</integer>
+					<key>Label</key>
+					<string></string>
 					<key>Text</key>
-					<string>[1;2D</string>
-				</dict>
-				<key>0xf702-0x240000-0x0</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[1;5D</string>
-				</dict>
-				<key>0xf702-0x260000-0x0</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[1;6D</string>
+					<string>0</string>
+					<key>Version</key>
+					<integer>0</integer>
 				</dict>
 				<key>0xf702-0x280000-0x0</key>
 				<dict>
@@ -596,12 +567,16 @@
 					<key>Text</key>
 					<string>0x1</string>
 				</dict>
-				<key>0xf703-0x220000-0x0</key>
+				<key>0xf703-0x220000-0x7c</key>
 				<dict>
 					<key>Action</key>
-					<integer>10</integer>
+					<integer>46</integer>
+					<key>Label</key>
+					<string></string>
 					<key>Text</key>
-					<string>[1;2C</string>
+					<string>0</string>
+					<key>Version</key>
+					<integer>0</integer>
 				</dict>
 				<key>0xf703-0x240000-0x0</key>
 				<dict>
