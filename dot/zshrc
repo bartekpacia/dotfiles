@@ -22,8 +22,11 @@ plugins=(
     adb
     zsh-autosuggestions
     zsh-syntax-highlighting
-    zsh-completions
+    # zsh-completions # does not work, see https://github.com/zsh-users/zsh-completions/issues/603
 )
+
+# see https://github.com/zsh-users/zsh-completions/issues/603
+fpath+="${ZSH_CUSTOM:-"$ZSH/custom"}/plugins/zsh-completions/src"
 
 
 if [ -d "$ZSH" ]; then
