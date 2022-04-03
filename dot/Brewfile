@@ -3,10 +3,11 @@ brew 'avrdude'
 brew 'bat'
 brew 'bundletool'
 
-brew 'cmake'
-brew 'coreutils'
-# brew 'cocoapods' # use cocoapods from fastlane!
 brew 'clang-format'
+brew 'cmake'
+# brew 'cocoapods' # use cocoapods installed from rbenv-installed bundle!
+brew 'coreutils'
+brew 'croc'
 
 brew 'doxygen'
 
@@ -67,9 +68,8 @@ brew 'wget'
 brew 'youtube-dl'
 brew 'zsh'
 
-# cask '1password'
+cask '1password-beta'
 cask '1password-cli'
-
 cask 'android-file-transfer'
 cask 'arduino'
 cask 'daisydisk'
@@ -99,9 +99,6 @@ cask 'vlc'
 cask 'zoom'
 
 # Specific taps
-
-tap 'schollz/tap'
-brew 'croc'
 
 # OpenJDK for Android SDK
 tap 'AdoptopenJDK/openjdk'
