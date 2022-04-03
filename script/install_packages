@@ -1,17 +1,19 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Ubuntu packages
+# Installs my Ubuntu packages. Run with sudo.
 
 apt update
 apt upgrade
+apt autoremove -y
 
 SOFTWARE=(
     git
     htop
+    imagemagick
     neofetch
     python3
     zsh
 )
 
-apt install $(SOFTWARE)
+apt install -y $(SOFTWARE)

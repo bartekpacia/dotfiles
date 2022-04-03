@@ -34,7 +34,6 @@ brew 'jq'
 brew 'kotlin'
 brew 'ktlint'
 
-
 brew 'latexindent'
 brew 'lsd'
 
@@ -48,7 +47,6 @@ brew 'micro'
 brew 'mosh'
 
 brew 'openvpn'
-
 
 # brew 'poetry' # use pyenv-installed Poetry instead, see https://github.com/Homebrew/homebrew-core/issues/53169
 brew 'prettier'
@@ -69,7 +67,7 @@ brew 'wget'
 brew 'youtube-dl'
 brew 'zsh'
 
-cask '1password'
+# cask '1password'
 cask '1password-cli'
 
 cask 'android-file-transfer'
@@ -95,7 +93,7 @@ cask 'qlimagesize'
 cask 'qlstephen'
 cask 'quicklook-json'
 cask 'quicklookapk'
-# cask 'unity-hub'
+cask 'unity-hub'
 cask 'visual-studio-code'
 cask 'vlc'
 cask 'zoom'
@@ -109,6 +107,9 @@ brew 'croc'
 tap 'AdoptopenJDK/openjdk'
 cask 'adoptopenjdk/openjdk/adoptopenjdk11'
 
+tap 'bartekpacia/tools'
+brew 'shell-scripts'
+
 tap 'tinygo-org/tools'
 brew 'tinygo'
 
@@ -119,7 +120,7 @@ cask 'font-jetbrains-mono'
 cask 'font-hack-nerd-font'
 
 tap 'heroku/brew'
-brew 'heroku'
+# brew 'heroku'
 
 tap 'dart-lang/dart'
 # brew 'dart'
@@ -137,7 +138,7 @@ tap 'osx-cross/avr'
 brew 'avr-gcc'
 
 tap 'ArmMbed/homebrew-formulae'
-brew 'arm-none-eabi-gcc'
+# brew 'arm-none-eabi-gcc'
 
 mas 'Notability', id: 360593530
 mas 'Telegram', id: 747648890
