@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Ubuntu packages
+
+apt update
+apt upgrade
+
+SOFTWARE=(
+    git
+    htop
+    neofetch
+    python3
+    zsh
+)
+
+apt install $(SOFTWARE)
