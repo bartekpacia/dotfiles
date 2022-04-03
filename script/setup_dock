@@ -3,25 +3,31 @@ set -euo pipefail
 
 # Sets icons in the Dock the way I want.
 
+# clear all icons in the dock
 defaults delete com.apple.dock persistent-apps
 
-dock_item() {
-    printf '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>%s</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>', "$1"
+# disable showing recent applications
+defaults write com.apple.dock show-recents -bool FALSE
+
+create_dock_item() {
+    local app_path="$1"
+    printf '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>%s</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>', "$app_path"
 }
 
 defaults write com.apple.dock persistent-apps -array \
 `# TODO: update once 1Password 8 is released` \
-"$(dock_item /Applications/1Password\ 7.app)" \
-"$(dock_item /Applications/Safari.app)" \
-"$(dock_item /Applications/Google\ Chrome.app)" \
-`# mail` \
-`# calendar` \
-"$(dock_item /Applications/Telegram.app)" \
-"$(dock_item /Applications/Slack.app)" \
-"$(dock_item /Applications/Discord.app)" \
-"$(dock_item /Applications/Notion.app)" \
-"$(dock_item /Applications/Spotify.app)" \
-"$(dock_item /Applications/iTerm.app)" \
-"$(dock_item /Applications/Visual\ Studio\ Code.app)" \
+"$(create_dock_item /Applications/1Password.app)" \
+"$(create_dock_item /Applications/Safari.app)" \
+"$(create_dock_item /Applications/Google\ Chrome.app)" \
+"$(create_dock_item /System/Applications/Mail.app)" \
+"$(create_dock_item /System/Applications/Calendar.app)" \
+"$(create_dock_item /Applications/Telegram.app)" \
+"$(create_dock_item /Applications/Slack.app)" \
+"$(create_dock_item /Applications/Discord.app)" \
+"$(create_dock_item /Applications/Notion.app)" \
+"$(create_dock_item /Applications/Spotify.app)" \
+"$(create_dock_item /Applications/iTerm.app)" \
+"$(create_dock_item /Applications/Visual\ Studio\ Code.app)" \
 
+# restart dock
 killall Dock
