@@ -31,27 +31,6 @@ if [ -f "$DOTFILES/local/clion" ]; then
     alias clion="$DOTFILES/local/clion"
 fi
 
-# ------ Android Debug Bridge ------
-adb_font_small() {
-    adb shell settings put system font_scale 0.85
-}
-
-adb_font_default() {
-    adb shell settings put system font_scale 1.0
-}
-
-adb_font_large() {
-    adb shell settings put system font_scale 1.15
-}
-
-adb_font_largest() {
-    adb shell settings put system font_scale 1.30
-}
-
-adb_display_default() {
-    adb shell wm density reset
-}
-
 # ------ Shit ------
 
 lenny() {
