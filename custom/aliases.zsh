@@ -7,19 +7,6 @@ else
     alias lsd="ls -lah"
 fi
 
-# ------ Dev ------
-godev() {
-    cd ~/dev/go
-}
-
-nodev() {
-    cd ~/dev/node
-}
-
-pydev() {
-    cd ~/dev/python
-}
-
 # ------ Sleep ------
 
 if command -v pmset &>/dev/null; then
