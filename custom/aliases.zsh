@@ -7,10 +7,6 @@ else
     alias lsd="ls -lah"
 fi
 
-if command -v bat &>/dev/null; then
-    alias cat="bat -p"
-fi
-
 # ------ Dev ------
 godev() {
     cd ~/dev/go

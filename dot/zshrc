@@ -2,6 +2,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 export ZSH_CONFIG="$HOME/.zshrc"
 export ZSH_CUSTOM="$ZSH/custom"
+export ZSH_COMPDUMP="$ZSH_CACHE_DIR/.zcompdump-$SHORT_HOST-$ZSH_VERSION"
 export DOTFILES="$HOME/.dotfiles"
 
 export MLH_AT_SYMBOL=" at "
@@ -145,4 +146,4 @@ export BAT_CONFIG_PATH="$HOME/.bat.conf"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 # make less don't clutter ~
-export LESSHISTFILE="$HOME/.config/less/history
+export LESSHISTFILE="$HOME/.config/less/history"
