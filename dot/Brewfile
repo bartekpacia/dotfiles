@@ -47,7 +47,7 @@ brew 'mas'
 brew 'micro'
 brew 'mosh'
 
-brew 'openvpn'
+# brew 'openvpn'
 
 # brew 'poetry' # use pyenv-installed Poetry instead, see https://github.com/Homebrew/homebrew-core/issues/53169
 brew 'prettier'
@@ -84,7 +84,7 @@ cask 'iterm2'
 cask 'jetbrains-toolbox'
 cask 'mos'
 cask 'notion'
-cask 'openvpn-connect'
+# cask 'openvpn-connect'
 cask 'postman'
 cask 'slack'
 cask 'spotify'
