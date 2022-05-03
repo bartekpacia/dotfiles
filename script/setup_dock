@@ -15,7 +15,6 @@ create_dock_item() {
 }
 
 defaults write com.apple.dock persistent-apps -array \
-`# TODO: update once 1Password 8 is released` \
 "$(create_dock_item /Applications/1Password.app)" \
 "$(create_dock_item /Applications/Safari.app)" \
 "$(create_dock_item /Applications/Google\ Chrome.app)" \
