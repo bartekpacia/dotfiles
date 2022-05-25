@@ -134,9 +134,7 @@ fi
 
 # Source local gitignored files (not tracked by git)
 if [ -d $DOTFILES/local ]; then
-    for file in $DOTFILES/local/*.zsh; do
-        source "$file"
-    done
+    export PATH="$DOTFILES/local:$PATH"
 fi
 
 # fzf

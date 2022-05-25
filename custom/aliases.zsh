@@ -17,20 +17,6 @@ if command -v pmset &>/dev/null; then
     alias zzzz="systemctl sleep"
 fi
 
-# ------ IntelliJ IDEs ------
-
-if [ -f "$DOTFILES/local/idea" ]; then
-    alias idea="$DOTFILES/local/idea"
-fi
-
-if [ -f "$DOTFILES/local/pycharm" ]; then
-    alias pycharm="$DOTFILES/local/pycharm"
-fi
-
-if [ -f "$DOTFILES/local/clion" ]; then
-    alias clion="$DOTFILES/local/clion"
-fi
-
 # ------ Shit ------
 
 lenny() {
