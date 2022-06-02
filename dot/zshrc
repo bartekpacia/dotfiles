@@ -4,6 +4,7 @@ export ZSH_CONFIG="$HOME/.zshrc"
 export ZSH_CUSTOM="$ZSH/custom"
 export ZSH_COMPDUMP="$ZSH_CACHE_DIR/.zcompdump-$SHORT_HOST-$ZSH_VERSION"
 export DOTFILES="$HOME/.dotfiles"
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=8"
 
 export MLH_AT_SYMBOL=" at "
 export MLH_IN_SYMBOL=" in "
@@ -38,7 +39,9 @@ fi
 export PATH="$HOME/.pub-cache/bin:$PATH"
 
 # Flutter (from fvm)
-export PATH="/Users/bartek/fvm/default/bin:$PATH"
+export PATH="$HOME/fvm/default/bin:$PATH"
+
+export MAESTRO_ARTIFACT_PATH="$HOME/.config/maestro"
 
 # Android
 export ANDROID_SDK_ROOT="$HOME/androidsdk"
