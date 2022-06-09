@@ -1,5 +1,6 @@
 brew 'avrdude'
 
+brew 'bash'
 brew 'bat'
 brew 'bundletool'
 
