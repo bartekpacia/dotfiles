@@ -72,6 +72,12 @@ for f in "$DOTFILES/custom/"*.zsh; do
     ln -sfn "$f" "$ZSH_CUSTOM/$(basename "$f")"
 done
 
+printf "setup: symlinking iTerm2 scripts...\n"
+for f in "$DOTFILES/iterm2/"*.py; do
+    mkdir -p "$HOME/Library/Application Support/iTerm2/Scripts/AutoLaunch"
+    ln -sfn "$f" "$HOME/Library/Application Support/iTerm2/Scripts/AutoLaunch/$(basename "$f")"
+done
+
 if [ "$ARG" = "--no-reinstall" ]; then
     printf "setup: --no-reinstall passed, aborted reinstalling custom plugins\n"
 else
