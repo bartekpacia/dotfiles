@@ -10,6 +10,13 @@ DOTFILES="$HOME/.dotfiles"
 # This script is designed to be run as part of the strap bootstrapping process.
 # Assume that git and brew are installed. Assume that dotfiles repo is in ~.
 
+ARG="${1:-}"
+if [ "$ARG" = "-h" ] || [ "$ARG" = "--help" ]; then
+    echo "Usage: ./setup.sh [--no-reinstall]"
+    echo "  --no-reinstall: Skip reinstalling oh-my-zsh plugins"
+    exit 0
+fi
+
 reinstall() {
     printf "setup: reinstalling zsh-autosuggestions...\n"
     rm -rf ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
@@ -65,7 +72,7 @@ for f in "$DOTFILES/custom/"*.zsh; do
     ln -sfn "$f" "$ZSH_CUSTOM/$(basename "$f")"
 done
 
-if [ "${1:-}" = "--no-reinstall" ]; then
+if [ "$ARG" = "--no-reinstall" ]; then
     printf "setup: --no-reinstall passed, aborted reinstalling custom plugins\n"
 else
     reinstall
