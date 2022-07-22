@@ -68,6 +68,7 @@ brew 'tree'
 
 brew 'webp'
 brew 'wget'
+brew 'xcbeautify'
 brew 'youtube-dl'
 brew 'zsh'
 
