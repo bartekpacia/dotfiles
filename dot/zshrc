@@ -16,6 +16,8 @@ export GPG_TTY=$(tty)
 
 stty -echoctl
 
+zstyle ':completion:*' matcher-list '' 'l:|=[^_]* r:|=*'
+
 ZSH_THEME="mlh"
 
 plugins=(
