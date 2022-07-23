@@ -151,6 +151,7 @@ fi
 
 # bat
 export BAT_CONFIG_PATH="$HOME/.bat.conf"
+alias bat="bat --theme=\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo default || echo GitHub)"
 
 # colorize man pages using bat
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
