@@ -43,7 +43,8 @@ export PATH="$HOME/.pub-cache/bin:$PATH"
 # Flutter (from fvm)
 export PATH="$HOME/fvm/default/bin:$PATH"
 
-export MAESTRO_ARTIFACT_PATH="$HOME/.config/maestro"
+export MASON_CACHE="$HOME/.config/mason"
+export MAESTRO_CACHE="$HOME/.config/maestro"
 
 # Android
 export ANDROID_SDK_ROOT="$HOME/androidsdk"
@@ -151,7 +152,7 @@ fi
 
 # bat
 export BAT_CONFIG_PATH="$HOME/.bat.conf"
-alias bat="bat --theme=\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo default || echo GitHub)"
+alias batt="bat --theme=\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo default || echo GitHub)"
 
 # colorize man pages using bat
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
