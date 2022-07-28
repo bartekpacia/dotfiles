@@ -47,14 +47,25 @@ export MASON_CACHE="$HOME/.config/mason"
 export MAESTRO_CACHE="$HOME/.config/maestro"
 
 # Android
-export ANDROID_SDK_ROOT="$HOME/androidsdk"
-export PATH="$ANDROID_SDK_ROOT:$PATH"
-export PATH="$ANDROID_SDK_ROOT/cmdline-tools/latest/bin:$PATH"
-export PATH="$ANDROID_SDK_ROOT/cmdline-tools/latest/lib:$PATH"
-export PATH="$ANDROID_SDK_ROOT/platform-tools:$PATH"
-export PATH="$ANDROID_SDK_ROOT/tools:$PATH"
-export PATH="$ANDROID_SDK_ROOT/tools/bin:$PATH"
-export PATH="$ANDROID_SDK_ROOT/emulator:$PATH"
+
+# see https://developer.android.com/studio/command-line/variables
+export ANDROID_HOME="$HOME/androidsdk"
+export ANDROID_USER_HOME="$HOME/.config/android"
+export PATH="$ANDROID_HOME:$PATH"
+# see https://developer.android.com/studio/command-line#tools-sdk
+export PATH="$ANDROID_HOME/cmdline-tools/latest/bin:$PATH" 
+# see https://developer.android.com/studio/command-line#tools-platform
+export PATH="$ANDROID_HOME/platform-tools:$PATH"
+# see https://developer.android.com/studio/command-line#tools-emulator
+export PATH="$ANDROID_HOME/emulator:$PATH"
+
+build_tools=$(
+    command ls "$ANDROID_HOME/build-tools" \
+        | sort --version-sort --reverse \
+        | head -n 1
+    )
+
+export PATH="$ANDROID_HOME/build-tools/$build_tools:$PATH"
 
 # Raspberry Pi Pico
 export PICO_SDK_PATH="$HOME/pico-sdk"
