@@ -61,6 +61,7 @@ brew 'rg'
 brew 'rustup'
 
 brew 'shellcheck'
+brew 'swift-format'
 
 brew 'tealdeer'
 brew 'texlive'
@@ -128,6 +129,9 @@ tap 'dart-lang/dart'
 
 tap 'leoafarias/fvm'
 brew 'fvm'
+
+tap 'facebook/fb'
+brew 'idb-companion'
 
 tap 'teamookla/speedtest'
 brew 'speedtest'
