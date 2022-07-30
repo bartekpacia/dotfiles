@@ -50,7 +50,6 @@ export MAESTRO_CACHE="$HOME/.config/maestro"
 
 # see https://developer.android.com/studio/command-line/variables
 export ANDROID_HOME="$HOME/androidsdk"
-export ANDROID_USER_HOME="$HOME/.config/android"
 # see https://developer.android.com/studio/command-line#tools-sdk
 export PATH="$ANDROID_HOME/cmdline-tools/latest/bin:$PATH" 
 # see https://developer.android.com/studio/command-line#tools-platform
