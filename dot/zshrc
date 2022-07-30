@@ -43,9 +43,6 @@ export PATH="$HOME/.pub-cache/bin:$PATH"
 # Flutter (from fvm)
 export PATH="$HOME/fvm/default/bin:$PATH"
 
-export MASON_CACHE="$HOME/.config/mason"
-export MAESTRO_CACHE="$HOME/.config/maestro"
-
 # Android
 
 # see https://developer.android.com/studio/command-line/variables
