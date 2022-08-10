@@ -37,8 +37,9 @@ brew 'jq'
 brew 'kotlin'
 brew 'ktlint'
 
-brew 'lcov'
 brew 'latexindent'
+brew 'lcov'
+brew 'libimobiledevice'
 brew 'lsd'
 
 brew 'ncdu'
