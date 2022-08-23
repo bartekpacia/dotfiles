@@ -28,6 +28,7 @@ brew 'gpg'
 brew 'grep'
 brew 'htop'
 
+brew 'ideviceinstaller'
 brew 'imagemagick'
 brew 'ios-deploy'
 brew 'iproute2mac'
