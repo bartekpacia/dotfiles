@@ -55,6 +55,7 @@ brew 'mosh'
 # brew 'openvpn'
 
 # brew 'poetry' # use pyenv-installed Poetry instead, see https://github.com/Homebrew/homebrew-core/issues/53169
+brew 'powershell'
 brew 'prettier'
 brew 'pyenv'
 
