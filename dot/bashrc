@@ -10,7 +10,6 @@ alias gd="git diff"
 alias gp="git push"
 alias gs="git status"
 alias gmnff="git merge --no-ff"
-alias gcleanbranches="git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -D"
 
 if command -v lsd &>/dev/null; then
     alias lsd="lsd -lah"
