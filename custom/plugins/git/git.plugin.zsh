@@ -250,6 +250,8 @@ alias gplum='git pull upstream master'
 alias gwch='git whatchanged -p --abbrev-commit --pretty=medium'
 alias gwip='git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commit --no-verify --no-gpg-sign -m "--wip-- [skip ci]"'
 
+alias gcleanbranches="git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -D"
+
 function grename() {
     if [[ -z "$1" || -z "$2" ]]; then
         echo "Usage: $0 old_branch new_branch"
