@@ -22,6 +22,7 @@ brew 'ffmpeg'
 
 brew 'gh'
 brew 'git'
+brew 'git-filter-repo'
 brew 'git-lfs'
 brew 'go'
 brew 'gpg'
