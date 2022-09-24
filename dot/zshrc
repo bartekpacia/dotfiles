@@ -54,13 +54,15 @@ export PATH="$ANDROID_HOME/platform-tools:$PATH"
 # see https://developer.android.com/studio/command-line#tools-emulator
 export PATH="$ANDROID_HOME/emulator:$PATH"
 
-build_tools=$(
-    command ls "$ANDROID_HOME/build-tools" \
-        | sort --version-sort --reverse \
-        | head -n 1
-    )
+if [ -d "$ANDROID_HOME/build-tools" ]; then
+    build_tools=$(
+        command ls "$ANDROID_HOME/build-tools" \
+            | sort --version-sort --reverse \
+            | head -n 1
+        )
 
-export PATH="$ANDROID_HOME/build-tools/$build_tools:$PATH"
+    export PATH="$ANDROID_HOME/build-tools/$build_tools:$PATH"
+fi
 
 # Raspberry Pi Pico
 export PICO_SDK_PATH="$HOME/pico-sdk"
