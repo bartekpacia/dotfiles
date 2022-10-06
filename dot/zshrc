@@ -121,6 +121,8 @@ if [ -d "$HOME/shell-scripts" ]; then
 	export PATH="$HOME/shell-scripts/bin:$PATH"
 fi
 
+# Wolfram Mathematica
+export PATH="/Applications/Mathematica.app/Contents/MacOS:$PATH"
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
