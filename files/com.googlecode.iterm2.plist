@@ -8,6 +8,8 @@
 	<true/>
 	<key>Default Bookmark Guid</key>
 	<string>8F98F46F-ED47-41D8-95C9-CE86359B7AE4</string>
+	<key>DefaultTabStopWidth</key>
+	<integer>4</integer>
 	<key>EnableAPIServer</key>
 	<true/>
 	<key>FastTrackpad</key>
