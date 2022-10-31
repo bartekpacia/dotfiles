@@ -124,8 +124,8 @@ fi
 # Wolfram Mathematica
 export PATH="/Applications/Mathematica.app/Contents/MacOS:$PATH"
 
-# nvm
-export NVM_DIR="$HOME/.nvm"
+# nvm (installed manually)
+export NVM_DIR="$HOME/.cache/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
@@ -169,5 +169,7 @@ if [ command -v bat >/dev/null 2>&1 ]; then
 	export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 fi
 
-# make less don't clutter ~
-export LESSHISTFILE="$HOME/.config/less/history"
+export LESSHISTFILE="$HOME/.config/less/history" # make less not clutter ~
+export CP_HOME_DIR="$HOME/.cache/cocoapods" # make cocoapods not clutter ~
+export MASON_CACHE="$HOME/.cache/mason" # make mason not clutter ~
+export MAVEN_HOME="$HOME/.cache/maven" # make maven not clutter ~
