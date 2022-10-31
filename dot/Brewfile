@@ -66,6 +66,7 @@ brew 'rg'
 brew 'rustup'
 
 brew 'shellcheck'
+brew 'spotifyd'
 brew 'swift-format'
 
 brew 'tealdeer'
