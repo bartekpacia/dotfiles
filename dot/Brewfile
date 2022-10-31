@@ -11,6 +11,7 @@ brew 'cmake'
 brew 'coreutils'
 brew 'croc'
 
+brew 'duti'
 brew 'doxygen'
 
 brew 'exif'

@@ -1,0 +1,188 @@
+# cross-shell configuration
+
+stty -echoctl
+
+XDG_CONFIG_HOME="$HOME/.config"
+XDG_CACHE_HOME="$HOME/.cache"
+XDG_DATA_HOME="$HOME/.local/share"
+XDG_STATE_HOME="$HOME/.local/state"
+export DOTFILES="$HOME/.dotfiles"
+
+if [ -x /opt/homebrew/bin/brew ]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
+
+# GPG config (see https://help.github.com/en/github/authenticating-to-github/telling-git-about-your-signing-key)
+export GPG_TTY=$(tty)
+
+# Dart
+export PATH="$HOME/.pub-cache/bin:$PATH"
+
+# Flutter (from fvm)
+export PATH="$HOME/fvm/default/bin:$PATH"
+
+# Android
+
+# see https://developer.android.com/studio/command-line/variables
+export ANDROID_HOME="$HOME/androidsdk"
+# see https://developer.android.com/studio/command-line#tools-sdk
+export PATH="$ANDROID_HOME/cmdline-tools/latest/bin:$PATH" 
+# see https://developer.android.com/studio/command-line#tools-platform
+export PATH="$ANDROID_HOME/platform-tools:$PATH"
+# see https://developer.android.com/studio/command-line#tools-emulator
+export PATH="$ANDROID_HOME/emulator:$PATH"
+
+if [ -d "$ANDROID_HOME/build-tools" ]; then
+    build_tools=$(
+        command ls "$ANDROID_HOME/build-tools" \
+            | sort --version-sort --reverse \
+            | head -n 1
+        )
+
+    export PATH="$ANDROID_HOME/build-tools/$build_tools:$PATH"
+fi
+
+# Raspberry Pi Pico
+export PICO_SDK_PATH="$HOME/pico-sdk"
+
+# Java
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    # on Linux
+    export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+    export PATH="$JAVA_HOME/bin:$PATH"
+    elif [[ "$OSTYPE" == "darwin"* ]]; then
+    # on macOS
+    export JAVA_HOME="/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home"
+    export PATH="$JAVA_HOME/bin:$PATH"
+fi
+
+# dotnet
+export PATH="/usr/local/share/dotnet/x64:$PATH"
+export PATH="$HOME/.dotnet/tools:$PATH"
+
+# make
+export MAKEFLAGS="-j 8"
+
+# avr-gcc
+export PATH="/usr/local/opt/avr-gcc@11/bin:$PATH"
+
+# Python poetry
+export PATH="$HOME/.local/bin:$PATH"
+
+# Check if pyenv is installed
+if [ -d "$HOME/.pyenv" ]; then
+    eval "$(pyenv init --path)"
+    eval "$(pyenv init -)"
+fi
+export PYTHONDONTWRITEBYTECODE=1
+export PYTHONUSERBASE="$XDG_DATA_HOME/python"
+
+# Ruby
+
+# Check if rbenv is installed
+if [ -d "$HOME/.rbenv" ]; then
+    export PATH="$HOME/.rbenv/bin:$PATH"
+    eval "$(rbenv init -)"
+fi
+
+# Go
+
+# when Go installed directly from the webpage (no thru the pkg manager)
+export PATH="/usr/local/go/bin:$PATH"
+# for "go install"-ed software
+export PATH="$HOME/go/bin:$PATH"
+
+# Rust
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# shell-scripts (when not installed through brew)
+if [ -d "$HOME/shell-scripts" ]; then
+	export PATH="$HOME/shell-scripts/bin:$PATH"
+fi
+
+# Wolfram Mathematica
+export PATH="/Applications/Mathematica.app/Contents/MacOS:$PATH"
+
+# nvm (installed manually)
+export NVM_DIR="$HOME/.cache/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# nvm (from Homebrew)
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+# You may need to manually set your language environment
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+if [[ -n $SSH_CONNECTION ]]; then
+    export EDITOR='micro'
+else
+    export EDITOR='micro'
+fi
+
+# Heroku autocomplete setup
+HEROKU_AC_ZSH_SETUP_PATH="$HOME/Library/Caches/heroku/autocomplete/zsh_setup"
+if [ -f $HEROKU_AC_ZSH_SETUP_PATH ]; then
+    source $HEROKU_AC_ZSH_SETUP_PATH;
+fi
+
+# Source local gitignored files (not tracked by git)
+if [ -d $DOTFILES/local ]; then
+    export PATH="$DOTFILES/local:$PATH"
+fi
+
+# fzf
+if [ -f ~/.fzf.zsh ]; then
+	source ~/.fzf.zsh
+fi
+
+# bat
+export BAT_CONFIG_PATH="$HOME/.bat.conf"
+alias batt="bat --theme=\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo default || echo GitHub)"
+
+# colorize man pages using bat
+if [ command -v bat >/dev/null 2>&1 ]; then
+	export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+fi
+
+export LESSHISTFILE="$HOME/.config/less/history" # make less not clutter ~
+export CP_HOME_DIR="$HOME/.cache/cocoapods" # make cocoapods not clutter ~
+export MASON_CACHE="$HOME/.cache/mason" # make mason not clutter ~
+export MAVEN_HOME="$HOME/.cache/maven" # make maven not clutter ~
+
+# ------ General ------
+alias cls="clear"
+
+if command -v lsd &>/dev/null; then
+    alias lsd="lsd -lah"
+else
+    alias lsd="ls -lah"
+fi
+
+# ------ Sleep ------
+
+if command -v pmset &>/dev/null; then
+    alias zzz="pmset sleepnow"
+    alias zzzz="pmset sleepnow"
+    elif command -v systemctl &>/dev/null; then
+    alias zzz="systemctl sleep"
+    alias zzzz="systemctl sleep"
+fi
+
+# ------ Shit ------
+
+lenny() {
+    if [ "$1" = "sad" ]; then
+        echo "( ͡° ʖ̯ ͡°)"
+        elif [ "$1" = "sly" ]; then
+        echo "( ͡° ͜ʖ ͡°)"
+        elif [ "$1" = "idk" ]; then
+        echo "¯\_(ツ)_/¯"
+    else
+        echo "error: name the lenny!"
+    fi
+}

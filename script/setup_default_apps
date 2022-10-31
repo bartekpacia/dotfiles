@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# setup_default_apps sets the default apps for specific UTI identifiers the way
+# I want.
+
+
+# see bundle ID of an app using `osascript -e 'id of app "Code"'`
+# https://developer.apple.com/documentation/uniformtypeidentifiers/uttype/3551601-xml
+
+duti -s com.microsoft.VSCode public.xml all
+duti -s com.google.Chrome com.adobe.pdf all
