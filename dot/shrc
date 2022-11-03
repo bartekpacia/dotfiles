@@ -1,11 +1,12 @@
+#!/usr/bin/env sh
 # cross-shell configuration
 
 stty -echoctl
 
-XDG_CONFIG_HOME="$HOME/.config"
-XDG_CACHE_HOME="$HOME/.cache"
-XDG_DATA_HOME="$HOME/.local/share"
-XDG_STATE_HOME="$HOME/.local/state"
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_STATE_HOME="$HOME/.local/state"
 export DOTFILES="$HOME/.dotfiles"
 
 if [ -x /opt/homebrew/bin/brew ]; then
@@ -14,7 +15,8 @@ fi
 
 
 # GPG config (see https://help.github.com/en/github/authenticating-to-github/telling-git-about-your-signing-key)
-export GPG_TTY=$(tty)
+GPG_TTY=$(tty)
+export GPG_TTY
 
 # Dart
 export PATH="$HOME/.pub-cache/bin:$PATH"
@@ -47,11 +49,11 @@ fi
 export PICO_SDK_PATH="$HOME/pico-sdk"
 
 # Java
-if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+if [ "$(uname)" = Linux ]; then
     # on Linux
     export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
     export PATH="$JAVA_HOME/bin:$PATH"
-    elif [[ "$OSTYPE" == "darwin"* ]]; then
+elif [ "$(uname)" = Darwin ]; then
     # on macOS
     export JAVA_HOME="/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home"
     export PATH="$JAVA_HOME/bin:$PATH"
@@ -126,18 +128,18 @@ fi
 
 # Heroku autocomplete setup
 HEROKU_AC_ZSH_SETUP_PATH="$HOME/Library/Caches/heroku/autocomplete/zsh_setup"
-if [ -f $HEROKU_AC_ZSH_SETUP_PATH ]; then
-    source $HEROKU_AC_ZSH_SETUP_PATH;
+if [ -f "$HEROKU_AC_ZSH_SETUP_PATH" ]; then
+    . "$HEROKU_AC_ZSH_SETUP_PATH"
 fi
 
 # Source local gitignored files (not tracked by git)
-if [ -d $DOTFILES/local ]; then
+if [ -d "$DOTFILES/local" ]; then
     export PATH="$DOTFILES/local:$PATH"
 fi
 
 # fzf
 if [ -f ~/.fzf.zsh ]; then
-	source ~/.fzf.zsh
+	. "$HOME/.fzf.zsh"
 fi
 
 # bat
@@ -145,7 +147,7 @@ export BAT_CONFIG_PATH="$HOME/.bat.conf"
 alias batt="bat --theme=\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo default || echo GitHub)"
 
 # colorize man pages using bat
-if [ command -v bat >/dev/null 2>&1 ]; then
+if command -v bat > /dev/null 2>&1; then
 	export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 fi
 
@@ -157,7 +159,7 @@ export MAVEN_HOME="$HOME/.cache/maven" # make maven not clutter ~
 # ------ General ------
 alias cls="clear"
 
-if command -v lsd &>/dev/null; then
+if command -v lsd > /dev/null 2>&1; then
     alias lsd="lsd -lah"
 else
     alias lsd="ls -lah"
@@ -165,10 +167,10 @@ fi
 
 # ------ Sleep ------
 
-if command -v pmset &>/dev/null; then
+if command -v pmset > /dev/null 2>&1; then
     alias zzz="pmset sleepnow"
     alias zzzz="pmset sleepnow"
-    elif command -v systemctl &>/dev/null; then
+elif command -v systemctl > /dev/null 2>&1; then
     alias zzz="systemctl sleep"
     alias zzzz="systemctl sleep"
 fi
