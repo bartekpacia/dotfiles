@@ -52,6 +52,7 @@ brew 'nvm'
 
 brew 'mas'
 brew 'micro'
+brew 'moreutils'
 brew 'mosh'
 
 # brew 'openvpn'
