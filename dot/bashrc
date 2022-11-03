@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 
 if [ -f ~/.shrc ]; then
-    source ~/.shrc
+	source ~/.shrc
 fi
-
 
 export PATH="$HOME/.poetry/bin:$PATH"
 
@@ -18,17 +17,10 @@ alias gs="git status"
 alias gmnff="git merge --no-ff"
 
 if command -v lsd &>/dev/null; then
-    alias lsd="lsd -lah"
+	alias lsd="lsd -lah"
 else
-    alias lsd="ls -lah"
+	alias lsd="ls -lah"
 fi
 
 alias cls="clear"
 alias md="mkdir"
-
-### Node.js ###
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
