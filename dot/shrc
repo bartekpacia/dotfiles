@@ -10,9 +10,8 @@ export XDG_STATE_HOME="$HOME/.local/state"
 export DOTFILES="$HOME/.dotfiles"
 
 if [ -x /opt/homebrew/bin/brew ]; then
-    eval "$(/opt/homebrew/bin/brew shellenv)"
+	eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
-
 
 # GPG config (see https://help.github.com/en/github/authenticating-to-github/telling-git-about-your-signing-key)
 GPG_TTY=$(tty)
@@ -29,20 +28,20 @@ export PATH="$HOME/fvm/default/bin:$PATH"
 # see https://developer.android.com/studio/command-line/variables
 export ANDROID_HOME="$HOME/androidsdk"
 # see https://developer.android.com/studio/command-line#tools-sdk
-export PATH="$ANDROID_HOME/cmdline-tools/latest/bin:$PATH" 
+export PATH="$ANDROID_HOME/cmdline-tools/latest/bin:$PATH"
 # see https://developer.android.com/studio/command-line#tools-platform
 export PATH="$ANDROID_HOME/platform-tools:$PATH"
 # see https://developer.android.com/studio/command-line#tools-emulator
 export PATH="$ANDROID_HOME/emulator:$PATH"
 
 if [ -d "$ANDROID_HOME/build-tools" ]; then
-    build_tools=$(
-        command ls "$ANDROID_HOME/build-tools" \
-            | sort --version-sort --reverse \
-            | head -n 1
-        )
+	build_tools=$(
+		command ls "$ANDROID_HOME/build-tools" |
+			sort --version-sort --reverse |
+			head -n 1
+	)
 
-    export PATH="$ANDROID_HOME/build-tools/$build_tools:$PATH"
+	export PATH="$ANDROID_HOME/build-tools/$build_tools:$PATH"
 fi
 
 # Raspberry Pi Pico
@@ -50,13 +49,13 @@ export PICO_SDK_PATH="$HOME/pico-sdk"
 
 # Java
 if [ "$(uname)" = Linux ]; then
-    # on Linux
-    export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
-    export PATH="$JAVA_HOME/bin:$PATH"
+	# on Linux
+	export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+	export PATH="$JAVA_HOME/bin:$PATH"
 elif [ "$(uname)" = Darwin ]; then
-    # on macOS
-    export JAVA_HOME="/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home"
-    export PATH="$JAVA_HOME/bin:$PATH"
+	# on macOS
+	export JAVA_HOME="/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home"
+	export PATH="$JAVA_HOME/bin:$PATH"
 fi
 
 # dotnet
@@ -74,8 +73,8 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # Check if pyenv is installed
 if [ -d "$HOME/.pyenv" ]; then
-    eval "$(pyenv init --path)"
-    eval "$(pyenv init -)"
+	eval "$(pyenv init --path)"
+	eval "$(pyenv init -)"
 fi
 export PYTHONDONTWRITEBYTECODE=1
 export PYTHONUSERBASE="$XDG_DATA_HOME/python"
@@ -84,8 +83,8 @@ export PYTHONUSERBASE="$XDG_DATA_HOME/python"
 
 # Check if rbenv is installed
 if [ -d "$HOME/.rbenv" ]; then
-    export PATH="$HOME/.rbenv/bin:$PATH"
-    eval "$(rbenv init -)"
+	export PATH="$HOME/.rbenv/bin:$PATH"
+	eval "$(rbenv init -)"
 fi
 
 # Go
@@ -108,33 +107,33 @@ export PATH="/Applications/Mathematica.app/Contents/MacOS:$PATH"
 
 # nvm (installed manually)
 export NVM_DIR="$HOME/.cache/nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
 # nvm (from Homebrew)
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"                                       # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-    export EDITOR='micro'
+if [ -n "$SSH_CONNECTION" ]; then
+	export EDITOR='micro'
 else
-    export EDITOR='micro'
+	export EDITOR='micro'
 fi
 
 # Heroku autocomplete setup
 HEROKU_AC_ZSH_SETUP_PATH="$HOME/Library/Caches/heroku/autocomplete/zsh_setup"
 if [ -f "$HEROKU_AC_ZSH_SETUP_PATH" ]; then
-    . "$HEROKU_AC_ZSH_SETUP_PATH"
+	. "$HEROKU_AC_ZSH_SETUP_PATH"
 fi
 
 # Source local gitignored files (not tracked by git)
 if [ -d "$DOTFILES/local" ]; then
-    export PATH="$DOTFILES/local:$PATH"
+	export PATH="$DOTFILES/local:$PATH"
 fi
 
 # fzf
@@ -147,44 +146,44 @@ export BAT_CONFIG_PATH="$HOME/.bat.conf"
 alias batt="bat --theme=\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo default || echo GitHub)"
 
 # colorize man pages using bat
-if command -v bat > /dev/null 2>&1; then
+if command -v bat >/dev/null 2>&1; then
 	export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 fi
 
 export LESSHISTFILE="$HOME/.config/less/history" # make less not clutter ~
-export CP_HOME_DIR="$HOME/.cache/cocoapods" # make cocoapods not clutter ~
-export MASON_CACHE="$HOME/.cache/mason" # make mason not clutter ~
-export MAVEN_HOME="$HOME/.cache/maven" # make maven not clutter ~
+export CP_HOME_DIR="$HOME/.cache/cocoapods"      # make cocoapods not clutter ~
+export MASON_CACHE="$HOME/.cache/mason"          # make mason not clutter ~
+export MAVEN_HOME="$HOME/.cache/maven"           # make maven not clutter ~
 
 # ------ General ------
 alias cls="clear"
 
-if command -v lsd > /dev/null 2>&1; then
-    alias lsd="lsd -lah"
+if command -v lsd >/dev/null 2>&1; then
+	alias lsd="lsd -lah"
 else
-    alias lsd="ls -lah"
+	alias lsd="ls -lah"
 fi
 
 # ------ Sleep ------
 
-if command -v pmset > /dev/null 2>&1; then
-    alias zzz="pmset sleepnow"
-    alias zzzz="pmset sleepnow"
-elif command -v systemctl > /dev/null 2>&1; then
-    alias zzz="systemctl sleep"
-    alias zzzz="systemctl sleep"
+if command -v pmset >/dev/null 2>&1; then
+	alias zzz="pmset sleepnow"
+	alias zzzz="pmset sleepnow"
+elif command -v systemctl >/dev/null 2>&1; then
+	alias zzz="systemctl sleep"
+	alias zzzz="systemctl sleep"
 fi
 
 # ------ Shit ------
 
 lenny() {
-    if [ "$1" = "sad" ]; then
-        echo "( ͡° ʖ̯ ͡°)"
-        elif [ "$1" = "sly" ]; then
-        echo "( ͡° ͜ʖ ͡°)"
-        elif [ "$1" = "idk" ]; then
-        echo "¯\_(ツ)_/¯"
-    else
-        echo "error: name the lenny!"
-    fi
+	if [ "$1" = "sad" ]; then
+		echo "( ͡° ʖ̯ ͡°)"
+	elif [ "$1" = "sly" ]; then
+		echo "( ͡° ͜ʖ ͡°)"
+	elif [ "$1" = "idk" ]; then
+		echo "¯\_(ツ)_/¯"
+	else
+		echo "error: name the lenny!"
+	fi
 }
