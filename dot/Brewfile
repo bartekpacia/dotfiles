@@ -67,6 +67,7 @@ brew 'rg'
 brew 'rustup'
 
 brew 'shellcheck'
+brew 'shfmt'
 brew 'spotifyd'
 brew 'swift-format'
 
