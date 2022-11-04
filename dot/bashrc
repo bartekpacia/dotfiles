@@ -4,8 +4,6 @@ if [ -f ~/.shrc ]; then
 	source ~/.shrc
 fi
 
-export PATH="$HOME/.poetry/bin:$PATH"
-
 alias g="git"
 alias gaa="git add ."
 alias gb="git branch"
@@ -15,12 +13,3 @@ alias gd="git diff"
 alias gp="git push"
 alias gs="git status"
 alias gmnff="git merge --no-ff"
-
-if command -v lsd &>/dev/null; then
-	alias lsd="lsd -lah"
-else
-	alias lsd="ls -lah"
-fi
-
-alias cls="clear"
-alias md="mkdir"
