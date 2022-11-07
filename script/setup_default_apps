@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# setup_default_apps sets the default apps for specific UTI identifiers the way
+# I want.
+#
+# See also:
+# * https://developer.apple.com/documentation/uniformtypeidentifiers/uttype
+# * `osascript -e 'id of app "Code"'` to get id of Visual Studio Code
+
+duti -s com.microsoft.VSCode public.xml all
+duti -s com.microsoft.VSCode public.shell-script all
+duti -s com.google.Chrome com.adobe.pdf all

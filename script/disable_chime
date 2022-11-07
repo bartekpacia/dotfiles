@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Disables the annoying noise that macOS does by default when starting up.
+# disable_chime disables the annoying noise that macOS does by default when
+# starting up.
 
-echo "the startup chime will be disabled"
 sudo nvram StartupMute=%01
+echo "disable_chime: the startup chime was disabled"

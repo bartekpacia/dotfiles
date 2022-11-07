@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Sets icons in the Dock the way I want.
+# setup_dock sets up the icons in the Dock the way I want.
 
 # clear all icons in the dock
 defaults delete com.apple.dock persistent-apps

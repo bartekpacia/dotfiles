@@ -11,6 +11,7 @@ brew 'cmake'
 brew 'coreutils'
 brew 'croc'
 
+brew 'duti'
 brew 'doxygen'
 
 brew 'exif'
@@ -51,6 +52,7 @@ brew 'nvm'
 
 brew 'mas'
 brew 'micro'
+brew 'moreutils'
 brew 'mosh'
 
 # brew 'openvpn'
@@ -65,6 +67,8 @@ brew 'rg'
 brew 'rustup'
 
 brew 'shellcheck'
+brew 'shfmt'
+brew 'spotifyd'
 brew 'swift-format'
 
 brew 'tealdeer'
@@ -109,12 +113,12 @@ cask 'zoom'
 
 # Specific taps
 
-# OpenJDK for Android SDK
-tap 'AdoptopenJDK/openjdk'
-cask 'adoptopenjdk/openjdk/adoptopenjdk11'
-
 tap 'bartekpacia/tools'
-brew 'shell-scripts'
+brew 'scripts'
+
+# OpenJDK for Android SDK
+tap 'AdoptOpenJDK/openjdk'
+cask 'adoptopenjdk11'
 
 tap 'tinygo-org/tools'
 brew 'tinygo'
