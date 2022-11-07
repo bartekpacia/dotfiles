@@ -113,12 +113,12 @@ cask 'zoom'
 
 # Specific taps
 
-# OpenJDK for Android SDK
-tap 'AdoptopenJDK/openjdk'
-cask 'adoptopenjdk/openjdk/adoptopenjdk11'
-
 tap 'bartekpacia/tools'
-brew 'shell-scripts'
+brew 'scripts'
+
+# OpenJDK for Android SDK
+tap 'AdoptOpenJDK/openjdk'
+cask 'adoptopenjdk11'
 
 tap 'tinygo-org/tools'
 brew 'tinygo'
