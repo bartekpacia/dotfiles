@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
 if [ -f ~/.shrc ]; then
-    source ~/.shrc
+	source ~/.shrc
 fi
 
 # Path to your oh-my-zsh installation.
@@ -21,17 +21,17 @@ zstyle ':completion:*' matcher-list '' 'l:|=[^_]* r:|=*'
 ZSH_THEME="mlh"
 
 plugins=(
-    git
-    macos
-    adb
-    zsh-autosuggestions
-    zsh-syntax-highlighting
-    # zsh-completions # does not work, see https://github.com/zsh-users/zsh-completions/issues/603
+	git
+	macos
+	adb
+	zsh-autosuggestions
+	zsh-syntax-highlighting
+	# zsh-completions # does not work, see https://github.com/zsh-users/zsh-completions/issues/603
 )
 
 # see https://github.com/zsh-users/zsh-completions/issues/603
 fpath+="${ZSH_CUSTOM:-"$ZSH/custom"}/plugins/zsh-completions/src"
 
 if [ -d "$ZSH" ]; then
-    source "$ZSH/oh-my-zsh.sh"
+	source "$ZSH/oh-my-zsh.sh"
 fi

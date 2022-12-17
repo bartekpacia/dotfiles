@@ -2,20 +2,19 @@
 # Functions
 #
 
-
 # Pretty log messages
-function _git_log_prettily(){
-    if ! [ -z $1 ]; then
-        git log --pretty=$1
-    fi
+function _git_log_prettily() {
+	if ! [ -z $1 ]; then
+		git log --pretty=$1
+	fi
 }
 compdef _git _git_log_prettily=git-log
 
 # Warn if the current branch is a WIP
 function work_in_progress() {
-    if $(git log -n 1 2>/dev/null | grep -q -c "\-\-wip\-\-"); then
-        echo "WIP!!"
-    fi
+	if $(git log -n 1 2>/dev/null | grep -q -c "\-\-wip\-\-"); then
+		echo "WIP!!"
+	fi
 }
 
 #
@@ -82,7 +81,9 @@ alias gds='git diff --staged'
 alias gdt='git diff-tree --no-commit-id --name-only -r'
 alias gdw='git diff --word-diff'
 
-function gdv() { git diff -w "$@" | view - }
+function gdv() {
+	git diff -w "$@" | view -
+}
 compdef _git gdv=git-diff
 
 alias gf='git fetch'
@@ -95,48 +96,48 @@ alias gg='git gui citool'
 alias gga='git gui citool --amend'
 
 function ggf() {
-    [[ "$#" != 1 ]] && local b="$(git_current_branch)"
-    git push --force origin "${b:=$1}"
+	[[ "$#" != 1 ]] && local b="$(git_current_branch)"
+	git push --force origin "${b:=$1}"
 }
 compdef _git ggf=git-checkout
 function ggfl() {
-    [[ "$#" != 1 ]] && local b="$(git_current_branch)"
-    git push --force-with-lease origin "${b:=$1}"
+	[[ "$#" != 1 ]] && local b="$(git_current_branch)"
+	git push --force-with-lease origin "${b:=$1}"
 }
 compdef _git ggfl=git-checkout
 
 function ggl() {
-    if [[ "$#" != 0 ]] && [[ "$#" != 1 ]]; then
-        git pull origin "${*}"
-    else
-        [[ "$#" == 0 ]] && local b="$(git_current_branch)"
-        git pull origin "${b:=$1}"
-    fi
+	if [[ "$#" != 0 ]] && [[ "$#" != 1 ]]; then
+		git pull origin "${*}"
+	else
+		[[ "$#" == 0 ]] && local b="$(git_current_branch)"
+		git pull origin "${b:=$1}"
+	fi
 }
 compdef _git ggl=git-checkout
 
 function ggp() {
-    if [[ "$#" != 0 ]] && [[ "$#" != 1 ]]; then
-        git push origin "${*}"
-    else
-        [[ "$#" == 0 ]] && local b="$(git_current_branch)"
-        git push origin "${b:=$1}"
-    fi
+	if [[ "$#" != 0 ]] && [[ "$#" != 1 ]]; then
+		git push origin "${*}"
+	else
+		[[ "$#" == 0 ]] && local b="$(git_current_branch)"
+		git push origin "${b:=$1}"
+	fi
 }
 compdef _git ggp=git-checkout
 
 function ggpnp() {
-    if [[ "$#" == 0 ]]; then
-        ggl && ggp
-    else
-        ggl "${*}" && ggp "${*}"
-    fi
+	if [[ "$#" == 0 ]]; then
+		ggl && ggp
+	else
+		ggl "${*}" && ggp "${*}"
+	fi
 }
 compdef _git ggpnp=git-checkout
 
 function ggu() {
-    [[ "$#" != 1 ]] && local b="$(git_current_branch)"
-    git pull --rebase origin "${b:=$1}"
+	[[ "$#" != 1 ]] && local b="$(git_current_branch)"
+	git pull --rebase origin "${b:=$1}"
 }
 compdef _git ggu=git-checkout
 
@@ -217,9 +218,9 @@ alias gsr='git svn rebase'
 
 # use the default stash push on git 2.13 and newer
 autoload -Uz is-at-least
-is-at-least 2.13 "$(git --version 2>/dev/null | awk '{print $3}')" \
-&& alias gsta='git stash push' \
-|| alias gsta='git stash save'
+is-at-least 2.13 "$(git --version 2>/dev/null | awk '{print $3}')" &&
+	alias gsta='git stash push' ||
+	alias gsta='git stash save'
 
 alias gstaa='git stash apply'
 alias gstc='git stash clear'
@@ -251,15 +252,15 @@ alias gwch='git whatchanged -p --abbrev-commit --pretty=medium'
 alias gwip='git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commit --no-verify --no-gpg-sign -m "--wip-- [skip ci]"'
 
 function grename() {
-    if [[ -z "$1" || -z "$2" ]]; then
-        echo "Usage: $0 old_branch new_branch"
-        return 1
-    fi
-    
-    # Rename branch locally
-    git branch -m "$1" "$2"
-    # Rename branch in origin remote
-    if git push origin :"$1"; then
-        git push --set-upstream origin "$2"
-    fi
+	if [[ -z "$1" || -z "$2" ]]; then
+		echo "Usage: $0 old_branch new_branch"
+		return 1
+	fi
+
+	# Rename branch locally
+	git branch -m "$1" "$2"
+	# Rename branch in origin remote
+	if git push origin :"$1"; then
+		git push --set-upstream origin "$2"
+	fi
 }
