@@ -17,7 +17,7 @@ fi
 GPG_TTY=$(tty)
 export GPG_TTY
 
-# Dart
+# Dart executable packages
 export PATH="$HOME/.pub-cache/bin:$PATH"
 
 # Flutter (from fvm)
@@ -58,6 +58,10 @@ elif [ "$(uname)" = Darwin ]; then
 	export PATH="$JAVA_HOME/bin:$PATH"
 fi
 
+# Gradle
+
+export GRADLE_USER_HOME="$HOME/.gradle"
+
 # dotnet
 export PATH="/usr/local/share/dotnet/x64:$PATH"
 export PATH="$HOME/.dotnet/tools:$PATH"
@@ -97,9 +101,9 @@ export PATH="$HOME/go/bin:$PATH"
 # Rust
 export PATH="$HOME/.cargo/bin:$PATH"
 
-# shell-scripts (when not installed through brew)
-if [ -d "$HOME/shell-scripts" ]; then
-	export PATH="$HOME/shell-scripts/bin:$PATH"
+# https://github.com/bartekpacia/scripts (when not installed through brew)
+if [ -d "$HOME/scripts" ]; then
+	export PATH="$HOME/scripts/bin:$PATH"
 fi
 
 # Wolfram Mathematica
@@ -157,16 +161,13 @@ export MAVEN_HOME="$HOME/.cache/maven"           # make maven not clutter ~
 
 # ------ General ------
 alias cls="clear"
+alias md="mkdir"
 
 if command -v lsd >/dev/null 2>&1; then
 	alias lsd="lsd -lah"
 else
 	alias lsd="ls -lah"
 fi
-
-alias cls="clear"
-alias md="mkdir"
-
 
 # ------ Sleep ------
 
