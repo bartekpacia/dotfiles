@@ -13,3 +13,5 @@ alias gd="git diff"
 alias gp="git push"
 alias gs="git status"
 alias gmnff="git merge --no-ff"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

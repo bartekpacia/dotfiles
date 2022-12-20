@@ -35,3 +35,5 @@ fpath+="${ZSH_CUSTOM:-"$ZSH/custom"}/plugins/zsh-completions/src"
 if [ -d "$ZSH" ]; then
 	source "$ZSH/oh-my-zsh.sh"
 fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
