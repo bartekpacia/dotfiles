@@ -26,6 +26,7 @@ plugins=(
 	adb
 	zsh-autosuggestions
 	zsh-syntax-highlighting
+	gradle-completion
 	# zsh-completions # does not work, see https://github.com/zsh-users/zsh-completions/issues/603
 )
 
