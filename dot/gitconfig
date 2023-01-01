@@ -1,7 +1,7 @@
 [user]
 	name = Bartek Pacia
 	email = barpac02@gmail.com
-	signingkey = 6E3C1569F64A987B
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIM0XGjV2GkSq7+K+l5SgIFVStXdZPT9ItmBHnizJW30X
 [github]
 	user = bartekpacia
 [core]
@@ -21,11 +21,22 @@
 	process = git-lfs filter-process
 	required = true
 [gpg]
-	program = gpg
-[credential]
-	credentialStore = gpg
-	helper = osxkeychain
-[credential "https://dev.azure.com"]
-	useHttpPath = true
+	format = ssh
+	# program = gpg
+[gpg "ssh"]
+	program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
 [init]
 	defaultBranch = master
+
+# [user]
+#   signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIL/k8E+4IW/Nxxw5fHVfHB4wm5DE5vddp/Ijfaj5jPmT
+
+# [gpg]
+#   format = ssh
+
+# [gpg "ssh"]
+#   program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+
+# [commit]
+#   gpgsign = true
+

@@ -47,14 +47,14 @@ for f in "$DOTFILES/files/"*; do
 done
 
 # Symlink ssh/* (my common SSH config) into ~/.ssh as regular files
-printf "setup: symlinking ssh files...\n"
-for f in "$DOTFILES/ssh/"*; do
-	if [ ! -d ~/.ssh ]; then
-		mkdir ~/.ssh
-	fi
+# printf "setup: symlinking ssh files...\n"
+# for f in "$DOTFILES/ssh/"*; do
+# 	if [ ! -d ~/.ssh ]; then
+# 		mkdir ~/.ssh
+# 	fi
 
-	ln -sfn "$f" ~/.ssh/"$(basename "$f")"
-done
+# 	ln -sfn "$f" ~/.ssh/"$(basename "$f")"
+# done
 
 # Setup oh-my-zsh
 export KEEP_ZSHRC="yes"

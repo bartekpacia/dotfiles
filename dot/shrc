@@ -17,6 +17,9 @@ fi
 GPG_TTY=$(tty)
 export GPG_TTY
 
+# 1Password SSH agent config
+export SSH_AUTH_SOCK="$HOME/.1password/agent.sock"
+
 # Dart executable packages
 export PATH="$HOME/.pub-cache/bin:$PATH"
 
