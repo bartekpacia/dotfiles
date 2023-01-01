@@ -1,80 +1,60 @@
 brew 'apktool'
 brew 'avrdude'
-
 brew 'bash'
 brew 'bat'
 brew 'bundletool'
-
 brew 'clang-format'
 brew 'cmake'
-# brew 'cocoapods' # use cocoapods installed from rbenv-installed bundle!
+brew 'cocoapods' if false  # use cocoapods installed by bundler from rbenv
 brew 'coreutils'
 brew 'croc'
-
-brew 'duti'
 brew 'doxygen'
-
+brew 'duti'
 brew 'exif'
 brew 'exiftool'
-
 brew 'fd'
-brew 'fzf'
 brew 'ffmpeg'
-
+brew 'fzf'
 brew 'gh'
-brew 'git'
 brew 'git-filter-repo'
 brew 'git-lfs'
+brew 'git'
 brew 'go'
 brew 'gpg'
 brew 'grep'
 brew 'htop'
-
 brew 'ideviceinstaller'
 brew 'imagemagick'
 brew 'ios-deploy'
 brew 'iproute2mac'
-
 brew 'jq'
-
 brew 'kotlin'
 brew 'ktlint'
-
 brew 'latexindent'
 brew 'lcov'
 brew 'libimobiledevice'
 brew 'lsd'
-
-brew 'ncdu'
-brew 'neofetch'
-brew 'nmap'
-brew 'nvm'
-
 brew 'mas'
 brew 'micro'
 brew 'moreutils'
 brew 'mosh'
-
-# brew 'openvpn'
-
-# brew 'poetry' # use pyenv-installed Poetry instead, see https://github.com/Homebrew/homebrew-core/issues/53169
-brew 'powershell'
+brew 'ncdu'
+brew 'neofetch'
+brew 'nmap'
+brew 'nvm'
+brew 'poetry' if false # use poetry installed by pip from pyenv, see https://github.com/Homebrew/homebrew-core/issues/53169
 brew 'prettier'
 brew 'pyenv'
-
 brew 'rbenv'
 brew 'rg'
 brew 'rustup'
-
 brew 'shellcheck'
 brew 'shfmt'
 brew 'spotifyd'
 brew 'swift-format'
-
 brew 'tealdeer'
 brew 'texlive'
 brew 'tree'
-
 brew 'webp'
 brew 'wget'
 brew 'xcbeautify'
@@ -98,6 +78,7 @@ cask 'jetbrains-toolbox'
 cask 'mos'
 cask 'notion'
 cask 'postman'
+cask 'powershell'
 cask 'qlimagesize'
 cask 'qlstephen'
 cask 'quicklook-json'
@@ -130,11 +111,11 @@ cask 'font-jetbrains-mono'
 # Font needed by lsd
 cask 'font-hack-nerd-font'
 
-# tap 'heroku/brew'
-# brew 'heroku'
+tap 'heroku/brew'
+brew 'heroku' if false
 
-# tap 'dart-lang/dart'
-# brew 'dart'
+tap 'dart-lang/dart'
+brew 'dart' if false
 
 tap 'leoafarias/fvm'
 brew 'fvm'
@@ -145,19 +126,19 @@ brew 'idb-companion'
 tap 'teamookla/speedtest'
 brew 'speedtest'
 
-# tap 'microsoft/git'
-# cask 'git-credential-manager-core'
+tap 'microsoft/git'
+cask 'git-credential-manager-core' if false
 
 tap 'osx-cross/avr'
 brew 'avr-gcc'
 
 tap 'ArmMbed/homebrew-formulae'
-# brew 'arm-none-eabi-gcc'
+brew 'arm-none-eabi-gcc' if false
 
 mas 'Notability', id: 360593530
 mas 'Telegram', id: 747648890
 mas 'The Unarchiver', id: 425424353
 mas 'iMovie', id: 408981434
 mas 'Amphetamine', id: 937984704
-# mas 'Termius - SSH client', id: 1176074088
+mas 'Termius - SSH client', id: 1176074088 if false
 mas 'Xcode', id: 497799835
