@@ -2,8 +2,6 @@
 	name = Bartek Pacia
 	email = barpac02@gmail.com
 	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIM0XGjV2GkSq7+K+l5SgIFVStXdZPT9ItmBHnizJW30X
-[includeIf "gitdir:~/dev/leancode/"]
-    path = ~/.gitconfig_work
 [github]
 	user = bartekpacia
 [core]
@@ -26,3 +24,5 @@
 	format = ssh
 [init]
 	defaultBranch = master
+[includeIf "gitdir:~/dev/leancode/"]
+    path = ~/.gitconfig_leancode
