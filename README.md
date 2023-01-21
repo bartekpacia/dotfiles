@@ -1,8 +1,26 @@
 # dotfiles
 
-Use with [strap](https://github.com/MikeMcQuaid/strap).
+My very personal development environment setup. I refuse to work without it.
 
-### File descriptions
+## Setup
+
+On macOS, use with [strap](https://github.com/MikeMcQuaid/strap).
+
+On other Unix-like systems, clone with `git` to the `.dotfiles` directory.
+
+### SSH
+
+```console
+git clone git@github.com:bartekpacia/dotfiles.git ~/.dotfiles
+```
+
+### HTTPS
+
+```console
+git clone https://github.com/bartekpacia/dotfiles.git ~/.dotfiles
+```
+
+## File descriptions
 
 - `ssh/config` SSH config. Automatically includes all files starting matching
   `ssh/config_*`.
