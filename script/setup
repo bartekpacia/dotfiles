@@ -7,7 +7,8 @@ ZSH_CUSTOM="$ZSH/custom"
 DOTFILES="$HOME/.dotfiles"
 
 # This script is designed to be run as part of the strap bootstrapping process.
-# Assume that git and brew are installed. Assume that dotfiles repo is in ~.
+# Assume that curl, git, and zsh are installed. Assume that dotfiles repo is in ~.
+# On macOS, assume that brew is installed.
 
 ARG="${1:-}"
 if [ "$ARG" = "-h" ] || [ "$ARG" = "--help" ]; then
@@ -63,12 +64,6 @@ done
 printf "setup: symlinking custom oh-my-zsh scripts...\n"
 for f in "$DOTFILES/custom/"*.zsh; do
 	ln -sfn "$f" "$ZSH_CUSTOM/$(basename "$f")"
-done
-
-printf "setup: symlinking iTerm2 scripts...\n"
-for f in "$DOTFILES/iterm2/"*.py; do
-	mkdir -p "$HOME/Library/Application Support/iTerm2/Scripts/AutoLaunch"
-	ln -sfn "$f" "$HOME/Library/Application Support/iTerm2/Scripts/AutoLaunch/$(basename "$f")"
 done
 
 if [ "$ARG" = "--no-reinstall" ]; then
