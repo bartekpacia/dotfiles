@@ -2,23 +2,42 @@
 
 My very personal development environment setup. I refuse to work without it.
 
-## Setup
+## Set up on macOS
 
-On macOS, use with [strap](https://github.com/MikeMcQuaid/strap).
+On macOS, simply use [strap](https://github.com/MikeMcQuaid/strap).
 
-On other Unix-like systems, clone with `git` to the `.dotfiles` directory.
+## Set up on UNIX
 
-### SSH
+### Download
+
+On other Unix-like systems, `git clone` this repository to the `$HOME/.dotfiles`
+directory.
+
+**SSH**
 
 ```console
 git clone git@github.com:bartekpacia/dotfiles.git ~/.dotfiles
 ```
 
-### HTTPS
+**HTTPS**
 
 ```console
 git clone https://github.com/bartekpacia/dotfiles.git ~/.dotfiles
 ```
+
+### Install
+
+Execute `script/setup`:
+
+```console
+~/.dotfiles/script/setup
+```
+
+Please note that `script/setup` depends on these tools:
+
+- `curl`
+- `git`
+- `zsh`
 
 ## File descriptions
 
