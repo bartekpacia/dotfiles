@@ -61,7 +61,7 @@ brew 'xcbeautify'
 brew 'youtube-dl'
 brew 'zsh'
 
-cask '1password-beta'
+cask '1password'
 cask '1password-cli'
 cask 'android-file-transfer'
 cask 'arduino'
