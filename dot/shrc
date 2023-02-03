@@ -169,9 +169,11 @@ alias cls="clear"
 alias md="mkdir"
 
 if command -v lsd >/dev/null 2>&1; then
-	alias lsd="lsd -lah"
+	alias lsd="lsd -lAh"
+	alias lsdt="lsd -lAht"
 else
-	alias lsd="ls -lah"
+	alias lsd="ls -lAh"
+	alias lsdt="ls -lAht"
 fi
 
 # ------ Sleep ------
