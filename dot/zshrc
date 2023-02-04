@@ -16,25 +16,25 @@ export MLH_IN_SYMBOL=" in "
 export MLH_ON_SYMBOL=" on "
 export MLH_SHELL_SYMBOL="$ "
 
-zstyle ':completion:*' matcher-list '' 'l:|=[^_]* r:|=*'
-
 ZSH_THEME="mlh"
 
 plugins=(
-	git
-	macos
 	adb
+	git
+	gradle-completion
+	macos
+	pod
 	zsh-autosuggestions
 	zsh-syntax-highlighting
-	gradle-completion
-	# zsh-completions # does not work, see https://github.com/zsh-users/zsh-completions/issues/603
+	# zsh-completions # needlessly slow, see https://github.com/zsh-users/zsh-completions/issues/603
 )
-
 # see https://github.com/zsh-users/zsh-completions/issues/603
 fpath+="${ZSH_CUSTOM:-"$ZSH/custom"}/plugins/zsh-completions/src"
 
 if [ -d "$ZSH" ]; then
 	source "$ZSH/oh-my-zsh.sh"
 fi
+
+zstyle ':completion:*' matcher-list ''
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
