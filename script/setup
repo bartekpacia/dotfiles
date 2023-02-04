@@ -32,7 +32,7 @@ reinstall() {
 
 	printf "setup: reinstalling gradle-completion...\n"
 	rm -rf ~/.oh-my-zsh/plugins/gradle-completion
-	git clone https://github.com/gradle/gradle-completion ~/.oh-my-zsh/plugins/gradle-completion 1>/dev/null 2>&1
+	git clone https://github.com/gradle/gradle-completion ~/.oh-my-zsh/custom/plugins/gradle-completion 1>/dev/null 2>&1
 }
 
 # Symlink dot/* into home directory as hidden files
