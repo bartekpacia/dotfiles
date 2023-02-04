@@ -111,9 +111,6 @@ cask 'font-jetbrains-mono'
 # Font needed by lsd
 cask 'font-hack-nerd-font'
 
-tap 'heroku/brew'
-brew 'heroku' if false
-
 tap 'dart-lang/dart'
 brew 'dart' if false
 

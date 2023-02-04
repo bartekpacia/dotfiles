@@ -134,12 +134,6 @@ else
 	export EDITOR='micro'
 fi
 
-# Heroku autocomplete setup
-HEROKU_AC_ZSH_SETUP_PATH="$HOME/Library/Caches/heroku/autocomplete/zsh_setup"
-if [ -f "$HEROKU_AC_ZSH_SETUP_PATH" ]; then
-	. "$HEROKU_AC_ZSH_SETUP_PATH"
-fi
-
 # Source local gitignored files (not tracked by git)
 if [ -d "$DOTFILES/local" ]; then
 	export PATH="$DOTFILES/local:$PATH"
