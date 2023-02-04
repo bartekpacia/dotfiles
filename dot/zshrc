@@ -36,5 +36,6 @@ if [ -d "$ZSH" ]; then
 fi
 
 zstyle ':completion:*' matcher-list ''
+bindkey \^U backward-kill-line
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

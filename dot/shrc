@@ -112,7 +112,9 @@ if [ -d "$HOME/scripts" ]; then
 fi
 
 # Wolfram Mathematica
-export PATH="/Applications/Mathematica.app/Contents/MacOS:$PATH"
+if [ "$(uname)" = Darwin ]; then
+	export PATH="/Applications/Mathematica.app/Contents/MacOS:$PATH"
+fi
 
 # nvm (installed manually)
 export NVM_DIR="$HOME/.cache/nvm"
@@ -129,9 +131,9 @@ export LC_ALL=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 if [ -n "$SSH_CONNECTION" ]; then
-	export EDITOR='micro'
+	export EDITOR=micro
 else
-	export EDITOR='micro'
+	export EDITOR=micro
 fi
 
 # Source local gitignored files (not tracked by git)
