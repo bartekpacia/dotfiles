@@ -70,7 +70,6 @@ export GRADLE_USER_HOME="$HOME/.gradle"
 # dotnet
 export PATH="/usr/local/share/dotnet/x64:$PATH"
 export PATH="$HOME/.dotnet/tools:$PATH"
-export DOTNET_CLI_HOME="$XDG_DATA_HOME/dotnet"
 
 # make
 export MAKEFLAGS="-j 8"
@@ -137,7 +136,7 @@ else
 	export EDITOR=micro
 fi
 
-# Add local gitignored files to PATH
+# Source local gitignored files (not tracked by git)
 if [ -d "$DOTFILES/local" ]; then
 	export PATH="$DOTFILES/local:$PATH"
 fi
@@ -151,21 +150,21 @@ if command -v bat >/dev/null 2>&1; then
 	export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 fi
 
-export LESSHISTFILE="$XDG_CONFIG_HOME/less/history" # make less not clutter ~
-export CP_HOME_DIR="$XDG_CACHE_HOME/cocoapods"      # make cocoapods not clutter ~
-export MASON_CACHE="$XDG_CACHE_HOME/.cache/mason"   # make mason not clutter ~
-export MAVEN_HOME="$XDG_CACHE_HOME/.cache/maven"    # make maven not clutter ~
+export LESSHISTFILE="$HOME/.config/less/history" # make less not clutter ~
+export CP_HOME_DIR="$HOME/.cache/cocoapods"      # make cocoapods not clutter ~
+export MASON_CACHE="$HOME/.cache/mason"          # make mason not clutter ~
+export MAVEN_HOME="$HOME/.cache/maven"           # make maven not clutter ~
 
 # ------ General ------
 alias cls="clear"
 alias md="mkdir"
 
 if command -v lsd >/dev/null 2>&1; then
-	alias l='lsd -lh' # list
-	alias ll='lsd -lAh' # list all
+	alias lsd="lsd -lAh"
+	alias lsdt="lsd -lAht"
 else
-	alias l='ls -lh' # list
-	alias ll='ls -lAh' # list all
+	alias lsd="ls -lAh"
+	alias lsdt="ls -lAht"
 fi
 
 # ------ Sleep ------
