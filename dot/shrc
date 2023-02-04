@@ -139,11 +139,6 @@ if [ -d "$DOTFILES/local" ]; then
 	export PATH="$DOTFILES/local:$PATH"
 fi
 
-# fzf
-if [ -f ~/.fzf.zsh ]; then
-	. "$HOME/.fzf.zsh"
-fi
-
 # bat
 export BAT_CONFIG_PATH="$HOME/.bat.conf"
 alias batt="bat --theme=\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo default || echo GitHub)"
