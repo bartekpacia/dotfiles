@@ -31,7 +31,10 @@ plugins=(
 )
 # see https://github.com/zsh-users/zsh-completions/issues/603
 fpath+="${ZSH_CUSTOM:-"$ZSH/custom"}/plugins/zsh-completions/src"
-fpath+="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
+if command -v brew >/dev/null 2>&1; then
+	fpath+="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+fi
 
 if [ -d "$ZSH" ]; then
 	source "$ZSH/oh-my-zsh.sh"
