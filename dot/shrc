@@ -64,8 +64,11 @@ elif [ "$(uname)" = Darwin ]; then
 fi
 
 # Gradle
-
 export GRADLE_USER_HOME="$HOME/.gradle"
+
+# Vagrant
+
+export VAGRANT_HOME="$XDG_DATA_HOME/vagrant"
 
 # dotnet
 export PATH="/usr/local/share/dotnet/x64:$PATH"
