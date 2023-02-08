@@ -22,6 +22,7 @@ plugins=(
 	adb
 	docker
 	git
+	gh
 	gradle-completion
 	macos
 	pod
