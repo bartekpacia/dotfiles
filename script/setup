@@ -44,7 +44,17 @@ done
 # Symlink files/* into home directory as regular files
 printf "setup: symlinking normal files...\n"
 for f in "$DOTFILES/files/"*; do
-	ln -sfn "$f" "$HOME/$(basename "$f")"
+	if [ -f "$f" ]; then
+		ln -sfn "$f" "$HOME/$(basename "$f")"
+	fi
+done
+
+# Symlink files/Darwin* into home directory as regular files
+printf "setup: symlinking normal files (Darwin)...\n"
+for f in "$DOTFILES/files/Darwin/"*; do
+	if [ -f "$f" ]; then
+		ln -sfn "$f" "$HOME/$(basename "$f")"
+	fi
 done
 
 # Setup oh-my-zsh
