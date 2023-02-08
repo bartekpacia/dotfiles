@@ -150,7 +150,7 @@ if command -v bat >/dev/null 2>&1; then
 	export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 fi
 
-export LESSHISTFILE="$XDG_CONFIG_HOME/less/history" # make less not clutter ~
+export LESSHISTFILE="$XDG_DATA_HOME/less/history" 	# make less not clutter ~
 export CP_HOME_DIR="$XDG_CACHE_HOME/cocoapods"      # make cocoapods not clutter ~
 export MASON_CACHE="$XDG_CACHE_HOME/.cache/mason"   # make mason not clutter ~
 export MAVEN_HOME="$XDG_CACHE_HOME/.cache/maven"    # make maven not clutter ~
