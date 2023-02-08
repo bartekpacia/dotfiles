@@ -1,4 +1,7 @@
 {
   "colorcolumn": 80,
-  "scrollspeed": 1
+  "tabsize": 2,
+  "scrollspeed": 1,
+  "mkparents": true,
+  "savehistory": false
 }
