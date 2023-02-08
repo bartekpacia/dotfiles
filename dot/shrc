@@ -90,6 +90,7 @@ if [ -d "$HOME/.pyenv" ]; then
 fi
 export PYTHONDONTWRITEBYTECODE=1
 export PYTHONUSERBASE="$XDG_DATA_HOME/python"
+export JUPYTER_PLATFORM_DIRS=1
 
 # Ruby
 
