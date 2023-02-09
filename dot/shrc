@@ -120,14 +120,12 @@ if [ "$(uname)" = Darwin ]; then
 	export PATH="/Applications/Mathematica.app/Contents/MacOS:$PATH"
 fi
 
-# nvm (installed manually)
+# Node.js and nvm
+export NODE_REPL_HISTORY=""
 export NVM_DIR="$HOME/.cache/nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
-
-# nvm (from Homebrew)
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"                                       # This loads nvm
-[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
+if command -v brew >/dev/null 2>&1; then
+	export NVM_HOMEBREW="$(brew --prefix nvm)"
+fi
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8

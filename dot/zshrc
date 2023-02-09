@@ -22,10 +22,11 @@ plugins=(
 	adb
 	brew
 	docker
-	git
 	gh
+	git
 	gradle-completion
 	macos
+	nvm
 	pod
 	zsh-autosuggestions
 	zsh-syntax-highlighting
