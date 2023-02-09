@@ -30,7 +30,7 @@ plugins=(
 	zsh-autosuggestions
 	zsh-syntax-highlighting
 	# zsh-completions # needlessly slow, see https://github.com/zsh-users/zsh-completions/issues/603
-)
+ swiftpm)
 # see https://github.com/zsh-users/zsh-completions/issues/603
 fpath+="${ZSH_CUSTOM:-"$ZSH/custom"}/plugins/zsh-completions/src"
 

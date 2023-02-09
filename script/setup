@@ -36,10 +36,23 @@ reinstall() {
 }
 
 # Symlink dot/* into home directory as hidden files
-printf "setup: symlinking hidden files...\n"
+printf 'setup: symlinking hidden files to $HOME...\n'
 for f in "$DOTFILES/dot/"*; do
+	if [ ! -f "$f" ]; then
+		continue
+	fi
 	ln -sfn "$f" "$HOME/.$(basename "$f")"
 done
+
+# Symlink directories under dot/ into ~/.config
+printf 'setup: symlinking directories to $XDG_CONFIG_HOME...\n'
+for f in "$DOTFILES/dot/"*; do
+	if [ ! -d "$f" ]; then
+		continue
+	fi
+	ln -sfn "$f" "$HOME/.config/$(basename "$f")"
+done
+
 
 # Symlink files/* into home directory as regular files
 printf "setup: symlinking normal files...\n"
