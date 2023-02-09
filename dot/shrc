@@ -126,12 +126,11 @@ export NODE_REPL_HISTORY=""
 export NVM_DIR="$XDG_CACHE_HOME/nvm"
 if command -v brew >/dev/null 2>&1; then
 	export NVM_HOMEBREW=$(brew --prefix nvm)
+	# load nvm from Homebrew
+	[ -s "$(brew --prefix)/opt/nvm/nvm.sh" ] && \. "$(brew --prefix)/opt/nvm/nvm.sh"
 fi
 
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
-
-# # nvm (from Homebrew)
-[ -s "$(brew --prefix)/opt/nvm/nvm.sh" ] && \. "$(brew --prefix)/opt/nvm/nvm.sh"  # This loads nvm
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
