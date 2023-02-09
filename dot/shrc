@@ -11,9 +11,8 @@ export DOTFILES="$HOME/.dotfiles"
 
 if [ -x /opt/homebrew/bin/brew ]; then
 	eval "$(/opt/homebrew/bin/brew shellenv)"
+	export HOMEBREW_NO_ENV_HINTS=true
 fi
-
-export HOMEBREW_NO_ENV_HINTS=true
 
 # GPG config (see https://help.github.com/en/github/authenticating-to-github/telling-git-about-your-signing-key)
 GPG_TTY=$(tty)
@@ -67,7 +66,6 @@ fi
 export GRADLE_USER_HOME="$HOME/.gradle"
 
 # Vagrant
-
 export VAGRANT_HOME="$XDG_DATA_HOME/vagrant"
 
 # dotnet
@@ -120,12 +118,20 @@ if [ "$(uname)" = Darwin ]; then
 	export PATH="/Applications/Mathematica.app/Contents/MacOS:$PATH"
 fi
 
-# Node.js and nvm
+# Node.js
 export NODE_REPL_HISTORY=""
-export NVM_DIR="$HOME/.cache/nvm"
+
+
+# nvm (installed manually)
+export NVM_DIR="$XDG_CACHE_HOME/nvm"
 if command -v brew >/dev/null 2>&1; then
-	export NVM_HOMEBREW="$(brew --prefix nvm)"
+	export NVM_HOMEBREW=$(brew --prefix nvm)
 fi
+
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+
+# # nvm (from Homebrew)
+[ -s "$(brew --prefix)/opt/nvm/nvm.sh" ] && \. "$(brew --prefix)/opt/nvm/nvm.sh"  # This loads nvm
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
