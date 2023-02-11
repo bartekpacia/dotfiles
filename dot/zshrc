@@ -24,7 +24,7 @@ plugins=(
 	docker
 	gh
 	git
-	gradle-completion
+	gradle
 	macos
 	nvm
 	pod
