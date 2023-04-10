@@ -49,7 +49,6 @@ for f in "$DOTFILES/dot/"*; do
 	ln -sfn "$f" "$HOME/.config/$(basename "$f")"
 done
 
-
 # Symlink files/* into home directory as regular files
 printf "setup: symlinking normal files...\n"
 for f in "$DOTFILES/files/"*; do
