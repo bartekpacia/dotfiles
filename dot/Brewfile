@@ -97,9 +97,9 @@ cask 'zoom'
 tap 'bartekpacia/tools'
 brew 'scripts'
 
-# OpenJDK for Android SDK
-tap 'AdoptOpenJDK/openjdk'
-cask 'adoptopenjdk11'
+# Eclipse Temurin (formerly OpenJDK) for Android SDK
+tap 'homebrew/cask-versions'
+cask 'temurin17'
 
 tap 'tinygo-org/tools'
 brew 'tinygo'
