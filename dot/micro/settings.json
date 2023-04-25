@@ -1,5 +1,6 @@
 {
     "colorcolumn": 80,
+    "colorscheme": "cmc-16",
     "mkparents": true,
     "savehistory": false,
     "scrollspeed": 1,
