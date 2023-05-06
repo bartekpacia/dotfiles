@@ -23,6 +23,7 @@ plugins=(
 	adb
 	brew
 	docker
+	dotnet
 	gh
 	git
 	gradle
