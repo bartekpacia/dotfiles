@@ -55,7 +55,8 @@ export PICO_SDK_PATH="$HOME/pico-sdk"
 # Java
 if [ "$(uname)" = Linux ]; then
 	# on Linux
-	# Download from https://github.com/adoptium/temurin17-binaries/releases
+	# Download: https://github.com/adoptium/temurin17-binaries/releases
+  # Install: https://adoptium.net/en-GB/installation/archives
 	export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 	export PATH="$JAVA_HOME/bin:$PATH"
 elif [ "$(uname)" = Darwin ]; then
