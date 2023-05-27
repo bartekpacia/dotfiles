@@ -24,8 +24,9 @@ export SSH_AUTH_SOCK="$HOME/.1password/agent.sock"
 # Dart executable packages
 export PATH="$HOME/.pub-cache/bin:$PATH"
 
-# Flutter (from fvm)
-export PATH="$HOME/fvm/default/bin:$PATH"
+# Flutter
+export PATH="$HOME/fvm/default/bin:$PATH" # installed with fvm
+export PATH="$HOME/flutter/bin:$PATH" # installed directly
 
 # Android
 
