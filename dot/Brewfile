@@ -48,6 +48,7 @@ brew 'pyenv'
 brew 'rbenv'
 brew 'rg'
 brew 'rustup'
+brew 'sensiblesidebuttons'
 brew 'shellcheck'
 brew 'shfmt'
 brew 'spotifyd'
@@ -135,6 +136,7 @@ mas 'Notability', id: 360593530
 mas 'Telegram', id: 747648890
 mas 'The Unarchiver', id: 425424353
 mas 'iMovie', id: 408981434
-mas 'Amphetamine', id: 937984704
+mas 'Amphetamine', id: 937984704 if false
 mas 'Termius - SSH client', id: 1176074088 if false
 mas 'Xcode', id: 497799835
+mas 'LocalSend', id: 1661733229
