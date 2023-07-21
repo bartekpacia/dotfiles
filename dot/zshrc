@@ -35,7 +35,7 @@ plugins=(
 	# zsh-completions # needlessly slow, see https://github.com/zsh-users/zsh-completions/issues/603
 	swiftpm)
 # see https://github.com/zsh-users/zsh-completions/issues/603
-fpath+="${ZSH_CUSTOM:-"$ZSH/custom"}/plugins/zsh-completions/src"
+fpath+="$ZSH_CUSTOM/plugins/zsh-completions/src"
 
 # lazy nvm configuration, see https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/nvm
 zstyle ':omz:plugins:nvm' lazy yes
