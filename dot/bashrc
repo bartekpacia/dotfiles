@@ -4,6 +4,10 @@ if [ -f ~/.shrc ]; then
 	source ~/.shrc
 fi
 
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
+fi
+
 alias g="git"
 alias gaa="git add ."
 alias gb="git branch"
