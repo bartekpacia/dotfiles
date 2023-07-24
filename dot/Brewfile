@@ -41,7 +41,7 @@ brew 'mosh'
 brew 'ncdu'
 brew 'neofetch'
 brew 'nmap'
-brew 'nvm'
+brew 'n'
 brew 'poetry' if false # use poetry installed by pip from pyenv, see https://github.com/Homebrew/homebrew-core/issues/53169
 brew 'pyenv'
 brew 'rbenv'

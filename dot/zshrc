@@ -28,7 +28,6 @@ plugins=(
 	git
 	gradle
 	macos
-	nvm
 	pod
 	zsh-autosuggestions
 	zsh-syntax-highlighting
@@ -36,10 +35,6 @@ plugins=(
 	swiftpm)
 # see https://github.com/zsh-users/zsh-completions/issues/603
 fpath+="$ZSH_CUSTOM/plugins/zsh-completions/src"
-
-# lazy nvm configuration, see https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/nvm
-zstyle ':omz:plugins:nvm' lazy yes
-zstyle ':omz:plugins:nvm' lazy-cmd eslint prettier typescript
 
 if command -v brew >/dev/null 2>&1; then
 	fpath+="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
