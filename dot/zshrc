@@ -22,9 +22,9 @@ plugins=(
 	1password
 	adb
 	brew
-	docker
-	dotnet
-	gh
+	# docker
+	# dotnet
+	# gh
 	git
 	gradle
 	macos
