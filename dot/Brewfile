@@ -43,7 +43,6 @@ brew 'neofetch'
 brew 'nmap'
 brew 'nvm'
 brew 'poetry' if false # use poetry installed by pip from pyenv, see https://github.com/Homebrew/homebrew-core/issues/53169
-brew 'prettier'
 brew 'pyenv'
 brew 'rbenv'
 brew 'rg'
