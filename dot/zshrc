@@ -44,7 +44,7 @@ if [ -d "$ZSH" ]; then
 	source "$ZSH/oh-my-zsh.sh"
 fi
 
-zstyle ':completion:*' matcher-list ''
+# make CMD+Delete delete line before the cursor (not the whole line)
 bindkey \^U backward-kill-line
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
