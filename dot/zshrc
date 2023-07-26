@@ -24,6 +24,7 @@ plugins=(
 	brew
 	# docker
 	# dotnet
+	flutter
 	# gh
 	git
 	gradle
