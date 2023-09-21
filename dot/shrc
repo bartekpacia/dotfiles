@@ -27,7 +27,6 @@ export PATH="$HOME/.pub-cache/bin:$PATH"
 # Flutter
 export PATH="$HOME/fvm/default/bin:$PATH" # installed with fvm
 export PATH="$HOME/flutter/bin:$PATH" # installed directly
-export PATROL_MIGRATED=true
 export PATROL_FINDERS=true
 
 # Android
