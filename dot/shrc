@@ -29,6 +29,11 @@ export PATH="$HOME/fvm/default/bin:$PATH" # installed with fvm
 export PATH="$HOME/flutter/bin:$PATH" # installed directly
 export PATROL_FINDERS=true
 
+# Check if pyenv is installed
+if [ -d "$HOME/depot_tools" ]; then
+	export PATH="$HOME/depot_tools:$PATH"
+fi
+
 # Android
 
 # see https://developer.android.com/studio/command-line/variables
