@@ -13,6 +13,8 @@
 	default = simple
 [pull]
 	ff = only
+[rebase]
+	autoSquash = true
 [tag]
 	forceSignAnnotated = true
 [filter "lfs"]
