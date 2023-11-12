@@ -90,7 +90,8 @@ export MAKEFLAGS="-j 8"
 export PATH="/usr/local/opt/avr-gcc@11/bin:$PATH"
 
 # Python poetry
-export PATH="$HOME/.local/bin:$PATH"
+export VENV_PATH="$HOME/.venvs"
+export PATH="$VENV_PATH/bin:$PATH"
 
 # Check if pyenv is installed
 if [ -d "$HOME/.pyenv" ]; then
