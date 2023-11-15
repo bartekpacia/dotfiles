@@ -27,7 +27,7 @@ export PATH="$HOME/.pub-cache/bin:$PATH"
 # Flutter
 export PATH="$HOME/fvm/default/bin:$PATH" # installed with fvm
 export PATH="$HOME/flutter/bin:$PATH" # installed directly
-export PATROL_FINDERS=true
+export PATROL_NO_COMPLETION=true
 
 # Check if pyenv is installed
 if [ -d "$HOME/depot_tools" ]; then
