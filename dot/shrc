@@ -73,6 +73,9 @@ elif [ "$(uname)" = Darwin ]; then
 	export PATH="$JAVA_HOME/bin:$PATH"
 fi
 
+# Docker
+export PATH="$HOME/.docker/bin:$PATH"
+
 # Gradle
 export GRADLE_USER_HOME="$HOME/.gradle"
 
