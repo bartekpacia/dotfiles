@@ -11,7 +11,9 @@ export DOTFILES="$HOME/.dotfiles"
 
 if [ -x /opt/homebrew/bin/brew ]; then
 	eval "$(/opt/homebrew/bin/brew shellenv)"
-	export HOMEBREW_NO_ENV_HINTS=true
+	export HOMEBREW_NO_ENV_HINTS=1
+	export HOMEBREW_NO_AUTO_UPDATE=1
+	export HOMEBREW_NO_INSTALL_CLEANUP=1
 fi
 
 # GPG config (see https://help.github.com/en/github/authenticating-to-github/telling-git-about-your-signing-key)
@@ -29,7 +31,7 @@ export PATH="$HOME/fvm/default/bin:$PATH" # installed with fvm
 export PATH="$HOME/flutter/bin:$PATH" # installed directly
 export PATROL_NO_COMPLETION=true
 
-# Check if pyenv is installed
+# Check if depot_tools is installed
 if [ -d "$HOME/depot_tools" ]; then
 	export PATH="$HOME/depot_tools:$PATH"
 fi
@@ -52,7 +54,6 @@ if [ -d "$ANDROID_HOME/build-tools" ]; then
 			sort --version-sort --reverse |
 			head -n 1
 	)
-
 	export PATH="$ANDROID_HOME/build-tools/$build_tools:$PATH"
 fi
 
