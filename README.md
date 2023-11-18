@@ -10,8 +10,6 @@ On macOS, simply use [strap](https://github.com/MikeMcQuaid/strap).
 
 ## Set up on UNIX
 
-### Download
-
 On other Unix-like systems, `git clone` this repository to the `$HOME/.dotfiles`
 directory.
 
@@ -27,19 +25,27 @@ git clone git@github.com:bartekpacia/dotfiles.git ~/.dotfiles
 git clone https://github.com/bartekpacia/dotfiles.git ~/.dotfiles
 ```
 
-### Install
-
-Execute `script/setup`:
+Once cloned, execute `script/setup`:
 
 ```console
 ~/.dotfiles/script/setup
 ```
 
-Please note that `script/setup` depends on these tools:
+> `script/setup` depends on `curl`, `git`, `zsh`.
 
-- `curl`
-- `git`
-- `zsh`
+## Set up SSH keys
+
+Get public key from password manager:
+
+```console
+op read "op://Personal/$SSH_KEY_NAME/public key" > ~/.ssh/tmp_key.pub
+```
+
+Copy public key to remote machine:
+
+```console
+ssh-copy-id -f -i ~/.ssh/tmp_key.pub $REMOTE_USER@$REMOTE_HOST
+```
 
 ## File descriptions
 
