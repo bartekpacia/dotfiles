@@ -18,21 +18,21 @@ if [ "$ARG" = "-h" ] || [ "$ARG" = "--help" ]; then
 fi
 
 reinstall() {
-	printf "setup: reinstalling zsh-autosuggestions...\n"
+	echof "setup: reinstalling zsh-autosuggestions..."
 	rm -rf ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 	git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions 1>/dev/null 2>&1
 
-	printf "setup: reinstalling zsh-syntax-highlighting...\n"
+	echof "setup: reinstalling zsh-syntax-highlighting..."
 	rm -rf ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting 1>/dev/null 2>&1
 
-	printf "setup: reinstalling zsh-completions...\n"
+	echof "setup: reinstalling zsh-completions..."
 	rm -rf ~/.oh-my-zsh/custom/plugins/zsh-completions
 	git clone https://github.com/zsh-users/zsh-completions ~/.oh-my-zsh/custom/plugins/zsh-completions 1>/dev/null 2>&1
 }
 
 # Symlink dot/* into home directory as hidden files
-printf 'setup: symlinking hidden files to $HOME...\n'
+echo 'setup: symlinking hidden files to $HOME...'
 for f in "$DOTFILES/dot/"*; do
 	if [ ! -f "$f" ]; then
 		continue
@@ -41,7 +41,7 @@ for f in "$DOTFILES/dot/"*; do
 done
 
 # Symlink directories under dot/ into ~/.config
-printf 'setup: symlinking directories to $XDG_CONFIG_HOME...\n'
+echo 'setup: symlinking hidden directories to $XDG_CONFIG_HOME...'
 for f in "$DOTFILES/dot/"*; do
 	if [ ! -d "$f" ]; then
 		continue
@@ -50,7 +50,7 @@ for f in "$DOTFILES/dot/"*; do
 done
 
 # Symlink files/* into home directory as regular files
-printf "setup: symlinking normal files...\n"
+echo 'setup: symlinking normal files to $HOME...'
 for f in "$DOTFILES/files/"*; do
 	if [ -f "$f" ]; then
 		ln -sfn "$f" "$HOME/$(basename "$f")"
@@ -58,7 +58,7 @@ for f in "$DOTFILES/files/"*; do
 done
 
 # Symlink files/Darwin* into home directory as regular files
-printf "setup: symlinking normal files (Darwin)...\n"
+echo 'setup: symlinking normal files (Darwin-only) to $HOME...'
 for f in "$DOTFILES/files/Darwin/"*; do
 	if [ -f "$f" ]; then
 		ln -sfn "$f" "$HOME/$(basename "$f")"
@@ -66,7 +66,7 @@ for f in "$DOTFILES/files/Darwin/"*; do
 done
 
 # Symlink ssh/* (my common SSH config) into ~/.ssh as regular files
-printf "setup: symlinking ssh files...\n"
+echo 'setup: symlinking ssh files to $HOME/.ssh...'
 for f in "$DOTFILES/ssh/"*; do
 	if [ ! -d ~/.ssh ]; then
 		mkdir ~/.ssh
@@ -81,21 +81,21 @@ export RUNZSH="no"
 if [ ! -d "$ZSH" ]; then
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 else
-	printf "setup: aborted installation of oh-my-zsh because directory ~/.oh-my-zsh/ already exists\n"
+	echo "setup: aborted installation of oh-my-zsh because directory ~/.oh-my-zsh/ already exists"
 fi
 
-printf "setup: symlinking custom oh-my-zsh plugins...\n"
+echo "setup: symlinking custom oh-my-zsh plugins..."
 for f in "$DOTFILES/custom/plugins/"*; do
 	ln -sfn "$f" "$ZSH_CUSTOM/plugins/$(basename "$f")"
 done
 
-printf "setup: symlinking custom oh-my-zsh scripts...\n"
+echo "setup: symlinking custom oh-my-zsh scripts..."
 for f in "$DOTFILES/custom/"*.zsh; do
 	ln -sfn "$f" "$ZSH_CUSTOM/$(basename "$f")"
 done
 
 if [ "$ARG" = "--no-reinstall" ]; then
-	printf "setup: --no-reinstall passed, aborted reinstalling custom plugins\n"
+	echo "setup: --no-reinstall passed, aborted reinstalling custom plugins"
 else
 	reinstall
 fi
@@ -106,4 +106,4 @@ fi
 # chsh -s $(which zsh)
 # echo "Successfully changed default shell to zsh"
 
-printf "setup: such successfullness\n"
+echo "setup: such successfullness"
