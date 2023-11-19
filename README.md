@@ -35,10 +35,14 @@ Once cloned, execute `script/setup`:
 
 ## Set up SSH keys
 
+After setting up a new machine, you very likely want to set up SSH
+authentication to it.
+
 Get public key from password manager:
 
 ```console
-op read "op://Personal/$SSH_KEY_NAME/public key" > ~/.ssh/tmp_key.pub
+op read "op://Personal/$SSH_KEY_NAME/public key" > ~/.ssh/key.pub
+chmod 0400 ~/.ssh/key.pub
 ```
 
 Copy public key to remote machine:
