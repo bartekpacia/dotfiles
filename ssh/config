@@ -1,4 +1,3 @@
 Host *
     ServerAliveInterval 5
-    VisualHostKey yes
-
+    AddKeysToAgent confirm
