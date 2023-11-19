@@ -41,20 +41,25 @@ authentication to it.
 Get public key from password manager:
 
 ```console
-op read "op://Personal/$SSH_KEY_NAME/public key" > ~/.ssh/key.pub
-chmod 0400 ~/.ssh/key.pub
+op read "op://Personal/main key/public key" > ~/.ssh/main_key.pub
+chmod 0400 ~/.ssh/main_key.pub
 ```
 
 Copy public key to remote machine:
 
 ```console
-ssh-copy-id -f -i ~/.ssh/tmp_key.pub $REMOTE_USER@$REMOTE_HOST
+ssh-copy-id -f -i ~/.ssh/main_key.pub $REMOTE_USER@$REMOTE_HOST
+```
+
+or use [my `get_ssh_key` script][get_ssh_key]:
+
+```console
+get_ssh_key 'Personal' 'main key'
 ```
 
 ## File descriptions
 
-- `ssh/config` SSH config. Automatically includes all files starting matching
-  `ssh/config_*`.
+- `ssh/config` SSH config.
 
 - `script/setup_dock` Sets up my Dock the way I want.
 
@@ -72,3 +77,5 @@ ssh-copy-id -f -i ~/.ssh/tmp_key.pub $REMOTE_USER@$REMOTE_HOST
   Example use case:
 
   - startup shell scripts from JetBrains Toolbox app
+
+[get_ssh_key]: https://github.com/bartekpacia/scripts/blob/master/bin/get_ssh_key
