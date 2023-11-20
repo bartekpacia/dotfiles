@@ -26,7 +26,6 @@ plugins=(
 	# dotnet
 	flutter
 	# gh
-	git
 	gradle
 	macos
 	pod

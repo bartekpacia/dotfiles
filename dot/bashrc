@@ -4,18 +4,8 @@ if [ -f ~/.shrc ]; then
 	source ~/.shrc
 fi
 
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-    . $(brew --prefix)/etc/bash_completion
+if [ -f "$(brew --prefix)/etc/bash_completion" ]; then
+    . "$(brew --prefix)/etc/bash_completion"
 fi
-
-alias g="git"
-alias gaa="git add ."
-alias gb="git branch"
-alias gc="git commit"
-alias gch="git checkout"
-alias gd="git diff"
-alias gp="git push"
-alias gs="git status"
-alias gmnff="git merge --no-ff"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
