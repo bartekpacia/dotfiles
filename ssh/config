@@ -1,3 +1,5 @@
 Host *
     ServerAliveInterval 5
+    StrictHostKeyChecking ask
     AddKeysToAgent confirm
+    UpdateHostKeys no
