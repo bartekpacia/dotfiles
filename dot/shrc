@@ -174,11 +174,13 @@ alias cls="clear"
 alias md="mkdir -p"
 
 if command -v lsd >/dev/null 2>&1; then
-	alias lsd="lsd -lAhF"
-	alias lsdt="lsd -lAhFt"
+	alias ll="lsd -lAhF"
+	alias la="lsd -AhF"
+	alias l="lsd -F"
 else
-	alias lsd="ls -lAhF"
-	alias lsdt="ls -lAhFt"
+	alias ll="ls -lAhF"
+	alias la="ls -AhF"
+	alias l="ls -F"
 fi
 
 alias g="git"
