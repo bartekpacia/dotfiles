@@ -156,12 +156,15 @@ if [ -d "$DOTFILES/local" ]; then
 fi
 
 # bat
-export BAT_CONFIG_PATH="$HOME/.bat.conf"
-alias batt="bat --theme=\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo default || echo GitHub)"
-
-# colorize man pages using bat
 if command -v bat >/dev/null 2>&1; then
+	export BAT_CONFIG_PATH="$HOME/.bat.conf"
+	alias batt="bat --theme=\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo default || echo GitHub)"
+	# colorize man pages using bat
 	export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+	# use bat for brew cat
+	if command -v brew >/dev/null 2>&1; then
+		export HOMEBREW_BAT=1
+	fi
 fi
 
 export LESSHISTFILE="$XDG_DATA_HOME/less/history" # make less not clutter ~
