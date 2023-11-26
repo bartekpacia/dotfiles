@@ -18,15 +18,15 @@ if [ "$ARG" = "-h" ] || [ "$ARG" = "--help" ]; then
 fi
 
 reinstall() {
-	echof "setup: reinstalling zsh-autosuggestions..."
+	echo "setup: reinstalling zsh-autosuggestions..."
 	rm -rf ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 	git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions 1>/dev/null 2>&1
 
-	echof "setup: reinstalling zsh-syntax-highlighting..."
+	echo "setup: reinstalling zsh-syntax-highlighting..."
 	rm -rf ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting 1>/dev/null 2>&1
 
-	echof "setup: reinstalling zsh-completions..."
+	echo "setup: reinstalling zsh-completions..."
 	rm -rf ~/.oh-my-zsh/custom/plugins/zsh-completions
 	git clone https://github.com/zsh-users/zsh-completions ~/.oh-my-zsh/custom/plugins/zsh-completions 1>/dev/null 2>&1
 }
