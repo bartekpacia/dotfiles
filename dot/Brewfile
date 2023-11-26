@@ -2,7 +2,7 @@ brew 'apktool'
 brew 'avrdude'
 brew 'bash'
 brew 'bat'
-brew 'bundletool'
+brew 'bundletool' if false # almost never used
 brew 'clang-format'
 brew 'cmake'
 brew 'cocoapods' if false # use cocoapods installed by bundler from rbenv
@@ -64,14 +64,14 @@ brew 'zsh'
 
 cask '1password-cli'
 cask '1password'
-cask 'arduino'
+cask 'arduino' if false # almost never used
 cask 'daisydisk'
 cask 'discord'
 cask 'docker'
 cask 'gimp'
-cask 'google-chrome'
-cask 'google-cloud-sdk'
-cask 'gpg-suite'
+cask 'google-chrome' if false # almost never used
+cask 'google-cloud-sdk' if false # almost never used
+cask 'gpg-suite' if false # almost never used
 cask 'iterm2'
 cask 'jetbrains-toolbox'
 cask 'mos'
@@ -111,7 +111,7 @@ cask 'font-jetbrains-mono'
 cask 'font-hack-nerd-font'
 
 tap 'dart-lang/dart'
-brew 'dart' if false
+brew 'dart' if false # I use Dart that comes with Flutter
 
 tap 'leoafarias/fvm'
 brew 'fvm'
@@ -123,19 +123,19 @@ tap 'teamookla/speedtest'
 brew 'speedtest'
 
 tap 'microsoft/git'
-cask 'git-credential-manager-core' if false
+cask 'git-credential-manager-core' if false # almost never used
 
 tap 'osx-cross/avr'
 brew 'avr-gcc'
 
 tap 'ArmMbed/homebrew-formulae'
-brew 'arm-none-eabi-gcc' if false
+brew 'arm-none-eabi-gcc' if false # almost never used
 
 mas 'Notability', id: 360593530
 mas 'Telegram', id: 747648890
 mas 'The Unarchiver', id: 425424353
 mas 'iMovie', id: 408981434
-mas 'Amphetamine', id: 937984704 if false
-mas 'Termius - SSH client', id: 1176074088 if false
+mas 'Amphetamine', id: 937984704 if false # almost never used
+mas 'Termius - SSH client', id: 1176074088 if false # almost never used
 mas 'Xcode', id: 497799835
 mas 'LocalSend', id: 1661733229
