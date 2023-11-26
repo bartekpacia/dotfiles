@@ -1,9 +1,5 @@
 #!/usr/bin/env zsh
 
-if [ -f ~/.shrc ]; then
-	source ~/.shrc
-fi
-
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export ZSH_CONFIG="$HOME/.zshrc"
@@ -47,3 +43,7 @@ fi
 bindkey \^U backward-kill-line
 
 # [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+if [ -f ~/.shrc ]; then
+	source ~/.shrc
+fi
