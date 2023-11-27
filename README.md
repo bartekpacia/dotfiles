@@ -4,6 +4,14 @@ My very personal development environment setup. I refuse to work without it.
 
 ![neofetch output](neofetch.png)
 
+### Philosophy
+
+- cross-platform
+  - work well on any POSIX shell
+  - do not favor GNU coreutils. Support BSD.
+- minimal, simple, obvious
+  - the less tools have to be installed, the better
+
 ## Set up on macOS
 
 On macOS, simply use [strap](https://github.com/MikeMcQuaid/strap).
