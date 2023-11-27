@@ -17,7 +17,7 @@ create_dock_item() {
 defaults write com.apple.dock persistent-apps -array \
 	"$(create_dock_item /Applications/1Password.app)" \
 	"$(create_dock_item /Applications/Safari.app)" \
-	"$(create_dock_item /Applications/Google\ Chrome.app)" \
+	"$(create_dock_item /Applications/Firefox.app)" \
 	"$(create_dock_item /System/Applications/Mail.app)" \
 	"$(create_dock_item /System/Applications/Calendar.app)" \
 	"$(create_dock_item /Applications/Telegram.app)" \
