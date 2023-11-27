@@ -1,0 +1,56 @@
+#!/usr/bin/env sh
+
+alias cls="clear"
+alias md="mkdir -p"
+
+if command -v lsd >/dev/null 2>&1; then
+	alias ll="lsd -lAhF"
+	alias la="lsd -AhF"
+	alias l="lsd -F"
+else
+	alias ll="ls -lAhF"
+	alias la="ls -AhF"
+	alias l="ls -F"
+fi
+
+alias g="git"
+alias ga="git add"
+alias gb="git branch"
+alias gc="git commit"
+alias gd="git diff"
+alias gl="git log"
+alias gp="git push"
+alias gr="git remote"
+alias gs="git status"
+alias gt="git tag"
+alias gaa="git add ."
+alias gch="git checkout"
+alias gds="git diff --staged"
+alias glo="git log --graph --oneline"
+alias gpf="git push --force-with-lease"
+alias gpl="git pull"
+alias grs="git restore"
+alias grst="git restore --staged"
+alias grv="git remote --verbose"
+alias gtv="git tag | sort -V"
+alias gmnff="git merge --no-ff"
+alias gpsup='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
+
+gprune() {
+	git fetch -p
+	git branch -r \
+		| awk '{print $1}' \
+		| egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) \
+		| awk '{print $1}' \
+		| xargs git branch -D
+}
+
+# ------ Sleep ------
+
+if command -v pmset >/dev/null 2>&1; then
+	alias zzz="pmset sleepnow"
+	alias zzzz="pmset sleepnow"
+elif command -v systemctl >/dev/null 2>&1; then
+	alias zzz="systemctl sleep"
+	alias zzzz="systemctl sleep"
+fi

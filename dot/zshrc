@@ -1,5 +1,8 @@
 #!/usr/bin/env zsh
 
+# Run cross shell configuration
+source ~/.shrc
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export ZSH_CONFIG="$HOME/.zshrc"
@@ -37,13 +40,16 @@ fi
 
 if [ -d "$ZSH" ]; then
 	source "$ZSH/oh-my-zsh.sh"
+	# oh-my-zsh initializes completion, so shrc needs to be sourced before it.
+	# oh-my-zsh sets aliases, so aliases needs to be sourced after it.
 fi
 
 # make CMD+Delete delete line before the cursor (not the whole line)
 bindkey \^U backward-kill-line
 
-# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-if [ -f ~/.shrc ]; then
-	source ~/.shrc
+# Enable searching shell history with fzf
+if [ -f ~/.fzf.zsh ]; then
+    . ~/.fzf.zsh
 fi
+
+source "$HOME/.dotfiles/script/aliases"
