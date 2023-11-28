@@ -138,6 +138,8 @@
 	<true/>
 	<key>HideScrollbar</key>
 	<false/>
+	<key>HideTab</key>
+	<false/>
 	<key>Hotkey</key>
 	<true/>
 	<key>HotkeyChar</key>
@@ -3155,6 +3157,8 @@
 	<false/>
 	<key>StatusBarPosition</key>
 	<integer>0</integer>
+	<key>StretchTabsToFillBar</key>
+	<false/>
 	<key>SwapFindNextPrevious</key>
 	<false/>
 	<key>TabStyleWithAutomaticOption</key>
@@ -3173,6 +3177,8 @@
 	</array>
 	<key>UseBorder</key>
 	<true/>
+	<key>UseUnevenTabs</key>
+	<false/>
 	<key>VisualIndicatorForEsc</key>
 	<false/>
 	<key>WindowNumber</key>
