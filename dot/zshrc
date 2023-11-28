@@ -52,4 +52,8 @@ if [ -f ~/.fzf.zsh ]; then
     . ~/.fzf.zsh
 fi
 
+# Auto-insert first completion https://unix.stackexchange.com/q/12288/417321
+setopt menu_complete
+
+# Load cross-shell aliases
 source "$HOME/.dotfiles/script/aliases"
