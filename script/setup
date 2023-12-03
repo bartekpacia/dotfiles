@@ -40,6 +40,10 @@ for f in "$DOTFILES/dot/"*; do
 	ln -sfn "$f" "$HOME/.$(basename "$f")"
 done
 
+if [ ! -d $HOME/.config ]; then
+	mkdir $HOME/.config
+fi
+
 # Symlink directories under dot/ into ~/.config
 echo 'setup: symlinking hidden directories to $XDG_CONFIG_HOME...'
 for f in "$DOTFILES/dot/"*; do
