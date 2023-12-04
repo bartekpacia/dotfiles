@@ -24,13 +24,15 @@ plugins=(
 	# docker
 	# dotnet
 	flutter
+	fzf
 	# gh
 	gradle
 	macos
 	pod
 	zsh-autosuggestions
 	zsh-syntax-highlighting
-	swiftpm)
+	swiftpm
+)
 
 if command -v brew >/dev/null 2>&1; then
 	# Set up completions for `brew` command and `brew`-installed programs
@@ -46,11 +48,6 @@ fi
 
 # make CMD+Delete delete line before the cursor (not the whole line)
 bindkey \^U backward-kill-line
-
-# Enable searching shell history with fzf
-if [ -f ~/.fzf.zsh ]; then
-    . ~/.fzf.zsh
-fi
 
 # Auto-insert first completion https://unix.stackexchange.com/q/12288/417321
 setopt menu_complete
