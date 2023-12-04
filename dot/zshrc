@@ -21,11 +21,11 @@ plugins=(
 	1password
 	adb
 	brew
-	# docker
+	# docker - works automatically when brew-installed
 	# dotnet
 	flutter
 	fzf
-	# gh
+	# gh – should work automatically when brew-installed but doesn't!
 	gradle
 	macos
 	pod
