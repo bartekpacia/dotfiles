@@ -23,9 +23,8 @@ plugins=(
 	brew
 	# docker - works automatically when brew-installed
 	# dotnet
+	`#fzf` $([ -x "$(command -v fzf)" ] && echo 'fzf')
 	flutter
-	fzf
-	# gh – should work automatically when brew-installed but doesn't!
 	gradle
 	macos
 	pod
