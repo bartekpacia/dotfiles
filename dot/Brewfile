@@ -48,10 +48,10 @@ brew 'pyenv'
 brew 'rbenv'
 brew 'rg'
 brew 'rustup'
-brew 'sensiblesidebuttons'
+brew 'sensiblesidebuttons' if false # almost never used
 brew 'shellcheck'
 brew 'shfmt'
-brew 'spotifyd'
+brew 'spotifyd' if false # almost never used
 brew 'swift-format'
 brew 'tealdeer'
 brew 'texlive'
@@ -77,13 +77,13 @@ cask 'iterm2'
 cask 'jetbrains-toolbox'
 cask 'mos'
 cask 'notion'
-cask 'postman'
-cask 'powershell'
-cask 'qlimagesize'
-cask 'qlstephen'
-cask 'quicklook-json'
-cask 'quicklookapk'
-cask 'raspberry-pi-imager'
+cask 'postman' if false # bulky, almost never used. TODO: find lightweight alternative
+cask 'powershell' if false # almost never used
+cask 'qlimagesize' if false # does not work on newer macOS version. TODO: try to make it work
+cask 'qlstephen' if false # does not work on newer macOS version. TODO: try to make it work
+cask 'quicklook-json' if false # does not work on newer macOS version. TODO: try to make it work
+cask 'quicklookapk' if false # does not work on newer macOS version. TODO: try to make it works
+cask 'raspberry-pi-imager' if false # TODO: learn how to flash with built-in tools
 cask 'rectangle'
 cask 'slack'
 cask 'spotify'
