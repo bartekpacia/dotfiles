@@ -31,9 +31,9 @@ export PATH="$HOME/fvm/default/bin:$PATH" # installed with fvm
 export PATH="$HOME/flutter/bin:$PATH" # installed directly
 export PATROL_NO_COMPLETION=true
 
-# Check if depot_tools is installed
-if [ -d "$HOME/depot_tools" ]; then
-	export PATH="$HOME/depot_tools:$PATH"
+# Check if depot_tools is installed and DEPOT_TOOLS_ENABLED is set
+if [ -d "$HOME/depot_tools" ] && [ -n "$DEPOT_TOOLS_ENABLED" ]; then
+    export PATH="$HOME/depot_tools:$PATH"
 fi
 
 # Android
