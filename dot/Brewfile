@@ -69,6 +69,7 @@ cask 'arduino' if false # almost never used
 cask 'daisydisk'
 cask 'discord'
 cask 'docker'
+cask 'firefox'
 cask 'gimp'
 cask 'google-chrome' if false # almost never used
 cask 'google-cloud-sdk' if false # almost never used
