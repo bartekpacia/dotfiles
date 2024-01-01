@@ -15,6 +15,7 @@ duti -s com.google.Chrome com.adobe.pdf all
 
 ###
 # Future idea: automate setup of default settings
+# Inspired by: https://github.com/mathiasbynens/dotfiles/blob/master/.macos
 ###
 
 # Finder: show hidden files by default
