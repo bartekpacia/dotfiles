@@ -6,6 +6,9 @@ set -euo pipefail
 # clear all icons in the dock
 defaults delete com.apple.dock persistent-apps
 
+# Minimize windows into their application’s icon
+defaults write com.apple.dock minimize-to-application -bool true
+
 # disable showing recent applications
 defaults write com.apple.dock show-recents -bool FALSE
 

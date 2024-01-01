@@ -47,3 +47,6 @@ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 # defaults write ~/Library/Preferences/.GlobalPreferences.plist 'com.apple.keyboard.fnState' -bool false
 
 # defaults write "com.apple.finder" "NewWindowTargetPath" '"file:///Users/bartek/Downloads/"'
+
+# Disable inline attachments (just show the icons)
+defaults write com.apple.mail DisableInlineAttachmentViewing -bool true
