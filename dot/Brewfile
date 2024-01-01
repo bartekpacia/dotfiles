@@ -99,6 +99,9 @@ cask 'zoom'
 # Specific taps
 
 tap 'bartekpacia/tools'
+brew 'emu'
+brew 'fhome'
+brew 'fhomed'
 brew 'scripts'
 
 # Eclipse Temurin (formerly OpenJDK) for Android SDK
