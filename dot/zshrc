@@ -25,7 +25,8 @@ plugins=(
 	# dotnet
 	`#fzf` $([ -x "$(command -v fzf)" ] && echo 'fzf')
 	# flutter
-	gradle
+	# gradle
+	gradle-completion
 	macos
 	pod
 	zsh-autosuggestions
