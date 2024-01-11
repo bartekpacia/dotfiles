@@ -24,7 +24,7 @@ plugins=(
 	# docker - works automatically when brew-installed
 	# dotnet
 	`#fzf` $([ -x "$(command -v fzf)" ] && echo 'fzf')
-	flutter
+	# flutter
 	gradle
 	macos
 	pod
@@ -43,6 +43,7 @@ if [ -d "$ZSH" ]; then
 	source "$ZSH/oh-my-zsh.sh"
 	# oh-my-zsh initializes completion, so shrc needs to be sourced before it.
 	# oh-my-zsh sets aliases, so aliases needs to be sourced after it.
+	FPATH="$ZSH_CACHE_DIR/completions:$FPATH"
 fi
 
 # make CMD+Delete delete line before the cursor (not the whole line)
