@@ -94,6 +94,9 @@ export MAKEFLAGS="-j 8"
 # avr-gcc
 export PATH="/usr/local/opt/avr-gcc@11/bin:$PATH"
 
+# Maestro
+export PATH=$PATH:$HOME/.maestro/bin
+
 # Python poetry
 export VENV_PATH="$HOME/.venvs"
 export PATH="$VENV_PATH/bin:$PATH"
