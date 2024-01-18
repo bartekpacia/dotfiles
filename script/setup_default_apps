@@ -11,6 +11,7 @@ set -euo pipefail
 duti -s com.microsoft.VSCode public.xml all
 duti -s com.microsoft.VSCode public.shell-script all
 duti -s com.microsoft.VSCode public.json all
+duti -s com.microsoft.VSCode com.topografix.gpx all
 duti -s com.google.Chrome com.adobe.pdf all
 
 ###
