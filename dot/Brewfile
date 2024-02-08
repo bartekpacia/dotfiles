@@ -62,6 +62,7 @@ brew 'webp'
 brew 'wget'
 brew 'xcbeautify'
 brew 'youtube-dl'
+brew 'yq'
 brew 'zsh'
 
 cask '1password-cli'
