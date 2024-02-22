@@ -26,5 +26,7 @@
 	format = ssh
 [init]
 	defaultBranch = master
-[includeIf "gitdir:~/dev/leancode/"]
-    path = ~/.gitconfig_leancode
+
+# FEUP CG project
+[includeIf "gitdir:~/projects/cg-t01-g12/"]
+    path = ~/.gitconfig_uporto
