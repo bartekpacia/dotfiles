@@ -16,6 +16,8 @@ export MLH_ON_SYMBOL=" on "
 export MLH_SHELL_SYMBOL="$ "
 
 ZSH_THEME="mlh"
+# ohmyzsh: use case-sensitive completion
+CASE_SENSITIVE="true"
 
 plugins=(
 	1password
