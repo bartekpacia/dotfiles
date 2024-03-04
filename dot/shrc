@@ -27,6 +27,8 @@ export SSH_AUTH_SOCK="$HOME/.1password/agent.sock"
 # Dart executable packages
 export PATH="$HOME/.pub-cache/bin:$PATH"
 
+export PATH="$HOME/projects/starpls/editors/code/bin:$PATH"
+
 # Flutter
 export PATH="$HOME/fvm/default/bin:$PATH" # installed with fvm
 export PATH="$HOME/flutter/bin:$PATH" # installed directly
@@ -76,7 +78,8 @@ elif [ "$(uname)" = Darwin ]; then
 fi
 
 # Docker
-export PATH="$HOME/.docker/bin:$PATH"
+# not needed anymore???
+# export PATH="$HOME/.docker/bin:$PATH"
 
 # Gradle
 export GRADLE_USER_HOME="$HOME/.gradle"
