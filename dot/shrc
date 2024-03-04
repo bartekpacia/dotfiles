@@ -78,8 +78,10 @@ elif [ "$(uname)" = Darwin ]; then
 fi
 
 # Docker
+export DOCKER_CLI_HINTS=false
 # not needed anymore???
 # export PATH="$HOME/.docker/bin:$PATH"
+
 
 # Gradle
 export GRADLE_USER_HOME="$HOME/.gradle"
@@ -98,7 +100,7 @@ export MAKEFLAGS="-j 8"
 export PATH="/usr/local/opt/avr-gcc@11/bin:$PATH"
 
 # Maestro
-export PATH=$PATH:$HOME/.maestro/bin
+export PATH="$PATH:$HOME/.maestro/bin"
 
 # Python poetry
 export VENV_PATH="$HOME/.venvs"
