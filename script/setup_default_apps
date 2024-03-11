@@ -46,13 +46,18 @@ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
 # This works, but for changes to become effective, you need to re-login.
 # See https://stackoverflow.com/q/3446128/7009800
-# defaults write ~/Library/Preferences/.GlobalPreferences.plist 'com.apple.keyboard.fnState' -bool false
+defaults write ~/Library/Preferences/.GlobalPreferences.plist 'com.apple.keyboard.fnState' -bool false
 
 # defaults write "com.apple.finder" "NewWindowTargetPath" '"file:///Users/bartek/Downloads/"'
 
 ###
 # TEXT EDITING
 ###
+
+# Set fast Key Repeat Rate and short Delay Until Repeat
+# See https://apple.stackexchange.com/a/83923/333067
+defaults write -g KeyRepeat -int 2 # the lowest value available in UI
+defaults write -g InitialKeyRepeat -int 15 # the lowest value available in UI
 
 # Disable inline attachments (just show the icons)
 defaults write com.apple.mail DisableInlineAttachmentViewing -bool true
