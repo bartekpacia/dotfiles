@@ -25,7 +25,8 @@ export GPG_TTY
 export SSH_AUTH_SOCK="$HOME/.1password/agent.sock"
 
 # Dart executable packages
-export PATH="$HOME/.pub-cache/bin:$PATH"
+export PUB_CACHE="$XDG_CACHE_HOME/pub"
+export PATH="$PUB_CACHE/bin:$PATH"
 
 export PATH="$HOME/projects/starpls/editors/code/bin:$PATH"
 
@@ -144,7 +145,7 @@ if [ -d "$HOME/scripts" ]; then
 fi
 
 # TealDeer
-export TEALDEER_CONFIG_DIR="$HOME/.config/tealdeer"
+export TEALDEER_CONFIG_DIR="$XDG_CONFIG_HOME/tealdeer"
 
 # Wolfram Mathematica
 if [ "$(uname)" = Darwin ]; then
@@ -183,5 +184,5 @@ fi
 
 export LESSHISTFILE="$XDG_DATA_HOME/less/history" # make less not clutter ~
 export CP_HOME_DIR="$XDG_CACHE_HOME/cocoapods"    # make cocoapods not clutter ~
-export MASON_CACHE="$XDG_CACHE_HOME/.cache/mason" # make mason not clutter ~
-export MAVEN_HOME="$XDG_CACHE_HOME/.cache/maven"  # make maven not clutter ~
+export MASON_CACHE="$XDG_CACHE_HOME/mason" # make mason not clutter ~
+export MAVEN_HOME="$XDG_CACHE_HOME/maven"  # make maven not clutter ~
