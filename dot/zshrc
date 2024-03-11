@@ -40,6 +40,9 @@ if command -v brew >/dev/null 2>&1; then
 	# Set up completions for `brew` command and `brew`-installed programs
 	# See: https://docs.brew.sh/Shell-Completion#configuring-completions-in-zsh
 	FPATH="$(brew --prefix)/share/zsh/site-functions:$FPATH"
+
+	# Set up zsh-completions
+	FPATH="$(brew --prefix)/share/zsh-completions:$FPATH"
 fi
 
 if [ -d "$ZSH" ]; then
