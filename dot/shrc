@@ -143,6 +143,9 @@ if [ -d "$HOME/scripts" ]; then
 	export PATH="$HOME/scripts/bin:$PATH"
 fi
 
+# TealDeer
+export TEALDEER_CONFIG_DIR="$HOME/.config/tealdeer"
+
 # Wolfram Mathematica
 if [ "$(uname)" = Darwin ]; then
 	export PATH="/Applications/Mathematica.app/Contents/MacOS:$PATH"
