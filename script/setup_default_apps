@@ -46,7 +46,7 @@ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
 # This works, but for changes to become effective, you need to re-login.
 # See https://stackoverflow.com/q/3446128/7009800
-defaults write ~/Library/Preferences/.GlobalPreferences.plist 'com.apple.keyboard.fnState' -bool false
+defaults write ~/Library/Preferences/.GlobalPreferences.plist 'com.apple.keyboard.fnState' -bool true
 
 # defaults write "com.apple.finder" "NewWindowTargetPath" '"file:///Users/bartek/Downloads/"'
 
