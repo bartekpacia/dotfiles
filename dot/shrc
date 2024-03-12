@@ -182,6 +182,7 @@ if command -v bat >/dev/null 2>&1; then
 	fi
 fi
 
+export LESS="--RAW-CONTROL-CHARS --QUIET --no-vbell"
 export LESSHISTFILE="$XDG_DATA_HOME/less/history" # make less not clutter ~
 export CP_HOME_DIR="$XDG_CACHE_HOME/cocoapods"    # make cocoapods not clutter ~
 export MASON_CACHE="$XDG_CACHE_HOME/mason" # make mason not clutter ~
