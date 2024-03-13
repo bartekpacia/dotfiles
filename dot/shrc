@@ -186,6 +186,14 @@ if command -v bat >/dev/null 2>&1; then
 	fi
 fi
 
+# micro
+if command -v micro >/dev/null 2>&1; then
+	if [ "$(uname)" = Darwin ]; then
+		# automatically set light/dark theme on macOS
+		alias micro="micro -colorscheme=\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo monokai || echo bubblegum)"
+	fi
+fi
+
 export LESS="--RAW-CONTROL-CHARS --QUIET --no-vbell"
 export LESSHISTFILE="$XDG_DATA_HOME/less/history" # make less not clutter ~
 export CP_HOME_DIR="$XDG_CACHE_HOME/cocoapods"    # make cocoapods not clutter ~
