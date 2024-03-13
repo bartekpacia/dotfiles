@@ -186,6 +186,19 @@ if command -v bat >/dev/null 2>&1; then
 	fi
 fi
 
+# fzf
+if command -v fzf >/dev/null 2>&1; then
+	if command -v fd >/dev/null 2>&1; then
+		export FZF_DEFAULT_COMMAND="fd --type f --hidden --exclude .git"
+		export FZF_CTRL_T_COMMAND="fd --type f --hidden --exclude .git"
+	fi
+
+	if command -v bat >/dev/null 2>&1; then
+		export FZF_CTRL_T_OPTS="--preview 'bat {}'"
+	fi
+	export FZF_DEFAULT_OPTS="--no-height"
+fi
+
 # micro
 if command -v micro >/dev/null 2>&1; then
 	if [ "$(uname)" = Darwin ]; then
