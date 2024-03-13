@@ -171,7 +171,7 @@ fi
 
 # bat
 if command -v bat >/dev/null 2>&1; then
-	export BAT_CONFIG_PATH="$HOME/.bat.conf"
+	export BAT_CONFIG_PATH="$XDG_CONFIG_HOME/bat/bat.conf"
 
 	if [ "$(uname)" = Darwin ]; then
 		# automatically set light/dark theme on macOS
