@@ -85,7 +85,7 @@ export DOCKER_CLI_HINTS=false
 
 
 # Gradle
-export GRADLE_USER_HOME="$HOME/.gradle"
+export GRADLE_USER_HOME="$XDG_CACHE_HOME/gradle"
 
 # Vagrant
 export VAGRANT_HOME="$XDG_DATA_HOME/vagrant"
