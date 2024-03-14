@@ -125,6 +125,7 @@ export JUPYTER_PLATFORM_DIRS=1
 # Check if rbenv is installed
 if [ -d "$HOME/.rbenv" ]; then
 	export PATH="$HOME/.rbenv/bin:$PATH"
+	export RBENV_ROOT="$XDG_DATA_HOME/rbenv"
 	eval "$(rbenv init -)"
 fi
 
