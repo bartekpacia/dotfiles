@@ -3,6 +3,8 @@
 # Run cross shell configuration
 source ~/.shrc
 
+export HISTFILE="$XDG_STATE_HOME/bash/history"
+
 if type brew &>/dev/null
 then
 	# Set up completions for `brew` command and `brew`-installed programs
