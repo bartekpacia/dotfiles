@@ -26,9 +26,11 @@ export GPG_TTY
 # This points to a symlink. The real socket is in "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
 export SSH_AUTH_SOCK="$HOME/.1password/agent.sock"
 
-# Dart executable packages
+# Dart
 export PUB_CACHE="$XDG_CACHE_HOME/pub"
-export PATH="$PUB_CACHE/bin:$PATH"
+# see https://github.com/dart-lang/sdk/issues/42813#issuecomment-972120346
+export ANALYZER_STATE_LOCATION_OVERRIDE="$XDG_STATE_HOME/dartServer"
+export PATH="$PUB_CACHE/bin:$PATH" # executables installed with pub global
 
 export PATH="$HOME/projects/starpls/editors/code/bin:$PATH"
 
