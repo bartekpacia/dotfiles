@@ -107,7 +107,9 @@ export PATH="/usr/local/opt/avr-gcc@11/bin:$PATH"
 # Maestro
 export PATH="$PATH:$HOME/.maestro/bin"
 
-# Python (with Poetry)
+# Python
+
+# Export binaries from Poetry venvs
 export VENV_PATH="$HOME/.venvs"
 export PATH="$VENV_PATH/bin:$PATH"
 
@@ -131,6 +133,10 @@ export PATH="$RBENV_ROOT/bin:$PATH"
 if command -v rbenv >/dev/null 2>&1; then
 	eval "$(rbenv init -)"
 fi
+
+export BUNDLE_USER_CONFIG="$XDG_CONFIG_HOME/bundle"
+export BUNDLE_USER_CACHE="$XDG_CACHE_HOME/bundle"
+export BUNDLE_USER_PLUGIN="$XDG_DATA_HOME/bundle"
 
 # Node.js
 export NODE_REPL_HISTORY=""
