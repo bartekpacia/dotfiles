@@ -105,17 +105,19 @@ export PATH="/usr/local/opt/avr-gcc@11/bin:$PATH"
 # Maestro
 export PATH="$PATH:$HOME/.maestro/bin"
 
-# Python poetry
+# Python (with Poetry)
 export VENV_PATH="$HOME/.venvs"
 export PATH="$VENV_PATH/bin:$PATH"
 
 # Check if pyenv is installed
 if [ -d "$HOME/.pyenv" ]; then
+	export PYENV_ROOT="$XDG_DATA_HOME/pyenv"
 	eval "$(pyenv init --path)"
 	eval "$(pyenv init -)"
 fi
 export PYTHONDONTWRITEBYTECODE=1
 export PYTHONUSERBASE="$XDG_DATA_HOME/python"
+export PYTHON_HISTORY="$XDG_STATE_HOME/python/history"
 export JUPYTER_PLATFORM_DIRS=1
 
 # Ruby
