@@ -143,6 +143,11 @@ export NODE_REPL_HISTORY=""
 export N_PREFIX="$HOME/.n"
 export PATH="$HOME/.n/bin:$PATH"
 
+# Source: https://github.com/npm/npm/issues/6675#issuecomment-251049832
+export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
+export NPM_CONFIG_CACHE="$XDG_CACHE_HOME/npm"
+export NPM_CONFIG_TMP="$XDG_CACHE_HOME/npm"
+
 # Go
 
 # when Go installed directly from the webpage (no thru the pkg manager)
