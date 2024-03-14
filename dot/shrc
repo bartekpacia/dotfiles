@@ -158,7 +158,8 @@ export NPM_CONFIG_TMP="$XDG_CACHE_HOME/npm"
 # when Go installed directly from the webpage (no thru the pkg manager)
 export PATH="/usr/local/go/bin:$PATH"
 # for "go install"-ed software
-export PATH="$HOME/go/bin:$PATH"
+export GOPATH="$XDG_CACHE_HOME/go"
+export PATH="$GOPATH/bin:$PATH"
 
 # Rust
 export PATH="$HOME/.cargo/bin:$PATH"
