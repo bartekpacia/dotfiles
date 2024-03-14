@@ -86,6 +86,7 @@ elif [ "$(uname)" = Darwin ]; then
 fi
 
 # Docker
+export DOCKER_CONFIG="$XDG_CONFIG_HOME/docker"
 export DOCKER_CLI_HINTS=false
 # not needed anymore???
 # export PATH="$HOME/.docker/bin:$PATH"
