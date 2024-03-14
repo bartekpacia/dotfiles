@@ -2,5 +2,10 @@
 idea/
 local/*
 
-dot/micro/backup/*
+# TODO: remove when resolved: https://github.com/zyedidia/micro/issues/3176
+dot/micro/backups/*
 dot/micro/buffers/*
+
+# TODO: remove when resolved: https://github.com/zed-industries/zed/issues/9308
+dot/zed/.tmp*
+dot/zed/embeddings/
