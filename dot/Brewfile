@@ -41,10 +41,11 @@ brew 'mas'
 brew 'micro'
 brew 'moreutils'
 brew 'mosh'
+# brew 'n' # Still deciding between nvm and n
 brew 'ncdu'
 brew 'neofetch'
 brew 'nmap'
-brew 'n'
+# brew 'nvm' # Still deciding between nvm and n
 brew 'poetry' if false # use poetry installed by pip from pyenv, see https://github.com/Homebrew/homebrew-core/issues/53169
 brew 'purr'
 brew 'pyenv'

@@ -144,8 +144,14 @@ export BUNDLE_USER_CACHE="$XDG_CACHE_HOME/bundle"
 
 # Node.js
 export NODE_REPL_HISTORY=""
-export N_PREFIX="$HOME/.n"
-export PATH="$HOME/.n/bin:$PATH"
+
+# n
+export N_PREFIX="$XDG_CACHE_HOME/n"
+export PATH="$N_PREFIX/bin:$PATH"
+
+# nvm
+export NVM_DIR="$XDG_CACHE_HOME/nvm"
+export PATH="$NVM_DIR/bin:$PATH"
 
 # Source: https://github.com/npm/npm/issues/6675#issuecomment-251049832
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
