@@ -28,12 +28,12 @@
 
 # FEUP CG project
 [includeIf "gitdir:~/projects/cg-t01-g12/"]
-    path = ~/.gitconfig_uporto
+    path = config_uporto
 
 # FEUP CPD project
 [includeIf "gitdir:~/projects/cpd-t02-g19/"]
-    path = ~/.gitconfig_uporto
+    path = config_uporto
 
 # FEUP C project
-#[includeIf "gitdir:~/projects/comp2024-2h/"]
-#    path = ~/.gitconfig_uporto
+[includeIf "gitdir:~/projects/comp2024-2h/"]
+    path = config_uporto
