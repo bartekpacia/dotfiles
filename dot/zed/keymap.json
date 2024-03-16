@@ -1,13 +1,24 @@
+// Defaults: https://github.com/zed-industries/zed/blob/main/assets/keymaps/default-macos.json
 [
   {
     "bindings": {
-      // "ctrl-tab": "workspace::ActivateNextPane",
-      // "ctrl-shift-tab": "workspace::ActivatePreviousPane"
       "ctrl-tab": "pane::ActivateNextItem",
       "ctrl-shift-tab": "pane::ActivatePrevItem",
       "cmd-shift-t": "pane::ReopenClosedItem",
       "ctrl-j": "editor::Hover",
-      "cmd-shift-n": "project_panel::NewDirectory"
+      // "cmd-shift-n": "project_panel::NewDirectory",
+      "alt-down": "editor::MoveLineDown",
+      "alt-up": "editor::MoveLineUp"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-shift-n": null, // doesn't work for some reason
+      "cmd-shift-a": "workspace::ToggleLeftDock",
+      "cmd-b": "workspace::ToggleRightDock",
+      "cmd-k cmd-e": "project_panel::ToggleFocus",
+      "cmd-j": "workspace::ToggleBottomDock"
     }
   }
 ]
