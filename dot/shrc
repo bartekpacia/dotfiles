@@ -190,6 +190,7 @@ if [ -n "$SSH_CONNECTION" ]; then
 else
 	export EDITOR=micro
 fi
+export PAGER=less
 
 # Add local gitignored files to PATH
 if [ -d "$DOTFILES/local" ]; then
