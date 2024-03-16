@@ -24,7 +24,9 @@ export GPG_TTY
 
 # 1Password SSH agent config
 # This points to a symlink. The real socket is in "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
-export SSH_AUTH_SOCK="$HOME/.1password/agent.sock"
+# Create symlink with:
+# ln -s ~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock "$XDG_STATE_HOME/1password/agent.sock"
+export SSH_AUTH_SOCK="$XDG_STATE_HOME/1password/agent.sock"
 
 # Dart
 export PUB_CACHE="$XDG_CACHE_HOME/pub"
