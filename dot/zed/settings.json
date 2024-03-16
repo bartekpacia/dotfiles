@@ -12,7 +12,11 @@
   },
   // "autosave": "on_focus_change",
   "show_copilot_suggestions": false,
-  "theme": "One Dark",
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "One Dark"
+  },
   "project_panel": {
     "dock": "right"
   },
