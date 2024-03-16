@@ -130,6 +130,7 @@ export PYTHONUSERBASE="$XDG_DATA_HOME/python"
 export PYTHON_HISTORY="$XDG_STATE_HOME/python/history"
 export JUPYTER_PLATFORM_DIRS=1
 export MPLCONFIGDIR="$XDG_CONFIG_HOME/matplotlib"
+export RUFF_CACHE_DIR="$XDG_CACHE_HOME/ruff"
 
 # Ruby
 
