@@ -186,13 +186,15 @@ fi
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-# Preferred editor for local and remote sessions
-if [ -n "$SSH_CONNECTION" ]; then
-	export EDITOR=micro
-else
-	export EDITOR=micro
+export PAGER=nano
+if command -v micro >/dev/null 2>&1; then
+    export PAGER=micro
 fi
+
 export PAGER=less
+if command -v delta >/dev/null 2>&1; then
+    export GIT_PAGER=delta
+fi
 
 # Add local gitignored files to PATH
 if [ -d "$DOTFILES/local" ]; then
