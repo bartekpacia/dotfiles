@@ -21,7 +21,9 @@
     "dock": "right"
   },
   "terminal": {
-    "font_size": 16
+    "font_size": 14,
+    "blinking": "on",
+    "copy_on_select": true
   },
   "show_whitespaces": "all",
   "ui_font_size": 18,
