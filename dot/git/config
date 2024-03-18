@@ -28,6 +28,9 @@
 [init]
 	defaultBranch = master
 
+[alias]
+	foo = "!testXD"
+
 # FEUP CG project
 [includeIf "gitdir:~/projects/cg-t01-g12/"]
     path = config_uporto

@@ -1,0 +1,7 @@
+#!/usr/bin/env zsh
+
+echo "this is .zprofile"
+
+testXD() {
+	echo siema
+}
