@@ -28,6 +28,17 @@
 [init]
 	defaultBranch = master
 
+[alias]
+	foo = "!testXD"
+
+[delta "light-mode"]
+  light = true
+  syntax-theme = GitHub
+
+[delta "dark-mode"]
+  light = false
+  syntax-theme = Visual Studio Dark+
+
 # FEUP CG project
 [includeIf "gitdir:~/projects/cg-t01-g12/"]
     path = config_uporto

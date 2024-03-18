@@ -186,14 +186,17 @@ fi
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-export EDITOR=nano
-if command -v micro >/dev/null 2>&1; then
-    export EDITOR=micro
-fi
+# export PAGER=less
+# export LESS="--RAW-CONTROL-CHARS --QUIET --no-vbell"
+# export LESSHISTFILE="$XDG_STATE_HOME/less/history"
 
-export PAGER=less
-export LESS="--RAW-CONTROL-CHARS --QUIET --no-vbell"
-export LESSHISTFILE="$XDG_STATE_HOME/less/history"
+# if command -v delta >/dev/null 2>&1; then
+#     export GIT_PAGER=delta
+
+#     if [ "$(uname)" = Darwin ]; then
+#         alias delta="echo xd; delta --features \"\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo dark-mode || echo light-mode)\""
+#     fi
+# fi
 
 # Add local gitignored files to PATH
 if [ -d "$DOTFILES/local" ]; then
@@ -231,13 +234,15 @@ if command -v fzf >/dev/null 2>&1; then
 	export FZF_DEFAULT_OPTS="--no-height"
 fi
 
-# micro
-if command -v micro >/dev/null 2>&1; then
-	if [ "$(uname)" = Darwin ]; then
-		# automatically set light/dark theme on macOS
-		alias micro="micro -colorscheme=\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo monokai || echo bubblegum)"
-	fi
-fi
+# export EDITOR=nano
+# if command -v micro >/dev/null 2>&1; then
+#     export EDITOR=micro
+
+# 	if [ "$(uname)" = Darwin ]; then
+# 		# automatically set light/dark theme on macOS
+# 		alias micro="micro -colorscheme=\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo monokai || echo bubblegum)"
+# 	fi
+# fi
 
 export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"
 export CP_HOME_DIR="$XDG_CACHE_HOME/cocoapods"    # make cocoapods not clutter ~

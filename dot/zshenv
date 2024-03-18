@@ -1,0 +1,9 @@
+<<<<<<< Updated upstream
+testXD() {
+	echo siema
+}
+=======
+echo "executed .zshenv!"
+
+alias delta="echo xd; delta --features \"\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo dark-mode || echo light-mode)\""
+>>>>>>> Stashed changes

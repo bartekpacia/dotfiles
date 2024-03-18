@@ -1,0 +1,48 @@
+#!/usr/bin/env zsh
+
+<<<<<<< Updated upstream
+echo "this is .zprofile"
+
+testXD() {
+	echo siema
+}
+=======
+echo "Loaded .zprofile since this is a login shell"
+
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
+# [ ! -d "$XDG_CONFIG_HOME" ] && "$XDG_CACHE_HOME" # not sure...
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_STATE_HOME="$HOME/.local/state"
+export DOTFILES="$HOME/.dotfiles"
+
+if [ -x /opt/homebrew/bin/brew ]; then
+	eval "$(/opt/homebrew/bin/brew shellenv)"
+	export HOMEBREW_NO_ENV_HINTS=1
+	export HOMEBREW_NO_AUTO_UPDATE=1
+	export HOMEBREW_NO_INSTALL_CLEANUP=1
+	export HOMEBREW_NO_EMOJI=1
+fi
+
+export PAGER=less
+export LESS="--RAW-CONTROL-CHARS --QUIET --no-vbell"
+export LESSHISTFILE="$XDG_STATE_HOME/less/history"
+
+if command -v delta >/dev/null 2>&1; then
+    export GIT_PAGER=delta
+
+    if [ "$(uname)" = Darwin ]; then
+        alias delta="echo xd; delta --features \"\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo dark-mode || echo light-mode)\""
+    fi
+fi
+
+export EDITOR=nano
+if command -v micro >/dev/null 2>&1; then
+    export EDITOR=micro
+
+	if [ "$(uname)" = Darwin ]; then
+		# automatically set light/dark theme on macOS
+		alias micro="micro -colorscheme=\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo monokai || echo bubblegum)"
+	fi
+fi
+>>>>>>> Stashed changes
