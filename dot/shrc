@@ -192,6 +192,8 @@ if command -v micro >/dev/null 2>&1; then
 fi
 
 export PAGER=less
+export LESS="--RAW-CONTROL-CHARS --QUIET --no-vbell"
+export LESSHISTFILE="$XDG_STATE_HOME/less/history"
 
 # Add local gitignored files to PATH
 if [ -d "$DOTFILES/local" ]; then
@@ -237,8 +239,6 @@ if command -v micro >/dev/null 2>&1; then
 	fi
 fi
 
-export LESS="--RAW-CONTROL-CHARS --QUIET --no-vbell"
-export LESSHISTFILE="$XDG_STATE_HOME/less/history" # make less not clutter ~
 export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"
 export CP_HOME_DIR="$XDG_CACHE_HOME/cocoapods"    # make cocoapods not clutter ~
 export MASON_CACHE="$XDG_CACHE_HOME/mason" # make mason not clutter ~
