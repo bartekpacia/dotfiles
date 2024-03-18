@@ -182,16 +182,15 @@ if [ "$(uname)" = Darwin ]; then
 	export PATH="/Applications/Mathematica.app/Contents/MacOS:$PATH"
 fi
 
-# You may need to manually set your language environment
+# Explicitly force the only sensible language
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-# Preferred editor for local and remote sessions
-if [ -n "$SSH_CONNECTION" ]; then
-	export EDITOR=micro
-else
-	export EDITOR=micro
+export EDITOR=nano
+if command -v micro >/dev/null 2>&1; then
+    export EDITOR=micro
 fi
+
 export PAGER=less
 
 # Add local gitignored files to PATH
