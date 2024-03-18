@@ -182,22 +182,26 @@ if [ "$(uname)" = Darwin ]; then
 	export PATH="/Applications/Mathematica.app/Contents/MacOS:$PATH"
 fi
 
+# Add local gitignored files to PATH
+if [ -d "$DOTFILES/local" ]; then
+	export PATH="$DOTFILES/local:$PATH"
+fi
+
 # Explicitly force the only sensible language
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
-
-export EDITOR=nano
-if command -v micro >/dev/null 2>&1; then
-    export EDITOR=micro
-fi
 
 export PAGER=less
 export LESS="--RAW-CONTROL-CHARS --QUIET --no-vbell"
 export LESSHISTFILE="$XDG_STATE_HOME/less/history"
 
-# Add local gitignored files to PATH
-if [ -d "$DOTFILES/local" ]; then
-	export PATH="$DOTFILES/local:$PATH"
+if command -v delta >/dev/null 2>&1; then
+    export GIT_PAGER=delta
+
+    if [ "$(uname)" = Darwin ]; then
+        alias delta="delta --features \"\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo dark-mode || echo light-mode)\""
+        export GIT_PAGER="delta --features \"\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo dark-mode || echo light-mode)\""
+    fi
 fi
 
 # bat
@@ -231,11 +235,14 @@ if command -v fzf >/dev/null 2>&1; then
 	export FZF_DEFAULT_OPTS="--no-height"
 fi
 
-# micro
+export EDITOR=nano
 if command -v micro >/dev/null 2>&1; then
+    export EDITOR=micro
+
 	if [ "$(uname)" = Darwin ]; then
 		# automatically set light/dark theme on macOS
 		alias micro="micro -colorscheme=\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo monokai || echo bubblegum)"
+		export GIT_EDITOR="micro -colorscheme=\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo monokai || echo bubblegum)"
 	fi
 fi
 
