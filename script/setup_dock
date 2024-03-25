@@ -18,6 +18,7 @@ create_dock_item() {
 }
 
 defaults write com.apple.dock persistent-apps -array \
+	"$(create_dock_item /System/Applications/Launchpad.app)" \
 	"$(create_dock_item /Applications/1Password.app)" \
 	"$(create_dock_item /Applications/Firefox.app)" \
 	"$(create_dock_item /System/Applications/Mail.app)" \
@@ -28,7 +29,8 @@ defaults write com.apple.dock persistent-apps -array \
 	"$(create_dock_item /Applications/Notion.app)" \
 	"$(create_dock_item /Applications/Spotify.app)" \
 	"$(create_dock_item /Applications/iTerm.app)" \
-	"$(create_dock_item /Applications/Visual\ Studio\ Code.app)"
+	"$(create_dock_item /Applications/Visual\ Studio\ Code.app)" \
+	"$(create_dock_item /Applications/Zed.app)"
 
 # restart dock
 killall Dock
