@@ -13,6 +13,7 @@ duti -s com.microsoft.VSCode public.shell-script all
 duti -s com.microsoft.VSCode public.json all
 duti -s com.microsoft.VSCode com.topografix.gpx all
 duti -s com.microsoft.VSCode net.daringfireball.markdown all
+duti -s com.microsoft.VSCode public.ruby-script all
 duti -s com.google.Chrome com.adobe.pdf all
 
 ###
