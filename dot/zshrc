@@ -33,9 +33,10 @@ plugins=(
 	gradle-completion
 	macos
 	pod
+	swiftpm
+	terraform
 	zsh-autosuggestions
 	zsh-syntax-highlighting
-	swiftpm
 )
 
 if command -v brew >/dev/null 2>&1; then
