@@ -4,6 +4,9 @@ alias cls="clear"
 alias md="mkdir -p"
 
 if command -v lsd >/dev/null 2>&1; then
+	if [ "$(uname)" = Darwin ]; then
+		alias lsd="lsd --color \"\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && printf always || printf never)\""
+	fi
 	alias ll="lsd -lAhF"
 	alias la="lsd -AhF"
 	alias l="lsd -F"
