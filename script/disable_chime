@@ -1,5 +1,5 @@
-#!/usr/bin/env bash
-set -euo pipefail
+#!/usr/bin/env sh
+set -eu
 
 # disable_chime disables the annoying noise that macOS does by default when
 # starting up.

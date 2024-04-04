@@ -1,5 +1,5 @@
-#!/usr/bin/env bash
-set -euo pipefail
+#!/usr/bin/env sh
+set -eu
 
 # setup_default_apps sets the default apps for specific UTI identifiers the way
 # I want.

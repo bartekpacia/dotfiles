@@ -1,5 +1,5 @@
-#!/usr/bin/env bash
-set -euo pipefail
+#!/usr/bin/env sh
+set -eu
 
 # setup_dock sets up the icons in the Dock the way I want.
 
@@ -13,8 +13,7 @@ defaults write com.apple.dock minimize-to-application -bool true
 defaults write com.apple.dock show-recents -bool FALSE
 
 create_dock_item() {
-	local app_path="$1"
-	printf '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>%s</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>', "$app_path"
+	printf '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>%s</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>' "$1"
 }
 
 defaults write com.apple.dock persistent-apps -array \

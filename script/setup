@@ -1,5 +1,5 @@
-#!/usr/bin/env bash
-set -euo pipefail
+#!/usr/bin/env sh
+set -eu
 
 # keep those in sync with dot/zshrc
 ZSH="$HOME/.oh-my-zsh"
@@ -36,7 +36,7 @@ reinstall() {
 }
 
 # Symlink dot/* into home directory as hidden files
-echo 'setup: symlinking hidden files to $HOME...'
+echo 'setup: symlinking hidden files to HOME...'
 for f in "$DOTFILES/dot/"*; do
 	if [ ! -f "$f" ]; then
 		continue
@@ -44,12 +44,12 @@ for f in "$DOTFILES/dot/"*; do
 	ln -sfn "$f" "$HOME/.$(basename "$f")"
 done
 
-if [ ! -d $HOME/.config ]; then
-	mkdir $HOME/.config
+if [ ! -d "$HOME/.config" ]; then
+	mkdir "$HOME/.config"
 fi
 
 # Symlink directories under dot/ into ~/.config
-echo 'setup: symlinking hidden directories to $XDG_CONFIG_HOME...'
+echo 'setup: symlinking hidden directories to XDG_CONFIG_HOME...'
 for f in "$DOTFILES/dot/"*; do
 	if [ ! -d "$f" ]; then
 		continue
@@ -58,7 +58,7 @@ for f in "$DOTFILES/dot/"*; do
 done
 
 # Symlink files/* into home directory as regular files
-echo 'setup: symlinking normal files to $HOME...'
+echo 'setup: symlinking normal files to HOME...'
 for f in "$DOTFILES/files/"*; do
 	if [ -f "$f" ]; then
 		ln -sfn "$f" "$HOME/$(basename "$f")"
@@ -66,7 +66,7 @@ for f in "$DOTFILES/files/"*; do
 done
 
 # Symlink files/Darwin* into home directory as regular files
-echo 'setup: symlinking normal files (Darwin-only) to $HOME...'
+echo 'setup: symlinking normal files (Darwin-only) to HOME...'
 for f in "$DOTFILES/files/Darwin/"*; do
 	if [ -f "$f" ]; then
 		ln -sfn "$f" "$HOME/$(basename "$f")"
@@ -74,7 +74,7 @@ for f in "$DOTFILES/files/Darwin/"*; do
 done
 
 # Symlink ssh/* (my common SSH config) into ~/.ssh as regular files
-echo 'setup: symlinking ssh files to $HOME/.ssh...'
+echo 'setup: symlinking ssh files to HOME/.ssh...'
 for f in "$DOTFILES/ssh/"*; do
 	if [ ! -d ~/.ssh ]; then
 		mkdir ~/.ssh
