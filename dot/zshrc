@@ -3,23 +3,35 @@
 # Run cross shell configuration
 source ~/.shrc
 
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+
+export ZSH="$HOME/.oh-my-zsh" # Path to oh-my-zsh installation
 export ZSH_CONFIG="$HOME/.zshrc"
 export ZSH_CUSTOM="$ZSH/custom"
 export ZSH_COMPDUMP="$ZSH_CACHE_DIR/.zcompdump-$SHORT_HOST-$ZSH_VERSION"
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=8"
-export HISTFILE="$XDG_STATE_HOME/zsh/history"
+
 mkdir -p "$XDG_STATE_HOME/zsh" # zsh doesn't create it
 
-export MLH_AT_SYMBOL=" at "
-export MLH_IN_SYMBOL=" in "
-export MLH_ON_SYMBOL=" on "
-export MLH_SHELL_SYMBOL="$ "
+HISTFILE="$XDG_STATE_HOME/zsh/history"
+SAVEHIST=1000000
+HISTSIZE=2000000
+setopt EXTENDED_HISTORY # Record timestamp in history
+setopt HIST_EXPIRE_DUPS_FIRST # Expire duplicate entries first when trimming history
+setopt HIST_IGNORE_DUPS # Dont record an entry that was just recorded again
+setopt HIST_IGNORE_ALL_DUPS # Delete old recorded entry if new entry is a duplicate
+setopt HIST_FIND_NO_DUPS # Do not display a line previously found
+setopt HIST_IGNORE_SPACE # Dont record an entry starting with a space
+setopt HIST_SAVE_NO_DUPS # Dont write duplicate entries in the history file
+setopt SHARE_HISTORY # Share history between all sessions
+setopt HIST_VERIFY # Do not execute commands using history (e.g.: using !$) immediately
 
 ZSH_THEME="mlh"
-# ohmyzsh: use case-sensitive completion
-CASE_SENSITIVE="true"
+MLH_AT_SYMBOL=" at "
+MLH_IN_SYMBOL=" in "
+MLH_ON_SYMBOL=" on "
+MLH_SHELL_SYMBOL="$ "
+
+CASE_SENSITIVE="true" # ohmyzsh: use case-sensitive completion
 
 plugins=(
 	1password

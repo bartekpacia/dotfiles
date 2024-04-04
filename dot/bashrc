@@ -3,7 +3,7 @@
 # Run cross shell configuration
 source ~/.shrc
 
-export HISTFILE="$XDG_STATE_HOME/bash/history"
+HISTFILE="$XDG_STATE_HOME/bash/history"
 mkdir -p "$XDG_STATE_HOME/bash" # bash doesn't create it
 
 if type brew &>/dev/null
