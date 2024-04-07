@@ -41,8 +41,8 @@ plugins=(
 	# dotnet
 	`#fzf` $([ -x "$(command -v fzf)" ] && echo 'fzf')
 	# flutter
-	# gradle
-	gradle-completion
+	gradle
+	# gradle-completion
 	macos
 	pod
 	swiftpm
@@ -50,6 +50,9 @@ plugins=(
 	zsh-autosuggestions
 	zsh-syntax-highlighting
 )
+
+# See https://github.com/ohmyzsh/ohmyzsh/pull/12281#issuecomment-1999588857
+zstyle ':omz:plugins:gradle' aliases no
 
 if command -v brew >/dev/null 2>&1; then
 	# Set up completions for `brew` command and `brew`-installed programs
