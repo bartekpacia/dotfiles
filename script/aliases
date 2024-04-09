@@ -16,6 +16,8 @@ else
 	alias l="ls -F"
 fi
 
+alias sshlocal='ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o "LogLevel ERROR"'
+
 alias g="git"
 alias ga="git add"
 alias gb="git branch"
