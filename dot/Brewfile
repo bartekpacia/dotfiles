@@ -46,6 +46,7 @@ brew 'ncdu'
 brew 'neofetch'
 brew 'nmap'
 # brew 'nvm' # Still deciding between nvm and n
+brew 'openjdk'
 brew 'poetry' if false # use poetry installed by pip from pyenv, see https://github.com/Homebrew/homebrew-core/issues/53169
 brew 'purr'
 brew 'pyenv'
@@ -110,9 +111,9 @@ brew 'fhomed'
 brew 'scripts'
 
 # Eclipse Temurin (formerly OpenJDK) for Android SDK
-tap 'homebrew/cask-versions'
-cask 'temurin17'
-cask 'temurin21'
+#tap 'homebrew/cask-versions'
+#cask 'temurin17'
+#cask 'temurin21'
 
 tap 'tinygo-org/tools'
 brew 'tinygo'

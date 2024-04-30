@@ -82,7 +82,13 @@ if [ "$(uname)" = Linux ]; then
 	export PATH="$JAVA_HOME/bin:$PATH"
 elif [ "$(uname)" = Darwin ]; then
 	# on macOS
-	export JAVA_HOME="/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home"
+
+	# OpenJDK
+	# export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+	export JAVA_HOME="/Library/Java/JavaVirtualMachines/openjdk.jdk/Contents/Home"
+
+	# Eclipse Temurin
+	# export JAVA_HOME="/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home"
 	export PATH="$JAVA_HOME/bin:$PATH"
 fi
 
