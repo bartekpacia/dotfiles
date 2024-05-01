@@ -6,26 +6,22 @@ source ~/.shrc
 HISTFILE="$XDG_STATE_HOME/bash/history"
 mkdir -p "$XDG_STATE_HOME/bash" # bash doesn't create it
 
-if type brew &>/dev/null
-then
+if type brew &>/dev/null; then
 	# Set up completions for `brew` command and `brew`-installed programs
 	# See: https://docs.brew.sh/Shell-Completion#configuring-completions-in-bash
-  HOMEBREW_PREFIX="$(brew --prefix)"
-  if [[ -r "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh" ]]
-  then
-    source "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh"
-  else
-    for COMPLETION in "${HOMEBREW_PREFIX}/etc/bash_completion.d/"*
-    do
-      [[ -r "${COMPLETION}" ]] && source "${COMPLETION}"
-    done
-  fi
+	HOMEBREW_PREFIX="$(brew --prefix)"
+	if [[ -r "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh" ]]; then
+		source "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh"
+	else
+		for COMPLETION in "${HOMEBREW_PREFIX}/etc/bash_completion.d/"*; do
+			[[ -r "${COMPLETION}" ]] && source "${COMPLETION}"
+		done
+	fi
 fi
-
 
 # Enable searching shell history with fzf
 if [ -f ~/.fzf.bash ]; then
-    . ~/.fzf.bash
+	. ~/.fzf.bash
 fi
 
 source "$HOME/.dotfiles/script/aliases"
