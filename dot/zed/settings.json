@@ -27,6 +27,9 @@
     "dock": "right",
     "auto_fold_dirs": true
   },
+  "preview_tabs": {
+    "enabled": false
+  },
   "terminal": {
     "font_size": 14,
     "blinking": "on",
