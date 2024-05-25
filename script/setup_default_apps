@@ -14,7 +14,9 @@ duti -s com.microsoft.VSCode public.json all
 duti -s com.microsoft.VSCode com.topografix.gpx all
 duti -s com.microsoft.VSCode net.daringfireball.markdown all
 duti -s com.microsoft.VSCode public.ruby-script all
-duti -s com.google.Chrome com.adobe.pdf all
+duti -s org.mozilla.firefox com.adobe.pdf all
+duti -s com.apple.Preview public.heic all
+duti -s com.apple.Preview public.heif all
 
 ###
 # Future idea: automate setup of default settings
