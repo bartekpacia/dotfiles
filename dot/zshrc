@@ -80,3 +80,5 @@ unsetopt beep
 
 # Load cross-shell aliases
 source "$HOME/.dotfiles/script/aliases"
+
+test -e /Users/bartek/.iterm2_shell_integration.zsh && source /Users/bartek/.iterm2_shell_integration.zsh || true
