@@ -1,8 +1,7 @@
 #!/usr/bin/env zsh
 
 # Run cross shell configuration
-source ~/.shrc
-
+. ~/.shrc
 
 export ZSH="$HOME/.oh-my-zsh" # Path to oh-my-zsh installation
 export ZSH_CONFIG="$HOME/.zshrc"

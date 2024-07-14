@@ -27,6 +27,11 @@ export GPG_TTY="$(tty)"
 # ln -s ~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock "$XDG_STATE_HOME/1password/agent.sock"
 export SSH_AUTH_SOCK="$XDG_STATE_HOME/1password/agent.sock"
 
+# 1Password shell plugins
+if [ -f "$XDG_CONFIG_HOME/op/plugins.sh" ]; then
+  . "$XDG_CONFIG_HOME/op/plugins.sh"
+fi
+
 # Dart
 export PUB_CACHE="$XDG_CACHE_HOME/pub"
 # see https://github.com/dart-lang/sdk/issues/42813#issuecomment-972120346
@@ -80,6 +85,8 @@ elif [ "$(uname)" = Darwin ]; then
 
 	# OpenJDK
 	# export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+	#export JAVA_HOME="/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home"
+	#export JAVA_HOME="/Library/Java/JavaVirtualMachines/openjdk-11.jdk/Contents/Home"
 	export JAVA_HOME="/Library/Java/JavaVirtualMachines/openjdk.jdk/Contents/Home"
 
 	# Eclipse Temurin
