@@ -34,7 +34,6 @@ CASE_SENSITIVE="true" # ohmyzsh: use case-sensitive completion
 
 plugins=(
 	1password
-	adb
 	brew
 	# docker - works automatically when brew-installed
 	# dotnet
