@@ -29,7 +29,7 @@ export SSH_AUTH_SOCK="$XDG_STATE_HOME/1password/agent.sock"
 
 # 1Password shell plugins
 if [ -f "$XDG_CONFIG_HOME/op/plugins.sh" ]; then
-  . "$XDG_CONFIG_HOME/op/plugins.sh"
+	. "$XDG_CONFIG_HOME/op/plugins.sh"
 fi
 
 # Dart
@@ -44,7 +44,7 @@ export PATH="$HOME/projects/starpls/editors/code/bin:$PATH"
 export FVM_CACHE_PATH="$XDG_CACHE_HOME/fvm"
 export FVM_GIT_CACHE_PATH="$XDG_CACHE_HOME/fvm"
 export PATH="$FVM_CACHE_PATH/default/bin:$PATH" # installed with fvm
-export PATH="$HOME/flutter/bin:$PATH" # installed directly
+export PATH="$HOME/flutter/bin:$PATH"           # installed directly
 export PATROL_NO_COMPLETION=true
 alias flutter="flutter --no-version-check"
 
@@ -76,8 +76,8 @@ export PICO_SDK_PATH="$HOME/pico-sdk"
 if [ "$(uname)" = Linux ]; then
 	# on Linux
 	# Download: https://github.com/adoptium/temurin17-binaries/releases
-  # Install: https://adoptium.net/en-GB/installation/archives
-  # Look for "OpenJDK17U-jdk_x64_linux_hotspot_17.0.7_7.tar.gz"
+	# Install: https://adoptium.net/en-GB/installation/archives
+	# Look for "OpenJDK17U-jdk_x64_linux_hotspot_17.0.7_7.tar.gz"
 	export JAVA_HOME="/usr/lib/jvm/temurin-17.jdk"
 	export PATH="$JAVA_HOME/bin:$PATH"
 elif [ "$(uname)" = Darwin ]; then
@@ -210,16 +210,22 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 export PAGER=less
-export LESS="--RAW-CONTROL-CHARS --QUIET --no-vbell"
+export LESS="--RAW-CONTROL-CHARS --QUIET"
+# guard against old version of less not having "--no-vbell"
+case "$(less --no-vbell 2>&1)" in
+*vbell*) ;;
+*) LESS="$LESS --no-vbell" ;;
+esac
+
 export LESSHISTFILE="$XDG_STATE_HOME/less/history"
 
 if command -v delta >/dev/null 2>&1; then
-    export GIT_PAGER=delta
+	export GIT_PAGER=delta
 
-    if [ "$(uname)" = Darwin ]; then
-        alias delta="delta --features \"\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo dark-mode || echo light-mode)\""
-        export GIT_PAGER="delta --features \"\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo dark-mode || echo light-mode)\""
-    fi
+	if [ "$(uname)" = Darwin ]; then
+		alias delta="delta --features \"\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo dark-mode || echo light-mode)\""
+		export GIT_PAGER="delta --features \"\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo dark-mode || echo light-mode)\""
+	fi
 fi
 
 # bat
@@ -255,7 +261,7 @@ fi
 
 export EDITOR=nano
 if command -v micro >/dev/null 2>&1; then
-    export EDITOR=micro
+	export EDITOR=micro
 
 	if [ "$(uname)" = Darwin ]; then
 		# automatically set light/dark theme on macOS
@@ -265,9 +271,9 @@ if command -v micro >/dev/null 2>&1; then
 fi
 
 export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"
-export CP_HOME_DIR="$XDG_CACHE_HOME/cocoapods"    # make cocoapods not clutter ~
-export MASON_CACHE="$XDG_CACHE_HOME/mason" # make mason not clutter ~
-export MAVEN_HOME="$XDG_CACHE_HOME/maven"  # make maven not clutter ~
+export CP_HOME_DIR="$XDG_CACHE_HOME/cocoapods" # make cocoapods not clutter ~
+export MASON_CACHE="$XDG_CACHE_HOME/mason"     # make mason not clutter ~
+export MAVEN_HOME="$XDG_CACHE_HOME/maven"      # make maven not clutter ~
 
 howexport() {
 	echo 'while read -r line; do export "$line"; done < .env'
