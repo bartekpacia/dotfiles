@@ -18,6 +18,23 @@ fi
 
 alias sshlocal='ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o "LogLevel ERROR"'
 
+# Check if main exists and use instead of master
+# Copied from https://github.com/ohmyzsh/ohmyzsh/blob/0ffcc3b68a1196e9164ff42fac8a5fdd4804abd0/plugins/git/git.plugin.zsh#L34-L48
+function git_main_branch() {
+  command git rev-parse --git-dir &>/dev/null || return
+  local ref
+  for ref in refs/{heads,remotes/{origin,upstream}}/{main,trunk,mainline,default,stable,master}; do
+    if command git show-ref -q --verify $ref; then
+      echo ${ref:t}
+      return 0
+    fi
+  done
+
+  # If no main branch was found, fall back to master but return error
+  echo master
+  return 1
+}
+
 alias g="git"
 alias ga="git add"
 alias gb="git branch"
@@ -30,6 +47,7 @@ alias gs="git status"
 alias gt="git tag"
 alias gaa="git add ."
 alias gch="git checkout"
+alias gcm='git checkout $(git_main_branch)'
 alias gds="git diff --staged"
 alias glo="git log --graph --oneline"
 alias gpf="git push --force-with-lease"
