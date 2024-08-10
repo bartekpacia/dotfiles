@@ -11,6 +11,7 @@ set -eu
 duti -s com.microsoft.VSCode public.xml all
 duti -s com.microsoft.VSCode public.shell-script all
 duti -s com.microsoft.VSCode public.json all
+duti -s com.microsoft.VSCode public.yaml all
 duti -s com.microsoft.VSCode com.topografix.gpx all
 duti -s com.microsoft.VSCode net.daringfireball.markdown all
 duti -s com.microsoft.VSCode public.ruby-script all
@@ -63,7 +64,8 @@ defaults write -g KeyRepeat -int 2 # the lowest value available in UI
 defaults write -g InitialKeyRepeat -int 15 # the lowest value available in UI
 
 # Disable inline attachments (just show the icons)
-defaults write com.apple.mail DisableInlineAttachmentViewing -bool true
+# stopped working for some reason
+# defaults write com.apple.mail DisableInlineAttachmentViewing -bool true
 
 # Disable automatic capitalization as it’s annoying when typing code
 defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
