@@ -72,6 +72,9 @@ gprune() {
 		| xargs git branch -D
 }
 
+alias lzd="lazydocker"
+alias lzg="lazygit"
+
 # ------ Sleep ------
 
 if command -v pmset >/dev/null 2>&1; then
