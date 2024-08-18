@@ -36,18 +36,6 @@
   light = false
   syntax-theme = Visual Studio Dark+
 
-# FEUP CG project
-[includeIf "gitdir:~/projects/cg-t01-g12/"]
-    path = config_uporto
-
-# FEUP CPD project
-[includeIf "gitdir:~/projects/cpd-t02-g19/"]
-    path = config_uporto
-
-# FEUP C project
-[includeIf "gitdir:~/projects/comp2024-2h/"]
-    path = config_uporto
-
 [alias]
 	b = branch
 	bs = b --format='%(refname:short)'
