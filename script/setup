@@ -31,8 +31,12 @@ reinstall() {
 	git clone https://github.com/zsh-users/zsh-completions ~/.oh-my-zsh/custom/plugins/zsh-completions 1>/dev/null 2>&1
 
 	printf "setup: reinstalling gradle-completion...\n"
-	rm -rf ~/.oh-my-zsh/plugins/gradle-completion
+	rm -rf ~/.oh-my-zsh/custom/plugins/gradle-completion
 	git clone https://github.com/gradle/gradle-completion ~/.oh-my-zsh/custom/plugins/gradle-completion 1>/dev/null 2>&1
+
+	printf "setup: reinstalling fzf-tab...\n"
+	rm -rf ~/.oh-my-zsh/custom/plugins/fzf-tab
+	git clone https://github.com/Aloxaf/fzf-tab ~/.oh-my-zsh/custom/plugins/fzf-tab 1>/dev/null 2>&1
 }
 
 # Symlink dot/* into home directory as hidden files
