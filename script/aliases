@@ -59,6 +59,15 @@ alias gtv="git tag | sort -V"
 alias gmnff="git merge --no-ff"
 alias gpsup='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
 
+ggch() {
+	if [ "$1" != "" ]; then
+		git checkout "$1"
+	else
+		# https://www.reddit.com/r/commandline/comments/ne90tm/comment/gyf33ps
+		git branch --sort=-committerdate  | grep -v "^\*" | fzf --reverse --info=inline | xargs git checkout
+	fi
+}
+
 gprune() {
 	git fetch --prune
 
