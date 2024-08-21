@@ -8,7 +8,8 @@
       "ctrl-j": "editor::Hover",
       "cmd-shift-n": "project_panel::NewDirectory",
       "alt-down": "editor::MoveLineDown",
-      "alt-up": "editor::MoveLineUp"
+      "alt-up": "editor::MoveLineUp",
+      "ctrl-cmd-r": "projects::OpenRecent"
     }
   },
   {
