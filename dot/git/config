@@ -55,3 +55,5 @@
 
 	pick-commits = "!f() { git l1 \"${1:-.}\" | fzf --ansi | cut -d' ' -f2; }; f"
 	l1 = log --date=short --color=always --format='%C(green)%ad %C(auto)%h %C(blue)%<(15,trunc)%an %C(auto)%<(65,trunc)%s%d%C(reset)'
+
+	# TODO: Add stuff from https://blog.jez.io/cli-code-review
