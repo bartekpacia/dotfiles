@@ -9,6 +9,8 @@ dot/micro/buffers/*
 # TODO: remove when resolved: https://github.com/zed-industries/zed/issues/9308
 dot/zed/.tmp*
 dot/zed/embeddings/
+dot/zed/conversations/
+dot/zed/prompts/
 
 # iTerm2 creates this
 dot/iterm2/AppSupport
