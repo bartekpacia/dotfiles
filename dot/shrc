@@ -192,7 +192,7 @@ if [ -d "$HOME/scripts" ]; then
 	export PATH="$HOME/scripts/bin:$PATH"
 fi
 
-# TealDeer
+# TealDeer (https://github.com/dbrgn/tealdeer/issues/311)
 export TEALDEER_CONFIG_DIR="$XDG_CONFIG_HOME/tealdeer"
 
 # Wolfram Mathematica
@@ -217,6 +217,7 @@ case "$(less --no-vbell 2>&1)" in
 *) LESS="$LESS --no-vbell" ;;
 esac
 
+# should not be required since (see https://github.com/gwsw/less/blob/b1548ca1188aca424026103da8284d1db25150f6/NEWS#L321-L322)
 export LESSHISTFILE="$XDG_STATE_HOME/less/history"
 
 if command -v delta >/dev/null 2>&1; then
