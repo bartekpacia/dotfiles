@@ -77,6 +77,14 @@ setopt menu_complete
 # Disable the annoying beep
 unsetopt beep
 
+# Auto-expand aliases on space https://www.reddit.com/r/zsh/comments/bbbluo/comment/ekhpxer
+my-new-keymap() {
+	zle _expand_alias
+	zle self-insert
+}
+zle -N my-new-keymap
+bindkey -M main ' ' my-new-keymap
+
 # Load cross-shell aliases
 source "$HOME/.dotfiles/script/aliases"
 
