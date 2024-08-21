@@ -38,7 +38,7 @@ plugins=(
 	# docker - works automatically when brew-installed
 	# dotnet
 	# flutter
-	fzf-tab
+	`#fzf` $([ -x "$(command -v fzf)" ] && echo 'fzf-tab')
 	`#fzf` $([ -x "$(command -v fzf)" ] && echo 'fzf')
 	gradle
 	# gradle-completion
