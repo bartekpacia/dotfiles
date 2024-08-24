@@ -35,6 +35,8 @@ function git_main_branch() {
   return 1
 }
 
+alias ec="echo"
+
 alias g="git"
 alias ga="git add"
 alias gb="git branch"
