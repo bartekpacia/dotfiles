@@ -85,6 +85,12 @@ my-new-keymap() {
 zle -N my-new-keymap
 bindkey -M main ' ' my-new-keymap
 
+# Set up Google Cloud SDK
+if command -v gcloud >/dev/null 2>&1; then
+	. "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
+	. "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
+fi
+
 # Load cross-shell aliases
 source "$HOME/.dotfiles/script/aliases"
 

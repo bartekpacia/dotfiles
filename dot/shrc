@@ -117,12 +117,6 @@ export PATH="/usr/local/opt/avr-gcc@11/bin:$PATH"
 # Maestro
 export PATH="$PATH:$HOME/.maestro/bin"
 
-# Google Cloud SDK
-if command -v gcloud >/dev/null 2>&1; then
-	. "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
-	. "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
-fi
-
 # Python
 
 # Export binaries from Poetry venvs

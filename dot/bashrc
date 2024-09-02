@@ -21,6 +21,12 @@ if type brew 1>/dev/null 2>&1; then
 	fi
 fi
 
+# Set up Google Cloud SDK
+if command -v gcloud >/dev/null 2>&1; then
+	. "$(brew --prefix)/share/google-cloud-sdk/path.bash.inc"
+	. "$(brew --prefix)/share/google-cloud-sdk/completion.bash.inc"
+fi
+
 # Enable searching shell history with fzf
 if [ -f ~/.fzf.bash ]; then
 	. ~/.fzf.bash
