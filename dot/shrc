@@ -46,7 +46,7 @@ export FVM_GIT_CACHE_PATH="$XDG_CACHE_HOME/fvm"
 export PATH="$FVM_CACHE_PATH/default/bin:$PATH" # installed with fvm
 export PATH="$HOME/flutter/bin:$PATH"           # installed directly
 export PATROL_NO_COMPLETION=true
-alias flutter="flutter --no-version-check"
+# alias flutter="flutter --no-version-check"
 
 # Android
 
