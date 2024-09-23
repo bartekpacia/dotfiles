@@ -98,3 +98,6 @@ source "$HOME/.dotfiles/script/aliases"
 if [ -e "$HOME/.iterm2_shell_integration.zsh" ]; then
 	. "$HOME/.iterm2_shell_integration.zsh" || true
 fi
+
+# Set up Atuin (https://atuin.sh)
+eval "$(atuin init zsh)"
