@@ -94,7 +94,7 @@ cask 'qlstephen' if false # does not work on newer macOS version. TODO: try to m
 cask 'quicklook-json' if false # does not work on newer macOS version. TODO: try to make it work
 cask 'quicklookapk' if false # does not work on newer macOS version. TODO: try to make it works
 cask 'raspberry-pi-imager' if false # TODO: learn how to flash with built-in tools
-cask 'rectangle'
+cask 'rectangle' if false # not needed since macOS 15 Sequoia
 cask 'slack'
 cask 'spotify'
 cask 'tailscale'
