@@ -36,6 +36,10 @@
   light = false
   syntax-theme = Visual Studio Dark+
 
+# JetBrains
+[includeIf "gitdir:~/projects/ultimate/"]
+    path = config_jetbrains
+
 [alias]
 	b = branch
 	bs = b --format='%(refname:short)'
