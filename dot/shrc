@@ -1,7 +1,11 @@
 #!/usr/bin/env sh
 # cross-shell configuration
 
-stty -echoctl
+if [ -z "$INTELLIJ_ENVIRONMENT_READER" ]; then
+	# Prevent "stty: stdin isn't a terminal" error when IntellJ loads shell variables.
+	# See https://intellij.com/shell-env
+	stty -echoctl
+fi
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
@@ -210,11 +214,15 @@ export LC_ALL=en_US.UTF-8
 
 export PAGER=less
 export LESS="--RAW-CONTROL-CHARS --QUIET"
-# guard against old version of less not having "--no-vbell"
-case "$(less --no-vbell 2>&1)" in
-*vbell*) ;;
-*) LESS="$LESS --no-vbell" ;;
-esac
+
+if [ -z "$INTELLIJ_ENVIRONMENT_READER" ]; then
+	# Guard against old version of less not having "--no-vbell".
+	# For some reason, this hangs forever when loaded from within IntelliJ.
+	case "$(less --no-vbell 2>&1)" in
+	*vbell*) ;;
+	*) LESS="$LESS --no-vbell" ;;
+	esac
+fi
 
 # should not be required since (see https://github.com/gwsw/less/blob/b1548ca1188aca424026103da8284d1db25150f6/NEWS#L321-L322)
 export LESSHISTFILE="$XDG_STATE_HOME/less/history"
