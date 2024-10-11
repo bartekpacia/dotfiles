@@ -14,3 +14,6 @@ dot/zed/prompts/
 
 # iTerm2 creates this
 dot/iterm2/AppSupport
+
+dot/pgcli/history
+dot/pgcli/log
