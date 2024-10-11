@@ -3,11 +3,6 @@
 # Run cross shell configuration
 . ~/.shrc
 
-if [ ! -z "$INTELLIJ_ENVIRONMENT_READER" ]; then
-	# See https://intellij-support.jetbrains.com/hc/en-us/articles/15268184143890-Shell-Environment-Loading
-	exit 0
-fi
-
 export ZSH="$HOME/.oh-my-zsh" # Path to oh-my-zsh installation
 export ZSH_CONFIG="$HOME/.zshrc"
 export ZSH_CUSTOM="$ZSH/custom"
