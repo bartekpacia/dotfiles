@@ -1,0 +1,9 @@
+serverAddr = "104.248.133.139"
+serverPort = 7000 # connect to frp server running on this port
+
+[[proxies]]
+name = "my-tcp-proxy"
+type = "tcp"
+localIP = "127.0.0.1" # my server runs on localhost
+localPort = 8080 # my server runs on this port on localhost
+remotePort = 8080 # this port will be exposed on public server
