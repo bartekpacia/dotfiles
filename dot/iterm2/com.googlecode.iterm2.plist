@@ -9,7 +9,7 @@
 	<key>AlternateMouseScroll</key>
 	<true/>
 	<key>CheckTestRelease</key>
-	<true/>
+	<false/>
 	<key>ClickToSelectCommand</key>
 	<false/>
 	<key>ClosingTmuxTabKillsTmuxWindows</key>
