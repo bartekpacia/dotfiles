@@ -1,0 +1,7 @@
+theme = dark:xcodedark,light:xcodelight
+
+copy-on-select = clipboard
+
+keybind = cmd+backspace=esc:w
+# keybind = global:option+space=toggle_quick_terminal
+keybind = global:option+space=toggle_visibility
