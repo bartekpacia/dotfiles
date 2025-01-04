@@ -78,12 +78,13 @@ setopt menu_complete
 unsetopt beep
 
 # Auto-expand aliases on space https://www.reddit.com/r/zsh/comments/bbbluo/comment/ekhpxer
-my-new-keymap() {
-	zle _expand_alias
-	zle self-insert
-}
-zle -N my-new-keymap
-bindkey -M main ' ' my-new-keymap
+# Disableed on 4th Jan 2025 because it started to annoy me.
+# my-new-keymap() {
+# 	zle _expand_alias
+# 	zle self-insert
+# }
+# zle -N my-new-keymap
+# bindkey -M main ' ' my-new-keymap
 
 # Set up Google Cloud SDK
 if command -v gcloud >/dev/null 2>&1; then
