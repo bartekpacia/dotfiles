@@ -49,8 +49,12 @@ export FVM_CACHE_PATH="$XDG_CACHE_HOME/fvm"
 export FVM_GIT_CACHE_PATH="$XDG_CACHE_HOME/fvm"
 export PATH="$FVM_CACHE_PATH/default/bin:$PATH" # installed with fvm
 export PATH="$HOME/flutter/bin:$PATH"           # installed directly
-export PATROL_NO_COMPLETION=true
+# export PATROL_NO_COMPLETION=true
 # alias flutter="flutter --no-version-check"
+
+export PATH="$FVM_CACHE_PATH/default/engine/src/flutter/bin:$PATH" # For Flutter engine development (et - engine tool)
+export PATH="$FVM_CACHE_PATH/default/engine/src/flutter/lib/web_ui/dev:$PATH" # For Flutter Web engine development
+export DART_SDK_DIR="$FVM_CACHE_PATH/default" # Needed by felt for web engine development
 
 # Android
 
@@ -92,6 +96,7 @@ elif [ "$(uname)" = Darwin ]; then
 	#export JAVA_HOME="/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home"
 	#export JAVA_HOME="/Library/Java/JavaVirtualMachines/openjdk-11.jdk/Contents/Home"
 	#export JAVA_HOME="/Library/Java/JavaVirtualMachines/openjdk-17.jdk/Contents/Home"
+	#export JAVA_HOME="/Library/Java/JavaVirtualMachines/openjdk-21.jdk/Contents/Home"
 	export JAVA_HOME="/Library/Java/JavaVirtualMachines/openjdk.jdk/Contents/Home"
 
 	# Eclipse Temurin
