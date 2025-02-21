@@ -1,5 +1,7 @@
 // Defaults: https://github.com/zed-industries/zed/blob/main/assets/keymaps/default-macos.json
 [
+  /*
+  // Commented out because as of 29-01-2025 I moved to the JetBrains keymap
   {
     "bindings": {
       "ctrl-tab": "pane::ActivateNextItem",
@@ -20,6 +22,13 @@
       "cmd-b": "workspace::ToggleRightDock",
       "cmd-k cmd-e": "project_panel::ToggleFocus",
       "cmd-j": "workspace::ToggleBottomDock"
+    }
+  }
+  */
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-shift-backspace": "workspace::ClearAllNotifications"
     }
   }
 ]
