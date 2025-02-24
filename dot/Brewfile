@@ -142,8 +142,8 @@ brew 'speedtest'
 tap 'microsoft/git'
 cask 'git-credential-manager-core' if false # almost never used
 
-tap 'osx-cross/avr'
-brew 'avr-gcc'
+tap 'osx-cross/avr' if false # almost never used
+brew 'avr-gcc' if false  # almost never used
 
 tap 'ArmMbed/homebrew-formulae'
 brew 'arm-none-eabi-gcc' if false # almost never used
