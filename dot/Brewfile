@@ -43,11 +43,11 @@ brew 'micro'
 brew 'moreutils'
 brew 'mosh'
 brew 'mycli'
-# brew 'n' # Still deciding between nvm and n
+brew 'n' if false # Still deciding between nvm and n
 brew 'ncdu'
 brew 'neofetch'
 brew 'nmap'
-# brew 'nvm' # Still deciding between nvm and n
+brew 'nvm' if false # Still deciding between nvm and n
 brew 'openjdk'
 brew 'pgcli'
 brew 'poetry' if false # use poetry installed by pip from pyenv, see https://github.com/Homebrew/homebrew-core/issues/53169
@@ -78,6 +78,7 @@ cask 'daisydisk'
 cask 'discord'
 cask 'docker'
 cask 'firefox'
+cask 'ghostty'
 cask 'gimp'
 cask 'google-chrome' if false # almost never used
 cask 'google-cloud-sdk' if false # almost never used
@@ -113,11 +114,6 @@ brew 'fhome'
 brew 'fhomed'
 brew 'scripts'
 
-# Eclipse Temurin (formerly OpenJDK) for Android SDK
-#tap 'homebrew/cask-versions'
-#cask 'temurin17'
-#cask 'temurin21'
-
 tap 'tinygo-org/tools'
 brew 'tinygo'
 
@@ -139,13 +135,13 @@ brew 'idb-companion'
 tap 'teamookla/speedtest'
 brew 'speedtest'
 
-tap 'microsoft/git'
+tap 'microsoft/git' if false # almost never used
 cask 'git-credential-manager-core' if false # almost never used
 
 tap 'osx-cross/avr' if false # almost never used
 brew 'avr-gcc' if false  # almost never used
 
-tap 'ArmMbed/homebrew-formulae'
+tap 'ArmMbed/homebrew-formulae' if false # almost never used
 brew 'arm-none-eabi-gcc' if false # almost never used
 
 mas 'Amphetamine', id: 937984704 if false # almost never used
