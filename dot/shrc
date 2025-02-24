@@ -42,8 +42,6 @@ export PUB_CACHE="$XDG_CACHE_HOME/pub"
 export ANALYZER_STATE_LOCATION_OVERRIDE="$XDG_STATE_HOME/dartServer"
 export PATH="$PUB_CACHE/bin:$PATH" # executables installed with pub global
 
-export PATH="$HOME/projects/starpls/editors/code/bin:$PATH"
-
 # Flutter
 export FVM_CACHE_PATH="$XDG_CACHE_HOME/fvm"
 export FVM_GIT_CACHE_PATH="$XDG_CACHE_HOME/fvm"
