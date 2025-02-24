@@ -7,6 +7,9 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
   "base_keymap": "JetBrains",
   // "autosave": "on_focus_change",
   // "assistant": {
@@ -29,6 +32,11 @@
   "show_whitespaces": "none",
   "ui_font_size": 18,
   "buffer_font_size": 14,
+  "git": {
+    "inline_blame": {
+      "enabled": true
+    }
+  },
   "line_indicator_format": "short",
   "chat_panel": {
     "dock": "right"
