@@ -170,12 +170,16 @@ export BUNDLE_USER_CACHE="$XDG_CACHE_HOME/bundle"
 export NODE_REPL_HISTORY=""
 
 # n
-export N_PREFIX="$XDG_CACHE_HOME/n"
-export PATH="$N_PREFIX/bin:$PATH"
+if command -v n >/dev/null 2>&1; then
+	export N_PREFIX="$XDG_CACHE_HOME/n"
+	export PATH="$N_PREFIX/bin:$PATH"
+fi
 
 # nvm
-export NVM_DIR="$XDG_CACHE_HOME/nvm"
-export PATH="$NVM_DIR/bin:$PATH"
+if command -v nvm >/dev/null 2>&1; then
+	export NVM_DIR="$XDG_CACHE_HOME/nvm"
+	export PATH="$NVM_DIR/bin:$PATH"	
+fi
 
 # Source: https://github.com/npm/npm/issues/6675#issuecomment-251049832
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
@@ -196,7 +200,11 @@ if command -v go >/dev/null 2>&1; then
 fi
 
 # Rust
-export PATH="$HOME/.cargo/bin:$PATH"
+
+# for "cargo install"-ed software
+if command -v cargo >/dev/null 2>&1; then
+	export PATH="$HOME/.cargo/bin:$PATH"
+fi
 
 # https://github.com/bartekpacia/scripts (when not installed through brew)
 if [ -d "$HOME/scripts" ]; then
