@@ -129,7 +129,7 @@ export MAKEFLAGS="-j 8"
 export PATH="/usr/local/opt/avr-gcc@11/bin:$PATH"
 
 # Maestro
-export PATH="$PATH:$HOME/.maestro/bin"
+export PATH="$HOME/.maestro/bin:$PATH"
 
 # Python
 
@@ -187,10 +187,15 @@ export NPM_CONFIG_TMP="$XDG_CACHE_HOME/npm"
 # Go
 
 # when Go installed directly from the webpage (no thru the pkg manager)
-export PATH="/usr/local/go/bin:$PATH"
+if [ -d "/usr/local/go" ]; then
+	export PATH="/usr/local/go/bin:$PATH"
+fi
+
 # for "go install"-ed software
-export GOPATH="$XDG_CACHE_HOME/go"
-export PATH="$GOPATH/bin:$PATH"
+if command -v go >/dev/null 2>&1; then
+	export GOPATH="$XDG_CACHE_HOME/go"
+	export PATH="$GOPATH/bin:$PATH"
+fi
 
 # Rust
 export PATH="$HOME/.cargo/bin:$PATH"
