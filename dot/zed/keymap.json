@@ -1,30 +1,10 @@
 // Defaults: https://github.com/zed-industries/zed/blob/main/assets/keymaps/default-macos.json
 [
-  /*
-  // Commented out because as of 29-01-2025 I moved to the JetBrains keymap
   {
     "bindings": {
-      "ctrl-tab": "pane::ActivateNextItem",
-      "ctrl-shift-tab": "pane::ActivatePrevItem",
-      "cmd-shift-t": "pane::ReopenClosedItem",
-      "ctrl-j": "editor::Hover",
-      "cmd-shift-n": "project_panel::NewDirectory",
-      "alt-down": "editor::MoveLineDown",
-      "alt-up": "editor::MoveLineUp",
-      "ctrl-cmd-r": "projects::OpenRecent"
+      "cmd-backspace": "editor::DeleteToBeginningOfLine"
     }
   },
-  {
-    "context": "Workspace",
-    "bindings": {
-      "cmd-shift-n": null, // doesn't work for some reason
-      "cmd-shift-a": "workspace::ToggleLeftDock",
-      "cmd-b": "workspace::ToggleRightDock",
-      "cmd-k cmd-e": "project_panel::ToggleFocus",
-      "cmd-j": "workspace::ToggleBottomDock"
-    }
-  }
-  */
   {
     "context": "Workspace",
     "bindings": {

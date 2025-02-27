@@ -11,14 +11,6 @@
     "edit_prediction_provider": "zed"
   },
   "base_keymap": "JetBrains",
-  // "autosave": "on_focus_change",
-  // "assistant": {
-  //   "default_model": {
-  //     "provider": "zed.dev",
-  //     "model": "claude-3-5-sonnet-20240620"
-  //   },
-  //   "version": "2"
-  // },
   "assistant": {
     "default_model": {
       "provider": "zed.dev",
