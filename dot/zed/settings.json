@@ -14,7 +14,7 @@
   "assistant": {
     "default_model": {
       "provider": "zed.dev",
-      "model": "claude-3-5-sonnet-20240620"
+      "model": "claude-3-7-sonnet-latest"
     },
     "version": "2"
   },
@@ -23,7 +23,7 @@
   "ui_font_family": "JetBrains Mono",
   "show_whitespaces": "none",
   "ui_font_size": 18,
-  "buffer_font_size": 14,
+  "buffer_font_size": 13.0,
   "git": {
     "inline_blame": {
       "enabled": true
