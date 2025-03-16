@@ -81,3 +81,19 @@ defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 
 # Disable auto-correct
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+
+# Finder sidebar folders aren't easily configurable with 'defaults' :(, so do it manually:
+# Favorites:
+# - Applications
+# - Downloads
+# - Music
+# - Movies
+# - Pictures
+# - home folder
+# - AirDrop
+# iCloud:
+# - iCloud Drive
+# - Documents
+# - Desktop
+# - Shared
+
