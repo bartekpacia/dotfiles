@@ -24,7 +24,7 @@ brew 'gofumpt'
 brew 'gpg'
 brew 'grep'
 brew 'htop'
-brew 'httpie'
+brew 'httpie' if false # almost never used
 brew 'ideviceinstaller'
 brew 'imagemagick'
 brew 'ios-deploy'
