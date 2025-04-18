@@ -7,12 +7,17 @@ if [ -z "$INTELLIJ_ENVIRONMENT_READER" ]; then
 	stty -echoctl
 fi
 
-export XDG_CONFIG_HOME="$HOME/.config"
-export XDG_CACHE_HOME="$HOME/.cache"
-# [ ! -d "$XDG_CONFIG_HOME" ] && "$XDG_CACHE_HOME" # not sure...
-export XDG_DATA_HOME="$HOME/.local/share"
-export XDG_STATE_HOME="$HOME/.local/state"
 export DOTFILES="$HOME/.dotfiles"
+
+export XDG_CONFIG_HOME="$HOME/.config" && mkdir -p "$XDG_CONFIG_HOME"
+export XDG_CACHE_HOME="$HOME/.cache" && mkdir -p "$XDG_CACHE_HOME"
+export XDG_DATA_HOME="$HOME/.local/share" && mkdir -p "$XDG_DATA_HOME"
+export XDG_STATE_HOME="$HOME/.local/state" && mkdir -p "$XDG_STATE_HOME"
+
+if [ "$(uname)" = Darwin ]; then
+	# https://stackoverflow.com/questions/14237142/xdg-runtime-dir-on-mac-os-x#comment93836291_53474291
+	export XDG_RUNTIME_DIR="$HOME/.run" && mkdir -p "$XDG_RUNTIME_DIR"
+fi
 
 if [ -x /opt/homebrew/bin/brew ]; then
 	eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -86,7 +91,7 @@ if [ "$(uname)" = Linux ]; then
 	# Look for "OpenJDK17U-jdk_x64_linux_hotspot_17.0.7_7.tar.gz"
 	export JAVA_HOME="/usr/lib/jvm/temurin-17.jdk"
 	export PATH="$JAVA_HOME/bin:$PATH"
-elif [ "$(uname)" = Darwin ]; then
+	elif [ "$(uname)" = Darwin ]; then
 	# on macOS
 
 	# OpenJDK
