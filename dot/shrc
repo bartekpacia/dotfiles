@@ -119,7 +119,7 @@ if [ -d "$(brew --prefix)/opt/libpq/bin" ]; then
 fi
 
 # Gradle
-export GRADLE_USER_HOME="$XDG_CACHE_HOME/gradle"
+# export GRADLE_USER_HOME="$XDG_CACHE_HOME/gradle" # FIXME: this is pointless until is fixed IDEA-334183
 
 # dotnet
 export PATH="/usr/local/share/dotnet/x64:$PATH"
