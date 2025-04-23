@@ -1556,6 +1556,8 @@
 			<false/>
 			<key>Send Terminal Generated Alerts</key>
 			<false/>
+			<key>Set Local Environment Vars</key>
+			<integer>2</integer>
 			<key>Shortcut</key>
 			<string></string>
 			<key>Show Status Bar</key>
