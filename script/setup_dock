@@ -26,7 +26,6 @@ defaults write com.apple.dock persistent-apps -array \
 	"$(create_dock_item /Applications/Slack.app)" \
 	"$(create_dock_item /Applications/Discord.app)" \
 	"$(create_dock_item /Applications/Notion.app)" \
-	"$(create_dock_item /Applications/Spotify.app)" \
 	"$(create_dock_item /Applications/iTerm.app)" \
 	"$(create_dock_item /Applications/Visual\ Studio\ Code.app)" \
 	"$(create_dock_item /Applications/Zed.app)"
