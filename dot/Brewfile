@@ -59,7 +59,7 @@ brew 'rustup'
 brew 'sensiblesidebuttons' if false # almost never used
 brew 'shellcheck'
 brew 'shfmt'
-brew 'spotifyd' if false # almost never used
+brew 'spotifyd' if false # almost never used + migrated to YT Music
 brew 'swift-format'
 brew 'tealdeer'
 brew 'texlive'
@@ -97,7 +97,7 @@ cask 'quicklookapk' if false # does not work on newer macOS version. TODO: try t
 cask 'raspberry-pi-imager' if false # TODO: learn how to flash with built-in tools
 cask 'rectangle' if false # not needed since macOS 15 Sequoia
 cask 'slack'
-cask 'spotify' # migrated to YT music
+cask 'spotify' if false # migrated to YT Music
 cask 'tailscale'
 cask 'unity-hub'
 cask 'utm'
