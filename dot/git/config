@@ -39,6 +39,10 @@
 # JetBrains
 [includeIf "gitdir:~/projects/ultimate/"]
     path = config_jetbrains
+[includeIf "gitdir:~/projects/ultimate_copy/"]
+	  path = config_jetbrains
+[includeIf "gitdir:~/projects/ultimate-teamcity-config/"]
+	  path = config_jetbrains
 
 [alias]
 	b = branch
