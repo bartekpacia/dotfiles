@@ -114,7 +114,7 @@ export DOCKER_CLI_HINTS=false
 # export PATH="$HOME/.docker/bin:$PATH"
 
 # Postgres
-if [ -d "$(brew --prefix)/opt/libpq/bin" ]; then
+if command -v brew >/dev/null 2>&1 && [ -d "$(brew --prefix)/opt/libpq/bin" ]; then
 	export PATH="$(brew --prefix)/opt/libpq/bin:$PATH"
 fi
 

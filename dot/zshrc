@@ -101,4 +101,6 @@ if [ -e "$HOME/.iterm2_shell_integration.zsh" ]; then
 fi
 
 # Set up Atuin (https://atuin.sh)
-eval "$(atuin init zsh --disable-up-arrow)"
+if command -v atuin >/dev/null 2>&1; then
+	eval "$(atuin init zsh --disable-up-arrow)"
+fi
