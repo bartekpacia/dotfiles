@@ -1,4 +1,4 @@
-theme = dark:xcodedark,light:xcodelight
+theme = dark:Xcode Dark,light:Xcode Light
 
 copy-on-select = clipboard
 
@@ -6,3 +6,10 @@ keybind = cmd+backspace=esc:w
 # keybind = global:option+space=toggle_quick_terminal
 keybind = global:option+space=toggle_visibility
 # font-feature = liga
+
+# window-subtitle = false
+# shell-integration-features = false
+
+# macos-titlebar-proxy-icon = hidden
+# title = " "
+# window-decoration = false
