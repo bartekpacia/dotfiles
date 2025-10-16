@@ -43,7 +43,8 @@
 	  path = config_jetbrains
 [includeIf "gitdir:~/projects/ultimate-teamcity-config/"]
 	  path = config_jetbrains
-
+[includeIf "gitdir:~/projects/diogen/"]
+	  path = config_jetbrains
 [alias]
 	b = branch
 	bs = b --format='%(refname:short)'
