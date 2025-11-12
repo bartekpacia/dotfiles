@@ -10,5 +10,11 @@
     "bindings": {
       "cmd-shift-backspace": "workspace::ClearAllNotifications"
     }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "cmd-alt-s": "git::Blame"
+    }
   }
 ]

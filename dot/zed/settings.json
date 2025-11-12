@@ -11,27 +11,16 @@
     "edit_prediction_provider": "zed"
   },
   "base_keymap": "JetBrains",
-  "assistant": {
-    "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-3-7-sonnet-latest"
-    },
-    "version": "2"
-  },
-  "show_copilot_suggestions": false,
   "buffer_font_family": "JetBrains Mono",
   "ui_font_family": "JetBrains Mono",
   "show_whitespaces": "none",
   "ui_font_size": 18,
-  "buffer_font_size": 13.0,
+  "buffer_font_size": 14,
+  "line_indicator_format": "short",
   "git": {
     "inline_blame": {
-      "enabled": true
+      "enabled": false
     }
-  },
-  "line_indicator_format": "short",
-  "chat_panel": {
-    "dock": "right"
   },
   "theme": {
     "mode": "system",
@@ -50,16 +39,16 @@
     "blinking": "on",
     "copy_on_select": true
   },
-  "language_overrides": {
+  "languages": {
     "JavaScript": {},
-    "Dart": {
-      "tab_size": 2
-    },
     "HTML": {
       "tab_size": 2
     },
     "CSS": {
       "tab_size": 2
     }
+    // "Dart": {
+    //   "tab_size": 2
+    // },
   }
 }
