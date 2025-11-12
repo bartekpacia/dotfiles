@@ -1,0 +1,12 @@
+base
+base-devel
+bat
+fzf
+git
+go
+htop
+jq
+openssh
+shellcheck
+tree
+zsh
