@@ -117,9 +117,6 @@ fi
 # Gradle
 # export GRADLE_USER_HOME="$XDG_CACHE_HOME/gradle" # FIXME: this is pointless until is fixed IDEA-334183
 
-# avr-gcc
-# export PATH="/usr/local/opt/avr-gcc@11/bin:$PATH"
-
 # Maestro
 export PATH="$HOME/.maestro/bin:$PATH"
 
