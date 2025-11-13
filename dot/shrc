@@ -126,9 +126,6 @@ fi
 export PATH="/usr/local/share/dotnet/x64:$PATH"
 export PATH="$HOME/.dotnet/tools:$PATH"
 
-# make
-export MAKEFLAGS="-j 8"
-
 # avr-gcc
 # export PATH="/usr/local/opt/avr-gcc@11/bin:$PATH"
 
