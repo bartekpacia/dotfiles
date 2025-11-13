@@ -34,7 +34,6 @@ CASE_SENSITIVE="true" # ohmyzsh: use case-sensitive completion
 
 plugins=(
 	1password
-	brew
 	# docker - works automatically when brew-installed
 	# flutter
 	`#fzf` $([ -x "$(command -v fzf)" ] && echo 'fzf-tab')
