@@ -220,11 +220,6 @@ fi
 # TealDeer (https://github.com/dbrgn/tealdeer/issues/311)
 export TEALDEER_CONFIG_DIR="$XDG_CONFIG_HOME/tealdeer"
 
-# Wolfram Mathematica
-if [ "$(uname)" = Darwin ]; then
-	export PATH="/Applications/Mathematica.app/Contents/MacOS:$PATH"
-fi
-
 # Add local gitignored files to PATH
 if [ -d "$DOTFILES/local" ]; then
 	export PATH="$DOTFILES/local:$PATH"
