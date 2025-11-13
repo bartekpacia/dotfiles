@@ -44,9 +44,8 @@ fi
 
 # Dart
 export PUB_CACHE="$XDG_CACHE_HOME/pub"
-# see https://github.com/dart-lang/sdk/issues/42813#issuecomment-972120346
-export ANALYZER_STATE_LOCATION_OVERRIDE="$XDG_STATE_HOME/dartServer"
-export PATH="$PUB_CACHE/bin:$PATH" # executables installed with pub global
+export ANALYZER_STATE_LOCATION_OVERRIDE="$XDG_STATE_HOME/dartServer" # see https://github.com/dart-lang/sdk/issues/42813#issuecomment-972120346
+export PATH="$PUB_CACHE/bin:$PATH"                                   # executables installed with pub global
 
 # Flutter
 export FVM_CACHE_PATH="$XDG_CACHE_HOME/fvm"
@@ -60,19 +59,15 @@ export PATH="$FVM_CACHE_PATH/default/engine/src/flutter/bin:$PATH"            # 
 export PATH="$FVM_CACHE_PATH/default/engine/src/flutter/lib/web_ui/dev:$PATH" # For Flutter Web engine development
 export DART_SDK_DIR="$FVM_CACHE_PATH/default"                                 # Needed by felt for web engine development
 
-# Android
-
-# see https://developer.android.com/studio/command-line/variables
+# Android (see https://developer.android.com/tools/variables)
 export ANDROID_HOME="$HOME/androidsdk"
 export ANDROID_USER_HOME="$HOME/.android"
-# see https://developer.android.com/studio/command-line#tools-sdk
-export PATH="$ANDROID_HOME/cmdline-tools/latest/bin:$PATH"
-# see https://developer.android.com/studio/command-line#tools-platform
-export PATH="$ANDROID_HOME/platform-tools:$PATH"
-# see https://developer.android.com/studio/command-line#tools-emulator
-export PATH="$ANDROID_HOME/emulator:$PATH"
+export PATH="$ANDROID_HOME/cmdline-tools/latest/bin:$PATH" # see https://developer.android.com/tools#tools-sdk
+export PATH="$ANDROID_HOME/platform-tools:$PATH"           # see https://developer.android.com/tools#tools-platform
+export PATH="$ANDROID_HOME/emulator:$PATH"                 # see https://developer.android.com/tools#tools-emulator
 
 if [ -d "$ANDROID_HOME/build-tools" ]; then
+	# see https://developer.android.com/tools#tools-build
 	build_tools=$(
 		command ls "$ANDROID_HOME/build-tools" |
 			sort --version-sort --reverse |
