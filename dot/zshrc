@@ -44,7 +44,7 @@ plugins=(
 	# gradle-completion
 	macos
 	swiftpm
-	terraform
+	terraform # TODO: submit to upstream: https://github.com/hashicorp/homebrew-tap/blob/master/Formula/terraform.rb
 	zsh-autosuggestions
 	zsh-syntax-highlighting
 )
