@@ -56,9 +56,9 @@ export PATH="$HOME/flutter/bin:$PATH"           # installed directly
 # export PATROL_NO_COMPLETION=true
 # alias flutter="flutter --no-version-check"
 
-export PATH="$FVM_CACHE_PATH/default/engine/src/flutter/bin:$PATH" # For Flutter engine development (et - engine tool)
+export PATH="$FVM_CACHE_PATH/default/engine/src/flutter/bin:$PATH"            # For Flutter engine development (et - engine tool)
 export PATH="$FVM_CACHE_PATH/default/engine/src/flutter/lib/web_ui/dev:$PATH" # For Flutter Web engine development
-export DART_SDK_DIR="$FVM_CACHE_PATH/default" # Needed by felt for web engine development
+export DART_SDK_DIR="$FVM_CACHE_PATH/default"                                 # Needed by felt for web engine development
 
 # Android
 
@@ -92,7 +92,7 @@ if [ "$(uname)" = Linux ]; then
 	# Look for "OpenJDK17U-jdk_x64_linux_hotspot_17.0.7_7.tar.gz"
 	export JAVA_HOME="/usr/lib/jvm/temurin-17.jdk"
 	export PATH="$JAVA_HOME/bin:$PATH"
-	elif [ "$(uname)" = Darwin ]; then
+elif [ "$(uname)" = Darwin ]; then
 	# on macOS
 
 	# OpenJDK

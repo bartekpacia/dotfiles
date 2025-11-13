@@ -7,11 +7,11 @@
 
 # Define a function to show the Git branch in red if available
 git_branch() {
-  local branch
-  branch=$(git symbolic-ref --short HEAD 2>/dev/null)
-  if [ -n "$branch" ]; then
-    echo " on \e[31m${branch}\e[0m"
-  fi
+	local branch
+	branch=$(git symbolic-ref --short HEAD 2>/dev/null)
+	if [ -n "$branch" ]; then
+		echo " on \e[31m${branch}\e[0m"
+	fi
 }
 
 # Define the main prompt line with user (red), host (blue), pwd (yellow), and Git branch (red)

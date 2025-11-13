@@ -60,7 +60,7 @@ defaults write ~/Library/Preferences/.GlobalPreferences.plist 'com.apple.keyboar
 
 # Set fast Key Repeat Rate and short Delay Until Repeat
 # See https://apple.stackexchange.com/a/83923/333067
-defaults write -g KeyRepeat -int 2 # the lowest value available in UI
+defaults write -g KeyRepeat -int 2         # the lowest value available in UI
 defaults write -g InitialKeyRepeat -int 15 # the lowest value available in UI
 
 # Disable inline attachments (just show the icons)
@@ -96,4 +96,3 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 # - Documents
 # - Desktop
 # - Shared
-
