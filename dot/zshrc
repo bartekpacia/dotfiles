@@ -43,7 +43,6 @@ plugins=(
 	gradle
 	# gradle-completion
 	macos
-	pod
 	swiftpm
 	terraform
 	zsh-autosuggestions
