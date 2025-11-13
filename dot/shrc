@@ -122,10 +122,6 @@ fi
 # Gradle
 # export GRADLE_USER_HOME="$XDG_CACHE_HOME/gradle" # FIXME: this is pointless until is fixed IDEA-334183
 
-# dotnet
-export PATH="/usr/local/share/dotnet/x64:$PATH"
-export PATH="$HOME/.dotnet/tools:$PATH"
-
 # avr-gcc
 # export PATH="/usr/local/opt/avr-gcc@11/bin:$PATH"
 
@@ -181,7 +177,7 @@ fi
 # nvm
 if command -v nvm >/dev/null 2>&1; then
 	export NVM_DIR="$XDG_CACHE_HOME/nvm"
-	export PATH="$NVM_DIR/bin:$PATH"	
+	export PATH="$NVM_DIR/bin:$PATH"
 fi
 
 # Source: https://github.com/npm/npm/issues/6675#issuecomment-251049832
