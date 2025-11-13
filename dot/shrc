@@ -33,15 +33,16 @@ if command -v gpg >/dev/null 2>&1; then
 	export GPG_TTY="$(tty)"
 fi
 
-# 1Password SSH agent config
-# This points to a symlink. The real socket is in "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
-# Create symlink with:
-# ln -s ~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock "$XDG_STATE_HOME/1password/agent.sock"
-export SSH_AUTH_SOCK="$XDG_STATE_HOME/1password/agent.sock"
-
-# 1Password shell plugins
-if [ -f "$XDG_CONFIG_HOME/op/plugins.sh" ]; then
-	. "$XDG_CONFIG_HOME/op/plugins.sh"
+if command -v op >/dev/null 2>&1; then
+	# 1Password SSH agent config
+	# This points to a symlink. The real socket is in "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+	# Create symlink with:
+	# ln -s ~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock "$XDG_STATE_HOME/1password/agent.sock"
+	export SSH_AUTH_SOCK="$XDG_STATE_HOME/1password/agent.sock"
+	# 1Password shell plugins
+	if [ -f "$XDG_CONFIG_HOME/op/plugins.sh" ]; then
+		. "$XDG_CONFIG_HOME/op/plugins.sh"
+	fi
 fi
 
 # Dart
