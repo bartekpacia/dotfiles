@@ -147,7 +147,6 @@ if command -v ruby >/dev/null 2>&1; then
 fi
 
 # Node.js
-export NODE_REPL_HISTORY=""
 
 # n
 if command -v n >/dev/null 2>&1; then
@@ -161,10 +160,14 @@ if command -v nvm >/dev/null 2>&1; then
 	export PATH="$NVM_DIR/bin:$PATH"
 fi
 
-# Source: https://github.com/npm/npm/issues/6675#issuecomment-251049832
-export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
-export NPM_CONFIG_CACHE="$XDG_CACHE_HOME/npm"
-export NPM_CONFIG_TMP="$XDG_CACHE_HOME/npm"
+if command -v node >/dev/null 2>&1; then
+	export NODE_REPL_HISTORY=""
+
+	# Source: https://github.com/npm/npm/issues/6675#issuecomment-251049832
+	export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
+	export NPM_CONFIG_CACHE="$XDG_CACHE_HOME/npm"
+	export NPM_CONFIG_TMP="$XDG_CACHE_HOME/npm"
+fi
 
 # Go
 
