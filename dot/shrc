@@ -109,11 +109,6 @@ export DOCKER_CLI_HINTS=false
 # not needed anymore???
 # export PATH="$HOME/.docker/bin:$PATH"
 
-# Postgres
-if command -v brew >/dev/null 2>&1 && [ -d "$(brew --prefix)/opt/libpq/bin" ]; then
-	export PATH="$(brew --prefix)/opt/libpq/bin:$PATH"
-fi
-
 # Gradle
 # export GRADLE_USER_HOME="$XDG_CACHE_HOME/gradle" # FIXME: this is pointless until is fixed IDEA-334183
 
