@@ -84,25 +84,9 @@ export PICO_SDK_PATH="$HOME/pico-sdk"
 
 # Java
 if [ "$(uname)" = Linux ]; then
-	# on Linux
-	# Download: https://github.com/adoptium/temurin17-binaries/releases
-	# Install: https://adoptium.net/en-GB/installation/archives
-	# Look for "OpenJDK17U-jdk_x64_linux_hotspot_17.0.7_7.tar.gz"
-	export JAVA_HOME="/usr/lib/jvm/temurin-17.jdk"
-	export PATH="$JAVA_HOME/bin:$PATH"
+	# TODO?
 elif [ "$(uname)" = Darwin ]; then
-	# on macOS
-
-	# OpenJDK
-	# export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
-	#export JAVA_HOME="/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home"
-	#export JAVA_HOME="/Library/Java/JavaVirtualMachines/openjdk-11.jdk/Contents/Home"
-	#export JAVA_HOME="/Library/Java/JavaVirtualMachines/openjdk-17.jdk/Contents/Home"
-	#export JAVA_HOME="/Library/Java/JavaVirtualMachines/openjdk-21.jdk/Contents/Home"
 	export JAVA_HOME="/Library/Java/JavaVirtualMachines/openjdk.jdk/Contents/Home"
-
-	# Eclipse Temurin
-	# export JAVA_HOME="/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home"
 	export PATH="$JAVA_HOME/bin:$PATH"
 fi
 
