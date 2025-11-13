@@ -262,7 +262,9 @@ if command -v micro >/dev/null 2>&1; then
 	fi
 fi
 
-export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"
+if command -v wget >/dev/null 2>&1; then
+	export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"
+fi
 export CP_HOME_DIR="$XDG_CACHE_HOME/cocoapods" # make cocoapods not clutter ~
 export MASON_CACHE="$XDG_CACHE_HOME/mason"     # make mason not clutter ~
 export MAVEN_HOME="$XDG_CACHE_HOME/maven"      # make maven not clutter ~
