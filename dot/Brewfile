@@ -5,7 +5,6 @@ brew 'bat'
 brew 'bundletool' if false # almost never used
 brew 'clang-format'
 brew 'cmake'
-brew 'cocoapods' if false # use cocoapods installed by bundler from rbenv
 brew 'coreutils'
 brew 'croc'
 brew 'doxygen'
