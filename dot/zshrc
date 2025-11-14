@@ -68,14 +68,21 @@ setopt menu_complete
 # Disable the annoying beep
 unsetopt beep
 
-# Auto-expand aliases on space https://www.reddit.com/r/zsh/comments/bbbluo/comment/ekhpxer
-# Disableed on 4th Jan 2025 because it started to annoy me.
-# my-new-keymap() {
-# 	zle _expand_alias
-# 	zle self-insert
-# }
-# zle -N my-new-keymap
-# bindkey -M main ' ' my-new-keymap
+# expand aliases on 'space' key (adapted from https://www.reddit.com/r/zsh/comments/bbbluo/comment/ekhpxer)
+expand-alias-space() {
+	zle _expand_alias
+	zle self-insert
+}
+zle -N expand-alias-space-widget expand-alias-space # create a new widget which calls the 'expand-alias-space' function
+bindkey ' ' expand-alias-space-widget         # call the widget when the space key is pressed
+
+# expand aliases on 'enter' key
+expand-alias-enter() {
+	zle _expand_alias
+	zle accept-line
+}
+zle -N expand-alias-enter-widget expand-alias-enter # create a new widget which calls the 'expand-alias-enter' function
+bindkey '^M' expand-alias-enter-widget              # call the widget when the enter key (^M) is pressed
 
 # Set up Google Cloud SDK
 if command -v gcloud >/dev/null 2>&1; then
