@@ -25,7 +25,6 @@ brew 'gpg'
 brew 'gradle'
 brew 'grep'
 brew 'htop'
-brew 'httpie' if false # almost never used
 brew 'ideviceinstaller'
 brew 'imagemagick'
 brew 'ios-deploy'
