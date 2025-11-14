@@ -93,9 +93,6 @@ brew 'fhome'
 brew 'fhomed'
 brew 'scripts'
 
-tap 'tinygo-org/tools'
-brew 'tinygo'
-
 tap 'homebrew/cask-fonts'
 cask 'font-jetbrains-mono' # the ASCII font for iTerm2
 cask 'font-hack-nerd-font' # the non-ASCII font for iTerm2 (needed by lsd)
