@@ -111,9 +111,6 @@ brew 'fvm'
 tap 'osx-cross/avr' if false # almost never used
 brew 'avr-gcc' if false  # almost never used
 
-tap 'ArmMbed/homebrew-formulae' if false # almost never used
-brew 'arm-none-eabi-gcc' if false # almost never used
-
 mas 'Amphetamine', id: 937984704 if false # almost never used
 mas 'iMovie', id: 408981434
 mas 'Keynote', id: 409183694
