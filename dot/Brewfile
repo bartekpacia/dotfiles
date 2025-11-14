@@ -28,8 +28,6 @@ brew 'imagemagick'
 brew 'ios-deploy'
 brew 'iproute2mac'
 brew 'jq'
-brew 'kotlin' if false # use from Gradle
-brew 'ktlint' if false # use from Gradle
 brew 'latexindent'
 brew 'lcov'
 brew 'less'
