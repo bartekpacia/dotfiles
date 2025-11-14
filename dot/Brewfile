@@ -2,7 +2,6 @@ brew 'apktool'
 brew 'avrdude'
 brew 'bash'
 brew 'bat'
-brew 'bundletool' if false # almost never used
 brew 'clang-format'
 brew 'cmake'
 brew 'coreutils'
