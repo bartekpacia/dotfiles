@@ -78,7 +78,6 @@ cask 'iterm2'
 cask 'jetbrains-toolbox'
 cask 'mos'
 cask 'notion'
-cask 'raspberry-pi-imager' if false # TODO: learn how to flash with built-in tools
 cask 'slack'
 cask 'tailscale'
 cask 'utm'
