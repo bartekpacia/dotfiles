@@ -60,7 +60,6 @@ brew 'rg'
 brew 'rustup'
 brew 'shellcheck'
 brew 'shfmt'
-brew 'spotifyd' if false # almost never used + migrated to YT Music
 brew 'swift-format'
 brew 'tealdeer'
 brew 'texlive'
