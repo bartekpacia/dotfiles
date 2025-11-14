@@ -58,7 +58,6 @@ brew 'pyenv'
 brew 'rbenv'
 brew 'rg'
 brew 'rustup'
-brew 'sensiblesidebuttons' if false # almost never used
 brew 'shellcheck'
 brew 'shfmt'
 brew 'spotifyd' if false # almost never used + migrated to YT Music
