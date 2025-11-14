@@ -75,7 +75,6 @@ brew 'zsh'
 
 cask '1password-cli'
 cask '1password'
-cask 'arduino' if false # almost never used
 cask 'daisydisk'
 cask 'discord'
 cask 'docker'
