@@ -78,10 +78,6 @@ cask 'iterm2'
 cask 'jetbrains-toolbox'
 cask 'mos'
 cask 'notion'
-cask 'qlimagesize' if false # does not work on newer macOS version. TODO: try to make it work
-cask 'qlstephen' if false # does not work on newer macOS version. TODO: try to make it work
-cask 'quicklook-json' if false # does not work on newer macOS version. TODO: try to make it work
-cask 'quicklookapk' if false # does not work on newer macOS version. TODO: try to make it works
 cask 'raspberry-pi-imager' if false # TODO: learn how to flash with built-in tools
 cask 'slack'
 cask 'tailscale'
