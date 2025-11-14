@@ -99,7 +99,6 @@ cask 'quicklookapk' if false # does not work on newer macOS version. TODO: try t
 cask 'raspberry-pi-imager' if false # TODO: learn how to flash with built-in tools
 cask 'rectangle' if false # not needed since macOS 15 Sequoia
 cask 'slack'
-cask 'spotify' if false # migrated to YT Music
 cask 'tailscale'
 cask 'utm'
 cask 'visual-studio-code'
