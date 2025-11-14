@@ -275,5 +275,5 @@ fi
 if command -v wget >/dev/null 2>&1; then
 	export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"
 fi
-export MASON_CACHE="$XDG_CACHE_HOME/mason"     # make mason not clutter ~
+
 export MAVEN_HOME="$XDG_CACHE_HOME/maven"      # make maven not clutter ~
