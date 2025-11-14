@@ -98,7 +98,6 @@ cask 'font-hack-nerd-font' # the non-ASCII font for iTerm2 (needed by lsd)
 tap 'leoafarias/fvm'
 brew 'fvm'
 
-mas 'Amphetamine', id: 937984704 if false # almost never used
 mas 'iMovie', id: 408981434
 mas 'Keynote', id: 409183694
 mas 'LocalSend', id: 1661733229
