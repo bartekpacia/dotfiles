@@ -65,8 +65,16 @@ fi
 # make CMD+Delete delete line before the cursor (not the whole line)
 bindkey \^U backward-kill-line
 
+NOEXPAND=(bat micro grep) # list of aliases to never expand
+
 # expand aliases on 'space' key (adapted from https://www.reddit.com/r/zsh/comments/bbbluo/comment/ekhpxer)
 expand-alias-space() {
+    local word=${LBUFFER##* }  # get the word before the cursor
+    if (( ${NOEXPAND[(Ie)$word]} )); then
+        zle self-insert
+        return
+    fi
+
 	zle _expand_alias
 	zle self-insert
 }
@@ -75,6 +83,11 @@ bindkey ' ' expand-alias-space-widget         # call the widget when the space k
 
 # expand aliases on 'enter' key
 expand-alias-enter() {
+    local word=${LBUFFER##* }  # get the word before the cursor
+    if (( ${NOEXPAND[(Ie)$word]} )); then
+        zle accept-line
+        return
+    fi
 	zle _expand_alias
 	zle accept-line
 }
