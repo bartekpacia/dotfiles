@@ -81,13 +81,11 @@ cask 'docker'
 cask 'firefox'
 cask 'ghostty'
 cask 'gimp'
-cask 'google-cloud-sdk' if false # almost never used
 cask 'keystore-explorer'
 cask 'iterm2'
 cask 'jetbrains-toolbox'
 cask 'mos'
 cask 'notion'
-cask 'powershell' if false # almost never used
 cask 'qlimagesize' if false # does not work on newer macOS version. TODO: try to make it work
 cask 'qlstephen' if false # does not work on newer macOS version. TODO: try to make it work
 cask 'quicklook-json' if false # does not work on newer macOS version. TODO: try to make it work
