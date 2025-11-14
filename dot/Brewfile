@@ -108,9 +108,6 @@ brew 'dart' if false # I use Dart that comes with Flutter
 tap 'leoafarias/fvm'
 brew 'fvm'
 
-tap 'facebook/fb'
-brew 'idb-companion'
-
 tap 'osx-cross/avr' if false # almost never used
 brew 'avr-gcc' if false  # almost never used
 
