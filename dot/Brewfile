@@ -126,9 +126,6 @@ brew 'idb-companion'
 tap 'teamookla/speedtest'
 brew 'speedtest'
 
-tap 'microsoft/git' if false # almost never used
-cask 'git-credential-manager-core' if false # almost never used
-
 tap 'osx-cross/avr' if false # almost never used
 brew 'avr-gcc' if false  # almost never used
 
