@@ -123,9 +123,6 @@ brew 'fvm'
 tap 'facebook/fb'
 brew 'idb-companion'
 
-tap 'teamookla/speedtest'
-brew 'speedtest'
-
 tap 'osx-cross/avr' if false # almost never used
 brew 'avr-gcc' if false  # almost never used
 
