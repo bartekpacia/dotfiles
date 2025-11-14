@@ -83,7 +83,6 @@ cask 'firefox'
 cask 'ghostty'
 cask 'gimp'
 cask 'google-cloud-sdk' if false # almost never used
-cask 'gpg-suite' if false # almost never used
 cask 'keystore-explorer'
 cask 'iterm2'
 cask 'jetbrains-toolbox'
