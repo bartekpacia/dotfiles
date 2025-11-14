@@ -88,7 +88,6 @@ cask 'iterm2'
 cask 'jetbrains-toolbox'
 cask 'mos'
 cask 'notion'
-cask 'postman' if false # bulky, almost never used. TODO: find lightweight alternative
 cask 'powershell' if false # almost never used
 cask 'qlimagesize' if false # does not work on newer macOS version. TODO: try to make it work
 cask 'qlstephen' if false # does not work on newer macOS version. TODO: try to make it work
