@@ -101,7 +101,6 @@ cask 'rectangle' if false # not needed since macOS 15 Sequoia
 cask 'slack'
 cask 'spotify' if false # migrated to YT Music
 cask 'tailscale'
-cask 'unity-hub'
 cask 'utm'
 cask 'visual-studio-code'
 cask 'vlc'
