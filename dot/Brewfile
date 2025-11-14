@@ -116,6 +116,5 @@ mas 'Notability', id: 360593530
 mas 'Numbers', id: 361304891
 mas 'Pages', id: 409201541
 mas 'Telegram', id: 747648890
-mas 'Termius - SSH client', id: 1176074088 if false # almost never used
 mas 'The Unarchiver', id: 425424353
 mas 'Xcode', id: 497799835
