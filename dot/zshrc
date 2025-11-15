@@ -94,12 +94,6 @@ expand-alias-enter() {
 zle -N expand-alias-enter-widget expand-alias-enter # create a new widget which calls the 'expand-alias-enter' function
 bindkey '^M' expand-alias-enter-widget              # call the widget when the enter key (^M) is pressed
 
-# Set up Google Cloud SDK
-if command -v gcloud >/dev/null 2>&1; then
-	. "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
-	. "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
-fi
-
 # Load cross-shell aliases
 source "$HOME/.dotfiles/script/aliases"
 
@@ -111,4 +105,10 @@ fi
 # Set up Atuin (https://atuin.sh)
 if command -v atuin >/dev/null 2>&1; then
 	eval "$(atuin init zsh --disable-up-arrow)"
+fi
+
+# Set up gcloud CLI
+if command -v gcloud >/dev/null 2>&1; then
+	. "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"       # see https://github.com/orgs/Homebrew/discussions/6548
+	. "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc" # see https://github.com/orgs/Homebrew/discussions/6547
 fi
