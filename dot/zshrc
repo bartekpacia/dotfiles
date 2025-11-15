@@ -97,11 +97,6 @@ bindkey '^M' expand-alias-enter-widget              # call the widget when the e
 # Load cross-shell aliases
 source "$HOME/.dotfiles/script/aliases"
 
-# iTerm2 shell integration
-if [ -e "$HOME/.iterm2_shell_integration.zsh" ]; then
-	. "$HOME/.iterm2_shell_integration.zsh" || true
-fi
-
 # Set up Atuin (https://atuin.sh)
 if command -v atuin >/dev/null 2>&1; then
 	eval "$(atuin init zsh --disable-up-arrow)"
