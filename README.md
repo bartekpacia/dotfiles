@@ -8,18 +8,20 @@ My very personal development environment setup. I refuse to work without it.
 
 - cross-platform
   - work well on any POSIX shell
-  - do not favor GNU coreutils. Support BSD.
+  - do not favor GNU coreutils. Support BSD systems.
 - minimal, simple, obvious
-  - the less tools have to be installed, the better
+  - less tools = better
+  - less config = better
+  - using defaults where possible = better
 
 ## Set up on macOS
 
-On macOS, simply use [strap](https://github.com/MikeMcQuaid/strap).
+On macOS, use [strap](https://github.com/MikeMcQuaid/strap).
 
 ## Set up on UNIX
 
-On other Unix-like systems, `git clone` this repository to the `$HOME/.dotfiles`
-directory.
+On other Unix-like systems,
+`git clone` this repository to the `$HOME/.dotfiles` directory.
 
 **SSH**
 
@@ -43,8 +45,8 @@ Once cloned, execute `script/setup`:
 
 ## Set up SSH keys
 
-After setting up a new machine, you very likely want to set up SSH
-authentication to it.
+After setting up a new machine,
+you very likely want to set up SSH authentication to it.
 
 Get public key from password manager:
 
@@ -71,19 +73,18 @@ get_ssh_key 'Personal' 'main key'
 
 - `script/setup_dock` Sets up my Dock the way I want.
 
-- `script/disable_chime` Disables the dumb macOS's startup chime.
+- `script/disable_chime` Disables macOS's dumb startup chime.
 
 - `files/com.googlecode.iterm2.plist` iTerm2 global settings.
 
 - `files/bartek.itermkeymap` iTerm2 global keybindings.
 
-- `files/settings.json` Windows Terminal global settings.
+- `files/windows/settings.json` Windows Terminal global settings.
 
 - `local` All scripts in this folder are gitignored and automatically sourced by
   zshrc.
 
   Example use case:
-
   - startup shell scripts from JetBrains Toolbox app
 
 [get_ssh_key]: https://github.com/bartekpacia/scripts/blob/master/bin/get_ssh_key
