@@ -40,7 +40,6 @@ brew 'mosh'
 brew 'mycli'
 brew 'n' if false # Still deciding between nvm and n
 brew 'ncdu'
-brew 'neofetch'
 brew 'nmap'
 brew 'nvm' if false # Still deciding between nvm and n
 brew 'openjdk'
