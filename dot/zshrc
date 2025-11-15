@@ -65,7 +65,7 @@ fi
 # make CMD+Delete delete line before the cursor (not the whole line)
 bindkey \^U backward-kill-line
 
-NOEXPAND=(bat micro grep) # list of aliases to never expand
+NOEXPAND=(bat micro delta grep) # list of aliases to never expand
 
 # expand aliases on 'space' key (adapted from https://www.reddit.com/r/zsh/comments/bbbluo/comment/ekhpxer)
 expand-alias-space() {
