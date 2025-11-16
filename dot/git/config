@@ -28,14 +28,6 @@
 [init]
 	defaultBranch = master
 
-[delta "light-mode"]
-  light = true
-  syntax-theme = GitHub
-
-[delta "dark-mode"]
-  light = false
-  syntax-theme = Visual Studio Dark+
-
 # JetBrains
 [includeIf "gitdir:~/projects/ultimate/"]
     path = config_jetbrains
