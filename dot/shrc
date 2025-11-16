@@ -223,11 +223,6 @@ export LESSHISTFILE="$XDG_STATE_HOME/less/history"
 
 if command -v delta >/dev/null 2>&1; then
 	export GIT_PAGER=delta
-
-	if [ "$(uname)" = Darwin ]; then
-		alias delta="delta --features \"\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo dark-mode || echo light-mode)\""
-		export GIT_PAGER="delta --features \"\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo dark-mode || echo light-mode)\""
-	fi
 fi
 
 # bat
