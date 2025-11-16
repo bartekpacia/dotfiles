@@ -229,10 +229,6 @@ fi
 if command -v bat >/dev/null 2>&1; then
 	export BAT_CONFIG_PATH="$XDG_CONFIG_HOME/bat/bat.conf"
 
-	if [ "$(uname)" = Darwin ]; then
-		# automatically set light/dark theme on macOS
-		alias bat="bat --theme=\"\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo Monokai Extended Bright || echo Monokai Extended Light)\""
-	fi
 	# colorize man pages using bat
 	export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 	# fix formatting problems (so far I experienced it only on ArchLinux)
