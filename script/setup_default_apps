@@ -1,20 +1,25 @@
 #!/usr/bin/env sh
 set -eu
 
-# setup_default_apps sets the default apps for specific UTI identifiers the way
-# I want.
+# setup_default_apps sets the default apps for specific UTI identifiers the way I want.
+#
+# To get id of VSCode: osascript -e 'id of app "Code"'
+# To get id of Zed: osascript -e 'id of app "Zed"'
 #
 # See also:
 # * https://developer.apple.com/documentation/uniformtypeidentifiers/uttype
-# * `osascript -e 'id of app "Code"'` to get id of Visual Studio Code
 
-duti -s com.microsoft.VSCode public.xml all
-duti -s com.microsoft.VSCode public.shell-script all
-duti -s com.microsoft.VSCode public.json all
-duti -s com.microsoft.VSCode public.yaml all
-duti -s com.microsoft.VSCode com.topografix.gpx all
-duti -s com.microsoft.VSCode net.daringfireball.markdown all
-duti -s com.microsoft.VSCode public.ruby-script all
+duti -s dev.zed.Zed public.c-header all
+duti -s dev.zed.Zed public.c-source all
+duti -s dev.zed.Zed public.c-plus-plus-header all
+duti -s dev.zed.Zed public.c-plus-plus-source all
+duti -s dev.zed.Zed public.xml all
+duti -s dev.zed.Zed public.shell-script all
+duti -s dev.zed.Zed public.json all
+duti -s dev.zed.Zed public.yaml all
+duti -s dev.zed.Zed com.topografix.gpx all
+duti -s dev.zed.Zed net.daringfireball.markdown all
+duti -s dev.zed.Zed public.ruby-script all
 duti -s org.mozilla.firefox com.adobe.pdf all
 duti -s com.apple.Preview public.heic all
 duti -s com.apple.Preview public.heif all
