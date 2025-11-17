@@ -19,7 +19,7 @@
     "model_parameters": []
   },
   "edit_predictions": {
-    "disabled_globs": ["*.txt", "*.md"]
+    "disabled_globs": ["**/*.txt", "**/*.md"]
   },
   "features": {
     "edit_prediction_provider": "zed"
@@ -54,6 +54,12 @@
     "copy_on_select": true
   },
   "languages": {
+    "Plain Text": {
+      "show_edit_predictions": false
+    },
+    "Markdown": {
+      "show_edit_predictions": false
+    },
     "JavaScript": {},
     "HTML": {
       "tab_size": 2
