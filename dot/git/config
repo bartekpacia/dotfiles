@@ -6,6 +6,7 @@
 	user = bartekpacia
 [core]
 	autocrlf = input
+	fsmonitor = true
 [commit]
 	gpgsign = true
 [push]
