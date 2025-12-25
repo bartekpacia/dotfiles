@@ -1,5 +1,6 @@
 #!/usr/bin/env sh
 
+unalias ls
 alias cls="clear"
 alias md="mkdir -p"
 
