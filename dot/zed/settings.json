@@ -6,7 +6,23 @@
 // To see all of Zed's default settings without changing your
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
+//
+// See also:
+// - Default settings: https://github.com/zed-industries/zed/blob/main/assets/settings/default.json
+// - Visual customization: https://zed.dev/docs/visual-customization
 {
+  "ssh_connections": [
+    {
+      "host": "pacia.tech",
+      "username": "charlie",
+      "args": [],
+      "projects": [
+        {
+          "paths": ["/etc/nginx"],
+        },
+      ],
+    },
+  ],
   "show_edit_predictions": false,
   "agent": {
     "inline_assistant_model": {
