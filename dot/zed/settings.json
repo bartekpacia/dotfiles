@@ -19,6 +19,7 @@
     "model_parameters": []
   },
   "edit_predictions": {
+    "mode": "subtle",
     "disabled_globs": ["**/*.txt", "**/*.md"]
   },
   "features": {
@@ -43,7 +44,9 @@
   },
   "project_panel": {
     "dock": "right",
-    "auto_fold_dirs": true
+    "auto_fold_dirs": true,
+    "sort_mode": "mixed"
+    // TODO: add sort_mode https://github.com/zed-industries/zed/pull/40160
   },
   "preview_tabs": {
     "enabled": false
