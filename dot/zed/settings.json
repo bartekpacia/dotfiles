@@ -89,6 +89,12 @@
     },
     "CSS": {
       "tab_size": 2
+    },
+    "Kotlin": {
+      "language_servers": ["kotlin-lsp"]
+    },
+    "Java": {
+      "language_servers": ["jdtls"]
     }
     // "Dart": {
     //   "tab_size": 2
