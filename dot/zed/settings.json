@@ -74,6 +74,9 @@
     "copy_on_select": true
   },
   "languages": {
+    "JSONC": {
+      "show_edit_predictions": false
+    },
     "Plain Text": {
       "show_edit_predictions": false
     },
