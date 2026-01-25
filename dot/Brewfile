@@ -39,7 +39,6 @@ brew 'maven'
 brew 'micro'
 brew 'moreutils'
 brew 'mosh'
-brew 'mycli'
 brew 'n' if false # Still deciding between nvm and n
 brew 'ncdu'
 brew 'nmap'
