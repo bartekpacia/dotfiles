@@ -51,8 +51,8 @@ export ANALYZER_STATE_LOCATION_OVERRIDE="$XDG_STATE_HOME/dartServer" # see https
 export PATH="$PUB_CACHE/bin:$PATH"                                   # executables installed with pub global
 
 # Flutter
-export FVM_CACHE_PATH="$XDG_CACHE_HOME/fvm"
-export FVM_GIT_CACHE_PATH="$XDG_CACHE_HOME/fvm"
+export FVM_CACHE_PATH="$XDG_CACHE_HOME/fvm/cache"
+export FVM_GIT_CACHE_PATH="$XDG_CACHE_HOME/fvm/git_cache"
 export PATH="$FVM_CACHE_PATH/default/bin:$PATH" # installed with fvm
 export PATH="$HOME/flutter/bin:$PATH"           # installed directly
 # export PATROL_NO_COMPLETION=true
