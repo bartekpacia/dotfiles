@@ -26,6 +26,8 @@
 	required = true
 [gpg]
 	format = ssh
+[gpg "ssh"]
+	allowedSignersFile = ~/.config/git/allowed_signers
 [init]
 	defaultBranch = master
 
