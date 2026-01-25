@@ -76,6 +76,9 @@ cask 'visual-studio-code'
 cask 'vlc'
 cask 'zed'
 
+cask 'font-jetbrains-mono' # the ASCII font for iTerm2
+cask 'font-hack-nerd-font' # the non-ASCII font for iTerm2 (needed by lsd)
+
 # Specific taps
 
 tap 'bartekpacia/tools'
@@ -83,9 +86,6 @@ brew 'bartekpacia/tools/emu'
 brew 'bartekpacia/tools/fhome'
 brew 'bartekpacia/tools/fhomed'
 brew 'bartekpacia/tools/scripts'
-
-cask 'font-jetbrains-mono' # the ASCII font for iTerm2
-cask 'font-hack-nerd-font' # the non-ASCII font for iTerm2 (needed by lsd)
 
 tap 'leoafarias/fvm'
 brew 'leoafarias/fvm/fvm'
