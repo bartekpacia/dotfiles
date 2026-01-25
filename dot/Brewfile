@@ -41,7 +41,6 @@ brew 'nmap'
 brew 'nvm' if false # Still deciding between nvm and n
 brew 'openjdk'
 brew 'pgcli'
-brew 'poetry' if false # use poetry installed by pip from pyenv, see https://github.com/Homebrew/homebrew-core/issues/53169
 brew 'purr'
 brew 'pyenv'
 brew 'rbenv'
