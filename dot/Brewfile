@@ -79,16 +79,16 @@ cask 'zed'
 # Specific taps
 
 tap 'bartekpacia/tools'
-brew 'emu'
-brew 'fhome'
-brew 'fhomed'
-brew 'scripts'
+brew 'bartekpacia/tools/emu'
+brew 'bartekpacia/tools/fhome'
+brew 'bartekpacia/tools/fhomed'
+brew 'bartekpacia/tools/scripts'
 
 cask 'font-jetbrains-mono' # the ASCII font for iTerm2
 cask 'font-hack-nerd-font' # the non-ASCII font for iTerm2 (needed by lsd)
 
 tap 'leoafarias/fvm'
-brew 'fvm'
+brew 'leoafarias/fvm/fvm'
 
 mas 'iMovie', id: 408981434
 mas 'Keynote', id: 409183694
