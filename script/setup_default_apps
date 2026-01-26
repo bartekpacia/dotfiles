@@ -8,6 +8,7 @@ set -eu
 #
 # See also:
 # * https://developer.apple.com/documentation/uniformtypeidentifiers/uttype
+# * https://macos-defaults.com
 
 duti -s dev.zed.Zed public.c-header all
 duti -s dev.zed.Zed public.c-source all
