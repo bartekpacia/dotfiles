@@ -1,9 +1,0 @@
-personality = "pragmatic"
-model = "gpt-5.3-codex"
-
-[mcp_servers.youtrack]
-url = "https://youtrack.jetbrains.com/mcp"
-bearer_token_env_var = "YOUTRACK_API_TOKEN"
-
-[projects."/Users/bartek/projects/ultimate"]
-trust_level = "trusted"

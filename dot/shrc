@@ -268,5 +268,6 @@ if command -v wget >/dev/null 2>&1; then
 	export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"
 fi
 
-# TODO: see https://github.com/openai/codex/issues/1980
-export CODEX_HOME="$XDG_CONFIG_HOME/codex"
+# This makes no sense; Codex drops all kinds of shit in there, not just config
+#  See https://github.com/openai/codex/issues/1980
+# export CODEX_HOME="$XDG_CONFIG_HOME/codex"
