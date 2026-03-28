@@ -102,3 +102,6 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 # - Documents
 # - Desktop
 # - Shared
+
+# Default browser can't be changed with defaults :(
+# See https://stackoverflow.com/q/17528688
