@@ -85,7 +85,7 @@ export PICO_SDK_PATH="$HOME/pico-sdk"
 
 # Java
 if [ "$(uname)" = Linux ]; then
-	# TODO?
+	true # TODO?
 elif [ "$(uname)" = Darwin ]; then
 	export JAVA_HOME="/Library/Java/JavaVirtualMachines/openjdk.jdk/Contents/Home"
 	export PATH="$JAVA_HOME/bin:$PATH"
