@@ -7,29 +7,25 @@ My very personal development environment setup. I refuse to work without it.
 ### Philosophy
 
 - cross-platform
-  - work well on any POSIX shell
+  - work well in any POSIX shell
   - do not favor GNU coreutils. Support BSD systems.
 - minimal, simple, obvious
   - less tools = better
   - less config = better
   - using defaults where possible = better
 
-## Set up on macOS
+## Set up
 
-On macOS, use [strap](https://github.com/MikeMcQuaid/strap).
+### macOS
 
-## Set up on UNIX
+Use [strap](https://github.com/MikeMcQuaid/strap).
 
-On other Unix-like systems,
+### UNIX
+
 `git clone` this repository to the `$HOME/.dotfiles` directory.
-
-**SSH**
-
-```console
-git clone git@github.com:bartekpacia/dotfiles.git ~/.dotfiles
-```
-
-**HTTPS**
+There are likely no SSH keys available at this stage,
+so using SSH would result in `Permission denied (publickey)`.
+Therefore, prefer HTTPS for the clone.
 
 ```console
 git clone https://github.com/bartekpacia/dotfiles.git ~/.dotfiles
@@ -41,9 +37,20 @@ Once cloned, execute `script/setup`:
 ~/.dotfiles/script/setup
 ```
 
+> [!NOTE]
 > `script/setup` depends on `curl`, `git`, `zsh`.
 
-## Set up SSH keys
+After the initial setup is complete (and 1Password SSH agent is up and running),
+change from HTTPS to SSH:
+
+```console
+git remote set-url origin git@github.com:bartekpacia/dotfiles.git
+```
+
+### Set up SSH keys
+
+> [!WARNING]
+> This is deprecated. Simply use 1Password SSH agent.
 
 After setting up a new machine,
 you very likely want to set up SSH authentication to it.
@@ -67,7 +74,7 @@ or use [my `get_ssh_key` script][get_ssh_key]:
 get_ssh_key 'Personal' 'main key'
 ```
 
-## File descriptions
+### File descriptions
 
 - `ssh/config` SSH config.
 
