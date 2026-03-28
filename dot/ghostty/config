@@ -7,6 +7,8 @@ keybind = cmd+backspace=esc:w
 keybind = global:option+space=toggle_visibility
 # font-feature = liga
 
+keybind = ctrl+backspace=text:\x1b\x7f
+
 # window-subtitle = false
 # shell-integration-features = false
 
