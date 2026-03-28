@@ -76,9 +76,11 @@ get_ssh_key 'Personal' 'main key'
 
 ### File descriptions
 
-- `ssh/config` SSH config.
+- `script/setup_dock` Sets up my Dock the way I want. macOS + GNOME.
 
-- `script/setup_dock` Sets up my Dock the way I want.
+- `script/setup_default_apps` Sets up default apps the way I want. macOS + GNOME.
+
+- `ssh/config` SSH config.
 
 - `script/disable_chime` Disables macOS's dumb startup chime.
 

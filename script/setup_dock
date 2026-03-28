@@ -3,30 +3,55 @@ set -eu
 
 # setup_dock sets up the icons in the Dock the way I want.
 
-# clear all icons in the dock
-defaults delete com.apple.dock persistent-apps
+if [ "$(uname -s)" = "Darwin" ]; then
+	# macOS-specific dock setup
 
-# Minimize windows into their application’s icon
-defaults write com.apple.dock minimize-to-application -bool true
+	# clear all icons in the dock
+	defaults delete com.apple.dock persistent-apps
 
-# disable showing recent applications
-defaults write com.apple.dock show-recents -bool FALSE
+	# Minimize windows into their application’s icon
+	defaults write com.apple.dock minimize-to-application -bool true
 
-create_dock_item() {
-	printf '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>%s</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>' "$1"
-}
+	# disable showing recent applications
+	defaults write com.apple.dock show-recents -bool FALSE
 
-defaults write com.apple.dock persistent-apps -array \
-	"$(create_dock_item /Applications/1Password.app)" \
-	"$(create_dock_item /Applications/Firefox.app)" \
-	"$(create_dock_item /System/Applications/Mail.app)" \
-	"$(create_dock_item /System/Applications/Calendar.app)" \
-	"$(create_dock_item /Applications/Signal.app)" \
-	"$(create_dock_item /Applications/Telegram.app)" \
-	"$(create_dock_item /Applications/Slack.app)" \
-	"$(create_dock_item /Applications/Discord.app)" \
-	"$(create_dock_item /Applications/Notion.app)" \
-	"$(create_dock_item /Applications/iTerm.app)"
+	create_dock_item() {
+		printf '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>%s</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>' "$1"
+	}
 
-# restart dock
-killall Dock
+	defaults write com.apple.dock persistent-apps -array \
+		"$(create_dock_item /Applications/1Password.app)" \
+		"$(create_dock_item /Applications/Firefox.app)" \
+		"$(create_dock_item /System/Applications/Mail.app)" \
+		"$(create_dock_item /System/Applications/Calendar.app)" \
+		"$(create_dock_item /Applications/Signal.app)" \
+		"$(create_dock_item /Applications/Telegram.app)" \
+		"$(create_dock_item /Applications/Slack.app)" \
+		"$(create_dock_item /Applications/Discord.app)" \
+		"$(create_dock_item /Applications/Notion.app)" \
+		"$(create_dock_item /Applications/iTerm.app)"
+
+	# restart dock
+	killall Dock
+elif [ -n "$XDG_CURRENT_DESKTOP" ] && [ "$XDG_CURRENT_DESKTOP" = "GNOME" ]; then
+	# GNOME-specific dock setup
+
+	# Check if gsettings and gnome-shell are available
+	if ! command -v gsettings >/dev/null 2>&1 || ! command -v gnome-shell >/dev/null 2>&1; then
+		echo "GNOME or gsettings not found, skipping GNOME setup"
+		return 1
+	fi
+
+	# Reset favorites
+	gsettings reset org.gnome.shell favorite-apps
+
+	# Set favorites (adjust paths as needed for Arch Linux)
+	gsettings set org.gnome.shell favorite-apps "[
+        'org.gnome.Nautilus.desktop',
+        '1password.desktop',
+        'firefox.desktop',
+        'org.telegram.desktop.desktop',
+        'com.mitchellh.ghostty.desktop',
+        'discord.desktop'
+    ]"
+fi
