@@ -100,7 +100,11 @@ export PICO_SDK_PATH="$HOME/pico-sdk"
 
 # Java
 if [ "$(uname)" = Linux ]; then
-	true # TODO?
+	# /usr/lib/jvm/default is a symlink provided by the java-runtime-common Arch package (see https://wiki.archlinux.org/title/Java)
+	if grep -q "^ID=arch$" /etc/os-release 2>/dev/null && [ -d "/usr/lib/jvm/default" ]; then
+		export JAVA_HOME="/usr/lib/jvm/default"
+		export PATH="$JAVA_HOME/bin:$PATH"
+	fi
 elif [ "$(uname)" = Darwin ]; then
 	export JAVA_HOME="/Library/Java/JavaVirtualMachines/openjdk.jdk/Contents/Home"
 	export PATH="$JAVA_HOME/bin:$PATH"
