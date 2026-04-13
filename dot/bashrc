@@ -43,8 +43,10 @@ fi
 
 # Set up Google Cloud SDK
 if command -v gcloud >/dev/null 2>&1; then
-	. "$(brew --prefix)/share/google-cloud-sdk/path.bash.inc"
-	. "$(brew --prefix)/share/google-cloud-sdk/completion.bash.inc"
+	if command -v brew >/dev/null 2>&1; then
+		. "$(brew --prefix)/share/google-cloud-sdk/path.bash.inc"
+		. "$(brew --prefix)/share/google-cloud-sdk/completion.bash.inc"
+	fi
 fi
 
 # Enable searching shell history with fzf

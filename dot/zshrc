@@ -104,6 +104,8 @@ fi
 
 # Set up gcloud CLI
 if command -v gcloud >/dev/null 2>&1; then
-	. "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"       # see https://github.com/orgs/Homebrew/discussions/6548
-	. "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc" # see https://github.com/orgs/Homebrew/discussions/6547
+	if command -v brew >/dev/null 2>&1; then
+		. "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"       # see https://github.com/orgs/Homebrew/discussions/6548
+		. "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc" # see https://github.com/orgs/Homebrew/discussions/6547
+	fi
 fi
