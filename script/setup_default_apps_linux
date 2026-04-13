@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+set -eu
+
+# TODO: should be merged with setup_default_apps
+
+# Default web browser.
+# See current choice with `xdg-settings get default-web-browser`
+xdg-settings set default-web-browser firefox.desktop
