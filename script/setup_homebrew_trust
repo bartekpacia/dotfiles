@@ -1,0 +1,23 @@
+#!/usr/bin/env sh
+set -eu
+
+DOTFILES="${DOTFILES:-$HOME/.dotfiles}"
+BREWFILE="$DOTFILES/dot/Brewfile"
+
+if ! command -v brew >/dev/null 2>&1; then
+	echo "setup_homebrew_trust: brew not found, skipping"
+	exit 0
+fi
+
+if [ ! -f "$BREWFILE" ]; then
+	echo "setup_homebrew_trust: Brewfile not found at $BREWFILE, skipping" >&2
+	exit 0
+fi
+
+brew bundle list --file "$BREWFILE" --tap |
+	while IFS= read -r tap; do
+		[ -n "$tap" ] || continue
+		brew trust --tap "$tap"
+	done
+
+echo "setup_homebrew_trust: trusted Brewfile taps"
