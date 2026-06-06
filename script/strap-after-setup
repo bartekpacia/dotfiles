@@ -3,6 +3,7 @@ set -eu
 
 # Stuff to happen after brew is installed goes here!
 
+~/.dotfiles/script/setup_homebrew_trust
 ~/.dotfiles/script/disable_chime
 ~/.dotfiles/script/setup_default_apps
 ~/.dotfiles/script/setup_dock
