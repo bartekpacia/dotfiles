@@ -112,6 +112,15 @@ else
 	reinstall
 fi
 
+# Symlink Firefox user.js into the default-release profile
+echo 'setup: symlinking Firefox user.js...'
+firefox_profile=$(find "$HOME/.config/mozilla/firefox" -maxdepth 1 -name "*.default-release" -type d 2>/dev/null | head -1)
+if [ -n "$firefox_profile" ]; then
+	ln -sfn "$DOTFILES/firefox/user.js" "$firefox_profile/user.js"
+else
+	echo 'setup: no Firefox default-release profile found, skipping'
+fi
+
 # The below asks for a password, so it's annoying
 #
 # echo "Changing default shell to zsh in $(which zsh)"
