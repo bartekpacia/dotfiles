@@ -1,4 +1,5 @@
 Host *
+    IdentityAgent ~/.1password/agent.sock
     ServerAliveInterval 5
     ServerAliveCountMax 1
     StrictHostKeyChecking ask
