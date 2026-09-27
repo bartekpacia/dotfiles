@@ -16,7 +16,7 @@
 [tag]
 	forceSignAnnotated = true
 [diff]
-    wsErrorHighlight = all
+	wsErrorHighlight = all
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true
