@@ -48,3 +48,5 @@
 	# TODO: Add stuff from https://blog.jez.io/cli-code-review
 [transfer]
 	fsckObjects = true
+[safe]
+	bareRepository = explicit
