@@ -28,6 +28,7 @@
 	defaultBranch = master
 [alias]
 	l1 = log --date=short --color=always --format='%C(green)%ad %C(auto)%h %C(blue)%<(15,trunc)%an %C(auto)%<(65,trunc)%s%d%C(reset)'
+	logsig = log --date=short --format='%G? %C(green)%ad %C(auto)%h %C(blue)%<(15,trunc)%an %C(auto)%<(65,trunc)%s%d%C(reset)'
 [transfer]
 	fsckObjects = true
 [safe]
