@@ -2,6 +2,7 @@
 	name = Bartek Pacia
 	email = barpac02@gmail.com
 	signingkey = key::ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIM0XGjV2GkSq7+K+l5SgIFVStXdZPT9ItmBHnizJW30X
+	useConfigOnly = true
 [github]
 	user = bartekpacia
 [core]
