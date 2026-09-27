@@ -46,3 +46,5 @@
 	l1 = log --date=short --color=always --format='%C(green)%ad %C(auto)%h %C(blue)%<(15,trunc)%an %C(auto)%<(65,trunc)%s%d%C(reset)'
 
 	# TODO: Add stuff from https://blog.jez.io/cli-code-review
+[transfer]
+	fsckObjects = true
