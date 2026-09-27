@@ -54,10 +54,6 @@
 	pick-branch = "!f() { git bvb \"$@\" | fzf --no-multi --tiebreak=begin --ansi; }; f"
 	commit-info = show --no-patch --date=short --format='%S%x00%C(green)%ad%C(reset) %C(magenta)%C(italic)%<(40,trunc)%S%C(reset) %C(auto)%h %C(blue)%<(15,trunc)%an %C(auto)%<(65,trunc)%s%D%C(reset)'
 
-	commit-url = !git pick-commits | xargs -I% echo "$(git url | sed '\\.git$' '')/commit/%"
-	url = remote get-url origin
-
-	pick-commits = "!f() { git l1 \"${1:-.}\" | fzf --ansi | cut -d' ' -f2; }; f"
 	l1 = log --date=short --color=always --format='%C(green)%ad %C(auto)%h %C(blue)%<(15,trunc)%an %C(auto)%<(65,trunc)%s%d%C(reset)'
 
 	# TODO: Add stuff from https://blog.jez.io/cli-code-review
