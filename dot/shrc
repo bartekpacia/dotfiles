@@ -51,7 +51,8 @@ if [ ! -L "$XDG_STATE_HOME/1password/agent.sock" ]; then
 	fi
 fi
 
-if [ -S "$XDG_STATE_HOME/1password/agent.sock" ]; then
+# Over SSH with a forwarded agent, keep the per-session socket sshd created.
+if [ -S "$XDG_STATE_HOME/1password/agent.sock" ] && ! { [ -n "$SSH_CONNECTION" ] && [ -S "$SSH_AUTH_SOCK" ]; }; then
 	export SSH_AUTH_SOCK="$XDG_STATE_HOME/1password/agent.sock"
 fi
 
