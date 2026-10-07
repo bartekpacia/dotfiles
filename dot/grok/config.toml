@@ -1,0 +1,28 @@
+[marketplace]
+default_skills_installs_purged = true
+official_marketplace_auto_installed = true
+
+[[marketplace.sources]]
+name = "xAI Official"
+git = "https://github.com/xai-org/plugin-marketplace.git"
+
+[ui]
+max_thoughts_width = 120
+fork_secondary_model = "grok-4.6"
+yolo = false
+compact_mode = false
+permission_mode = "auto"
+keep_text_selection = "word_select"
+confirm_before_rewind = false
+
+[cli]
+installer = "internal"
+
+[consent.answers.enterprise-tos-2026-08]
+version = 1
+account = "bartek.pacia@anysphere.co"
+acked = true
+
+[models]
+default = "grok-4.7-build-fast"
+default_reasoning_effort = "high"

@@ -61,6 +61,11 @@ for f in "$DOTFILES/dot/"*; do
 	ln -sfn "$f" "$HOME/.config/$(basename "$f")"
 done
 
+if [ -f "$DOTFILES/dot/grok/config.toml" ]; then
+	mkdir -p "$HOME/.grok"
+	ln -sfn "$DOTFILES/dot/grok/config.toml" "$HOME/.grok/config.toml"
+fi
+
 # Symlink files/* into home directory as regular files
 echo 'setup: symlinking normal files to HOME...'
 for f in "$DOTFILES/files/"*; do
