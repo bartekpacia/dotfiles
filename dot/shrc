@@ -232,10 +232,10 @@ export LC_ALL=en_US.UTF-8
 export PAGER=less
 export LESS="--RAW-CONTROL-CHARS --QUIET"
 
-if [ -z "$INTELLIJ_ENVIRONMENT_READER" ]; then
-	# Guard against old version of less not having "--no-vbell".
-	# For some reason, this hangs forever when loaded from within IntelliJ.
-	case "$(less --no-vbell 2>&1)" in
+if [ -z "$INTELLIJ_ENVIRONMENT_READER" ] && [ -t 0 ]; then
+	# Old less rejects "--no-vbell". With no filename, less reads stdin and waits
+	# for EOF, so an IDE env probe whose pipe stays open hangs shell startup.
+	case "$(less --no-vbell </dev/null 2>&1)" in
 	*vbell*) ;;
 	*) LESS="$LESS --no-vbell" ;;
 	esac
