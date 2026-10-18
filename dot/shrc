@@ -220,9 +220,6 @@ fi
 # TealDeer (https://github.com/dbrgn/tealdeer/issues/311)
 export TEALDEER_CONFIG_DIR="$XDG_CONFIG_HOME/tealdeer"
 
-# Grok Build ignores XDG_CONFIG_HOME and keeps config, sessions, and
-# credentials in one directory. A symlink is refused when the sandbox
-# is on, so this has to be a real directory.
 export GROK_HOME="$XDG_CONFIG_HOME/grok"
 
 # Add local gitignored files to PATH
