@@ -1,7 +1,7 @@
 # On a machine I'm sitting at, use the local 1Password agent.
 # Inside an SSH session, fall back to $SSH_AUTH_SOCK (the forwarded agent).
 Match !exec "printenv SSH_CONNECTION >/dev/null"
-    IdentityAgent ~/.1password/agent.sock
+    IdentityAgent ~/.local/state/1password/agent.sock
 
 Host *
     ServerAliveInterval 5
