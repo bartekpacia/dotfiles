@@ -58,12 +58,21 @@ for f in "$DOTFILES/dot/"*; do
 	if [ ! -d "$f" ]; then
 		continue
 	fi
+	# Grok state lives in ~/.grok. Linking this directory into ~/.config
+	# put sessions and credentials inside the dotfiles repo.
+	if [ "$(basename "$f")" = "grok" ]; then
+		continue
+	fi
 	ln -sfn "$f" "$HOME/.config/$(basename "$f")"
 done
 
 if [ -f "$DOTFILES/dot/grok/config.toml" ]; then
 	mkdir -p "$HOME/.grok"
 	ln -sfn "$DOTFILES/dot/grok/config.toml" "$HOME/.grok/config.toml"
+	# A previous setup left ~/.config/grok pointing at the repo.
+	if [ -L "$HOME/.config/grok" ]; then
+		rm "$HOME/.config/grok"
+	fi
 fi
 
 # Symlink files/* into home directory as regular files

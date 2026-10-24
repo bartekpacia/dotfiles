@@ -220,8 +220,6 @@ fi
 # TealDeer (https://github.com/dbrgn/tealdeer/issues/311)
 export TEALDEER_CONFIG_DIR="$XDG_CONFIG_HOME/tealdeer"
 
-export GROK_HOME="$XDG_CONFIG_HOME/grok"
-
 # Add local gitignored files to PATH
 if [ -d "$DOTFILES/local" ]; then
 	export PATH="$DOTFILES/local:$PATH"
