@@ -186,6 +186,8 @@
 	<integer>4</integer>
 	<key>JiggleTTYSizeOnClearBuffer</key>
 	<true/>
+	<key>LoadPrefsFromCustomFolder</key>
+	<true/>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -3185,6 +3187,8 @@
 			<string>kNextWindowPointerAction</string>
 		</dict>
 	</dict>
+	<key>PrefsCustomFolder</key>
+	<string>/Users/bartek/.config/iterm2</string>
 	<key>Print In Black And White</key>
 	<true/>
 	<key>PromptOnQuit</key>
