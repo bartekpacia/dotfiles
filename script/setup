@@ -108,6 +108,9 @@ done
 
 echo "setup: symlinking custom oh-my-zsh scripts..."
 for f in "$DOTFILES/custom/"*.zsh; do
+	if [ ! -f "$f" ]; then
+		continue
+	fi
 	ln -sfn "$f" "$ZSH_CUSTOM/$(basename "$f")"
 done
 
