@@ -45,8 +45,18 @@ for f in "$DOTFILES/dot/"*; do
 	if [ ! -f "$f" ]; then
 		continue
 	fi
+	# Only meaningful on pacman-based distros, linked separately below.
+	if [ "$(basename "$f")" = "pkglist.txt" ]; then
+		continue
+	fi
 	ln -sfn "$f" "$HOME/.$(basename "$f")"
 done
+
+# Symlink the package list only where pacman is available (Arch and derivatives)
+if command -v pacman >/dev/null 2>&1; then
+	echo 'setup: pacman found, symlinking pkglist.txt to HOME...'
+	ln -sfn "$DOTFILES/dot/pkglist.txt" "$HOME/.pkglist.txt"
+fi
 
 if [ ! -d "$HOME/.config" ]; then
 	mkdir "$HOME/.config"
