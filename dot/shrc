@@ -56,6 +56,10 @@ if [ -S "$XDG_STATE_HOME/1password/agent.sock" ] && ! { [ -n "$SSH_CONNECTION" ]
 fi
 
 if command -v op >/dev/null 2>&1; then
+    # On macOS 27 Golden Gate:
+	# 1. go to System Settings > Privacy & Security > Files & Folders
+	# 2. Allow the terminal to access "Data shared by 1Password"
+
 	# 1Password shell plugins
 	if [ -f "$XDG_CONFIG_HOME/op/plugins.sh" ]; then
 		. "$XDG_CONFIG_HOME/op/plugins.sh"
