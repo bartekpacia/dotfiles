@@ -1,6 +1,5 @@
 brew 'apktool'
 brew 'atuin'
-brew 'avrdude'
 brew 'bash'
 brew 'bat'
 brew 'clang-format'
