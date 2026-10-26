@@ -97,3 +97,11 @@ get_ssh_key 'Personal' 'main key'
   - startup shell scripts from JetBrains Toolbox app
 
 [get_ssh_key]: https://github.com/bartekpacia/scripts/blob/master/bin/get_ssh_key
+
+
+### Some things to do after installation
+
+- In 1Password app, enable integration with 1Password CLI.
+- Set up pyenv and install latest stable python.
+- Set up rbenv and install latest stable python.
+- Set up atuin.
