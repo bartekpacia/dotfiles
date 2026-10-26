@@ -71,7 +71,6 @@ cask 'tailscale-app'
 cask 'utm'
 cask 'visual-studio-code'
 cask 'vlc'
-cask 'zed'
 
 cask 'font-jetbrains-mono' # the ASCII font for iTerm2
 cask 'font-hack-nerd-font' # the non-ASCII font for iTerm2 (needed by lsd)
